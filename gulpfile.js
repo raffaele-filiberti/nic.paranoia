@@ -20,7 +20,9 @@ gulp.task('lint', function() {
 
 // Compile Our Sass
 gulp.task('sass', function() {
-    return gulp.src('scss/*.scss')
+    return gulp.src([
+        'scss/*.scss'
+    ])
         .pipe(sass())
         .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.stream());
@@ -28,9 +30,17 @@ gulp.task('sass', function() {
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
-    return gulp.src('js/*.js')
+    return gulp.src([
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/gsap/TweenMax.js',
+        'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
+        'node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
+        'node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
+        'node_modules/gsap/ScrollToPlugin.js',
+        'js/index.js'
+        ])
         .pipe(concat('all.js'))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist/js'))
         .pipe(rename('all.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
@@ -39,8 +49,18 @@ gulp.task('scripts', function() {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('js/*.js', ['lint', 'scripts']);
-    gulp.watch('scss/*.scss', ['sass']);
+    gulp.watch('js/index.js', ['lint', 'scripts']);
+    gulp.watch(
+        [
+            'scss/base/*.scss',
+            'scss/components/*.scss',
+            'scss/helpers/*.scss',
+            'scss/layout/*.scss',
+            'scss/pages/*.scss',
+            'scss/themes/*.scss',
+            'scss/vendor/*.scss',
+            'scss/*.scss'
+        ], ['sass']);
     gulp.watch("*.html").on('change', browserSync.reload);
 });
 

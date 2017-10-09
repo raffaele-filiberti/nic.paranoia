@@ -1,0 +1,16 @@
+/**
+ *  Typography
+ *  v 1.0
+ */
+
+@each $style in map-keys($font-tag) {
+  #{$style} {
+    @include typography-adjust-margin($style);
+  }
+}
+
+@each $style in map-keys($font-tag-display) {
+  .display #{$style} {
+    @include typography-adjust-margin($style, true);
+  }
+}

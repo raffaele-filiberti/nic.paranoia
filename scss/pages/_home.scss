@@ -1,0 +1,54 @@
+.section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+
+  &.section--half {
+    min-height: 60vh;
+  }
+
+  &.section--img-gutter {
+    background-size: 80% !important;
+  }
+
+  &.section--img {
+    background-size: cover !important;
+  }
+
+  &.section--img,
+  &.section--img-gutter {
+    &.section--img-dark {
+      .section--text {
+        background: rgba(255, 255, 255, .9);
+        color: #212121;
+      }
+    }
+    &.section--img-light {
+      .section--text {
+        background: transparent;
+        color: #212121;
+      }
+    }
+  }
+
+  .parallax--img,
+  .parallax--img-secondary{
+    position: absolute;
+    left: 0;
+  }
+
+  .parallax--img {
+    width: 100%;
+
+  }
+
+  .parallax--img-secondary {
+    height: 50%;
+    width: auto;
+  }
+
+    .section--text {
+    position: relative;
+    padding: 50px;
+  }
+}

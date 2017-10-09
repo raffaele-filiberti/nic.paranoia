@@ -1,0 +1,34 @@
+/**
+ *  HELPERS
+ */
+
+@import 'helpers/_variables.scss';
+@import 'helpers/_functions.scss';
+@import 'helpers/_mixins.scss';
+@import 'helpers/_helpers.scss';
+
+/**
+ *  BASE
+ */
+
+@import 'base/_reset.scss';
+@import 'base/_typography.scss';
+@import 'base/_flex.scss';
+
+
+/**
+ *  COMPONENTS
+ */
+
+//@import 'components/_buttons.scss';
+
+/**
+ *  LAYOUT
+ */
+
+@import 'layout/_grid.scss';
+@import 'layout/_header.scss';
+@import 'layout/_footer.scss';
+@import 'layout/_forms.scss';
+
+@import 'pages/_home.scss';

@@ -1,51 +1,17 @@
 /**
  *  MiXiNs
+ * pseudo elements, media queries, transitions, hover, border-radius
  *  v 1.0
  */
 
 //Before & After Pseudo Elements
-@mixin pseudo($display: block, $pos: absolute, $content: '') {
+@mixin pseudo($content: '', $display: block, $pos: absolute) {
   content: $content;
   display: $display;
   position: $pos;
 }
 
-//font behavior
-@mixin typography-base {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-@mixin typography($style, $display: false) {
-  $style-props: '' !default;
-  @if ($display) {
-    $style-props: map-get($font-tag-display, $style);
-  } @else {
-    $style-props: map-get($font-tag, $style);
-  }
-
-  @include typography-base;
-
-  font-family: map-get($style-props, font-family);
-  font-size: map-get($style-props, font-size);
-  font-weight: #{map-get($style-props, font-weight)};
-  letter-spacing: map-get($style-props, letter-spacing);
-  line-height: map-get($style-props, line-height);
-  text-decoration: map-get($style-props, text-decoration);
-  text-transform: map-get($style-props, text-transform);
-}
-
-@mixin typography-adjust-margin($style, $display: false) {
-  @include typography-base;
-  @include typography($style, $display);
-  @if ($display) {
-    margin: map-get(map-get($font-tag-display, $style), margin);
-  } @else {
-    margin: map-get(map-get($font-tag, $style), margin);
-  }
-}
-
-//Media Query
+//  Media Query
 $breakpoints: (
         "phone": 576px,
         "tablet": 768px,
@@ -64,10 +30,92 @@ $breakpoints: (
   }
 }
 
-/* animation */
-@mixin animate($duration: .25s) {
-  -webkit-transition: all $duration cubic-bezier(.550, .055, .675, .190);
-  transition: all $duration cubic-bezier(.550, .055, .675, .190);
+//  Transition
+@mixin transition($transition...) {
+  @if length($transition) == 0 {
+    transition: $transition-base;
+  } @else {
+    transition: $transition;
+  }
+}
+
+
+//  Hover behaviour
+@mixin hover {
+  &:hover {
+    @content;
+  }
+}
+
+ //share content among hover and focus
+@mixin hover-focus {
+  @include hover {
+    @content;
+  }
+
+  &:focus,
+  &:hover {
+    @content;
+  }
+
+}
+
+ //share content among plain, hover and focus
+@mixin plain-hover-focus {
+  @include hover {
+    @content;
+  }
+
+  &,
+  &:focus,
+  &:hover {
+    @content;
+  }
+
+}
+
+ //share content among active, hover and focus
+@mixin hover-focus-active {
+
+  @include hover {
+    @content;
+  }
+
+  &:focus,
+  &:active,
+  &:hover {
+    @content;
+  }
+}
+
+// Border-radius
+@mixin border-radius($radius: $border-radius) {
+    border-radius: $radius;
+}
+
+@mixin border-top-radius($radius) {
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+}
+
+@mixin border-right-radius($radius) {
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+
+@mixin border-bottom-radius($radius) {
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+
+@mixin border-left-radius($radius) {
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+
+//  Box-shadow
+@mixin box-shadow($shadow) {
+    box-shadow: $shadow;
 }
 
 

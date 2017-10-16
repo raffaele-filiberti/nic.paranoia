@@ -1,54 +1,84 @@
-.section {
+.hero {
+  &.nav--padding {
+    padding-top: 5rem;
+  }
+}
+
+.heading {
+  text-align: right;
+  h1 {
+    font-size: 5rem !important;
+    line-height: 5rem !important;
+  }
+
+  span {
+    font-weight: 700;
+  }
+}
+
+@include mq(phone) {
+  .hero {
+    &.nav--padding {
+      padding: 0;
+    }
+  }
+}
+
+@include mq(tablet) {
+    .heading {
+      h1 {
+        font-size: 7rem !important;
+        line-height: 7rem !important;
+      }
+    }
+  }
+
+
+@include mq(desktop-wide) {
+
+    .heading {
+      h1 {
+        font-size: 12rem !important;
+        line-height: 12rem !important;
+      }
+    }
+  }
+
+
+.text--box {
+  padding: 2rem 1.25rem;
+}
+
+@include mq(tablet) {
+  .text--box {
+    padding: 4rem 2.5rem;
+  }
+}
+
+.card {
+  padding: 3rem 2.5rem;
+  margin-right: 0;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  border-width: .2rem;
   position: relative;
-  height: 100vh;
+  background: #fafafa;
+  border: solid $gray-primary;
+}
+
+.parallax--container {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: 0;
+}
+
+.parallax--background {
   width: 100%;
-
-  &.section--half {
-    min-height: 60vh;
-  }
-
-  &.section--img-gutter {
-    background-size: 80% !important;
-  }
-
-  &.section--img {
-    background-size: cover !important;
-  }
-
-  &.section--img,
-  &.section--img-gutter {
-    &.section--img-dark {
-      .section--text {
-        background: rgba(255, 255, 255, .9);
-        color: #212121;
-      }
-    }
-    &.section--img-light {
-      .section--text {
-        background: transparent;
-        color: #212121;
-      }
-    }
-  }
-
-  .parallax--img,
-  .parallax--img-secondary{
-    position: absolute;
-    left: 0;
-  }
-
-  .parallax--img {
-    width: 100%;
-
-  }
-
-  .parallax--img-secondary {
-    height: 50%;
-    width: auto;
-  }
-
-    .section--text {
-    position: relative;
-    padding: 50px;
-  }
+  min-height: 100vh;
+  height: 100%;
 }

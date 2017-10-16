@@ -1,11 +1,35 @@
-$theme-colors: () !default;
-$theme-colors: map-merge((
-        "primary": $blue,
-        "secondary": $gray-600,
-        "success": $green,
-        "info": $cyan,
-        "warning": $yellow,
-        "danger": $red,
-        "light": $gray-100,
-        "dark": $gray-800
-), $theme-colors);
+.bg-primary {
+  background: $primary;
+
+  &.card {
+    border: solid $secondary;
+  }
+
+  &.color-contrast {
+    color: $secondary;
+  }
+}
+
+.bg-secondary {
+  background: $secondary;
+
+  &.card {
+    border: solid $primary;
+  }
+
+  &.color-contrast {
+    color: $primary;
+  }
+}
+
+.bg-neutro {
+  background: transparent;
+
+  &.color-contrast {
+    color: transparent;
+  }
+}
+
+.bg-dark {
+  background: $gray-secondary;
+}

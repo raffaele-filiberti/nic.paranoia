@@ -9,6 +9,8 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
 
 
 // Lint Task
@@ -23,13 +25,15 @@ gulp.task('sass', function() {
     return gulp.src([
         'scss/*.scss'
     ])
+        .pipe(sourcemaps.init())
         .pipe(sass())
+        .pipe(autoprefixer())
         .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.stream());
 });
 
 // Concatenate & Minify JS
-gulp.task('scripts', function() {
+gulp.task('init', function () {
     return gulp.src([
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/gsap/TweenMax.js',
@@ -37,6 +41,19 @@ gulp.task('scripts', function() {
         'node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
         'node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
         'node_modules/gsap/ScrollToPlugin.js',
+        'libs/imagesLoaded.pkgd.min.js',
+        'libs/masonry.pkgd.min.js'
+        ])
+        .pipe(concat('libs.js'))
+        .pipe(gulp.dest('dist/js'))
+        .pipe(rename('libs.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js'))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('scripts', function() {
+    return gulp.src([
         'js/index.js'
         ])
         .pipe(concat('all.js'))
@@ -65,7 +82,7 @@ gulp.task('watch', function() {
 });
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['lint', 'sass', 'scripts', 'watch'], function() {
+gulp.task('serve', ['lint', 'init', 'sass', 'scripts', 'watch'], function() {
     browserSync.init({
         server: "./"
     });

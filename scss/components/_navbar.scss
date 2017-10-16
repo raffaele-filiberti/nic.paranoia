@@ -1,0 +1,281 @@
+//
+// Navbar
+//
+
+$navbar-light-color: $primary;
+$navbar-light-active-color: $primary;
+$navbar-light-disabled-color: $gray-primary;
+$nav-padding-y: 20px;
+$nav-padding-x: 40px;
+$nav-fixed-margin-y: 0;
+$nav-fixed-margin-x: 50px;
+$nav-brand-padding-y: 5px;
+$nav-brand-padding-x: 5px;
+$nav-link-padding-y: 8px;
+$nav-link-padding-x: 12px;
+
+//
+//  Basic theming
+//
+
+.nav--light {
+
+  .nav--brand {
+    color: $navbar-light-active-color;
+
+    @include hover-focus {
+      color: $navbar-light-active-color;
+    }
+  }
+
+  .nav--wrapper {
+    .nav--link {
+      color: $navbar-light-color;
+
+      @include hover-focus {
+        color: $navbar-light-active-color;
+      }
+
+      &.disabled {
+        color: $navbar-light-disabled-color;
+      }
+    }
+
+    .active > .nav--link,
+    .nav--link.active {
+      color: $navbar-light-active-color;
+    }
+  }
+}
+
+.nav--dark {
+
+  .nav--link {
+    color: map_get($colors, blank);
+
+  }
+}
+
+//
+//  Nav Container - Designed for sub menu containing
+//
+.nav--container {
+  @extend .container;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+//
+//  Fixed Navbar
+//
+.nav--fixed {
+  position: fixed;
+  top: $nav-fixed-margin-y;
+  left: 0;
+  right: 0;
+  z-index: 900;
+}
+
+.nav {
+  padding: ($nav-padding-y / 2) ($nav-padding-x / 2);
+}
+
+//
+//  General nav
+//
+
+.nav {
+  position: relative;
+
+  //
+  // Container inside nav
+  //
+
+  &,
+  > .container,
+  > .container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    @extend .center;
+    @extend .between;
+  }
+
+  //
+  // Navbar brand
+  //
+
+  .nav--brand {
+    display: inline-block;
+    padding-top: $nav-brand-padding-y;
+    padding-bottom: $nav-brand-padding-y;
+    @extend %headline;
+    white-space: nowrap;
+    margin: 0 $nav-padding-x 0 0;
+    align-self: center;
+
+    @include hover-focus {
+      text-decoration: none;
+    }
+
+    .nav--sub-brand {
+      font-size: .975rem;
+    }
+  }
+
+  //
+  // Nav wrapper
+  //
+
+  .nav--wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    @extend .middle;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+    //
+    // Nav link
+    //
+
+    .nav--link {
+      padding: ($nav-link-padding-y / 2) 0;
+      margin: $nav-link-padding-y 0;
+    }
+  }
+
+  //
+  // Navbar text
+  //
+
+  .nav--text {
+    display: inline-block;
+    padding-top: $nav-link-padding-y;
+    padding-bottom: $nav-link-padding-y;
+  }
+
+  //
+  // Responsive
+  //
+
+  &.nav--expand .nav--collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    @extend .middle;
+  }
+
+  //
+  // Burger menu icon
+  //
+
+  .nav--burger {
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+      position: relative;
+      display: block;
+
+      &:before,
+      &:after {
+        @include pseudo();
+      }
+
+      &,
+      &:before,
+      &:after {
+        width: 35px;
+        height: 2px;
+        background: map_get($colors, primary);
+        @include transition($transition-base);
+      }
+
+      &:before {
+        transform: translate3d(0, -10px, 0);
+      }
+
+      &:after {
+        transform: translate3d(0, 10px, 0);
+      }
+    }
+
+    &.active {
+      span {
+        width: 0;
+
+        &:before {
+          transform: translate3d(-27.5px, 0, 0) rotateZ(45deg);
+        }
+        &:after {
+          transform: translate3d(-27.5px, 0, 0) rotateZ(-45deg);
+        }
+      }
+    }
+  }
+}
+
+@include mq(tablet) {
+  .nav {
+    padding: $nav-padding-y $nav-padding-x;
+    &.nav--expand {
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+
+      .nav--wrapper {
+        flex-direction: row;
+
+        .dropdown-menu {
+          position: absolute;
+        }
+
+        .dropdown-menu-right {
+          right: 0;
+          left: auto;
+        }
+
+        .nav--link {
+          padding-right: .5rem;
+          padding-left: .5rem;
+          margin-right: .25rem;
+          margin-left: .25rem;
+        }
+      }
+
+      > .container,
+      > .container-fluid {
+        flex-wrap: nowrap;
+      }
+
+      .nav--collapse {
+        display: flex !important;
+        flex-basis: auto;
+      }
+
+      .nav--burger {
+        display: none;
+      }
+    }
+  }
+}
+
+@include mq(tablet, max) {
+  .nav--expand {
+    > .container,
+    > .container-fluid {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  .collapse {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+}

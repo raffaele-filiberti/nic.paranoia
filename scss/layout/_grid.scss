@@ -15,31 +15,24 @@ $container-md: ($md-min + $gutter-width);
 $container-lg: ($lg-min + $gutter-width);
 $container-xl: ($xl-min + $gutter-width);
 
-
 .container-fluid,
 .container {
   margin-right: auto;
   margin-left: auto;
 }
 
-.container-fluid {
-  padding-right: #{$outer-margin}rem;
-  padding-left: #{$outer-margin}rem;
-}
-
 .row {
-  @extend %flexbox;
-  @include flex-direction(row);
-  @include flex-wrap(wrap);
-  @include flex(0,1);
+  display: flex;
+  flex-flow: row wrap;
+  flex: 0 1 auto;
 }
 
 .reverse {
-  @include flex-direction(row-reverse);
+  flex-direction: row-reverse;
 }
 
 .col.reverse {
-  @include flex-direction(column-reverse);
+  flex-direction: column-reverse;
 }
 
 .col,
@@ -68,63 +61,61 @@ $container-xl: ($xl-min + $gutter-width);
 .col-offset-10,
 .col-offset-11,
 .col-offset-12 {
-  @include flex(0 0);
-  padding-right: ($outer-margin)rem;
-  padding-left: ($outer-margin)rem;
+  flex: 0 0 auto;
 }
 
 .col {
-  @include flex-grow(1);
-  @include  flex-basis(0);
+  flex-grow: 1;
+  flex-basis: 0;
   max-width: 100%;
 }
 
 .col-1 {
-  @include  flex-basis(8.33333333%, true);
+  flex-basis: 8.33333333%;
 }
 
 .col-2 {
-  @include  flex-basis(16.66666667%, true);
+  flex-basis: 16.66666667%;
 }
 
 .col-3 {
-  @include  flex-basis(25%, true);
+  flex-basis: 25%;
 }
 
 .col-4 {
-  @include  flex-basis(33.33333333%, true);
+  flex-basis: 33.33333333%;
 }
 
 .col-5 {
-  @include  flex-basis(41.66666667%, true);
+  flex-basis: 41.66666667%;
 }
 
 .col-6 {
-  @include  flex-basis(50%, true);
+  flex-basis: 50%;
 }
 
 .col-7 {
-  @include  flex-basis(58.33333333%, true);
+  flex-basis: 58.33333333%;
 }
 
 .col-8 {
-  @include  flex-basis(66.66666667%, true);
+  flex-basis: 66.66666667%;
 }
 
 .col-9 {
-  @include  flex-basis(75%, true);
+  flex-basis: 75%;
 }
 
 .col-10 {
-  @include  flex-basis(83.33333333%, true);
+  flex-basis: 83.33333333%;
 }
 
 .col-11 {
-  @include  flex-basis(91.66666667%, true);
+  flex-basis: 91.66666667%;
 }
 
 .col-12 {
-  @include  flex-basis(100%, true);
+  flex-basis: 100%;
 }
 
 .col-offset-0 {
@@ -176,49 +167,55 @@ $container-xl: ($xl-min + $gutter-width);
 }
 
 .start {
-  @include justify-content(flex-start);
+  justify-content: flex-start;
 }
 
 .center {
-  @include justify-content(center);
+  justify-content: center;
 }
 
 .end {
-  @include justify-content(flex-end);
+  justify-content: flex-end;
 }
 
 .top {
-  @include align-items(flex-start);
+  align-items: flex-start;
 }
 
 .middle {
-  @include align-items(center);
+  align-items: center;
 }
 
 .bottom {
-  @include align-items(flex-end);
+  align-items: flex-end;
 }
 
 .around {
-  @include justify-content(space-around);
+  justify-content: space-around;
 }
 
 .between {
-  @include justify-content(space-between);
+  justify-content: space-between;
 }
 
 .first {
-  @include order(-1);
+  order: -1;
 }
 
 .last {
-  @include order(1);
+  order: 1;
 }
 
 @include mq(phone) {
   .container {
     max-width: #{$container-sm}em;
   }
+
+  .container-fluid {
+    padding-right: #{$outer-margin}rem;
+    padding-left: #{$outer-margin}rem;
+  }
+
 
   .col-sm,
   .col-sm-1,
@@ -246,63 +243,61 @@ $container-xl: ($xl-min + $gutter-width);
   .col-sm-offset-10,
   .col-sm-offset-11,
   .col-sm-offset-12 {
-    @include flex(0 0);
-    padding-right: ($outer-margin)rem;
-    padding-left: ($outer-margin)rem;
+    flex: 0 0 auto;
   }
 
   .col-sm {
-    @include flex-grow(1);
-    @include  flex-basis(0);
+    flex-grow: 1;
+    flex-basis: 0;
     max-width: 100%;
   }
 
   .col-sm-1 {
-    @include  flex-basis(8.33333333%, true);
+    flex-basis: 8.33333333%;
   }
 
   .col-sm-2 {
-    @include  flex-basis(16.66666667%, true);
+    flex-basis: 16.66666667%;
   }
 
   .col-sm-3 {
-    @include  flex-basis(25%, true);
+    flex-basis: 25%;
   }
 
   .col-sm-4 {
-    @include  flex-basis(33.33333333%, true);
+    flex-basis: 33.33333333%;
   }
 
   .col-sm-5 {
-    @include  flex-basis(41.66666667%, true);
+    flex-basis: 41.66666667%;
   }
 
   .col-sm-6 {
-    @include  flex-basis(50%, true);
+    flex-basis: 50%;
   }
 
   .col-sm-7 {
-    @include  flex-basis(58.33333333%, true);
+    flex-basis: 58.33333333%;
   }
 
   .col-sm-8 {
-    @include  flex-basis(66.66666667%, true);
+    flex-basis: 66.66666667%;
   }
 
   .col-sm-9 {
-    @include  flex-basis(75%, true);
+    flex-basis: 75%;
   }
 
   .col-sm-10 {
-    @include  flex-basis(83.33333333%, true);
+    flex-basis: 83.33333333%;
   }
 
   .col-sm-11 {
-    @include  flex-basis(91.66666667%, true);
+    flex-basis: 91.66666667%;
   }
 
   .col-sm-12 {
-    @include  flex-basis(100%, true);
+    flex-basis: 100%;
   }
 
   .col-sm-offset-0 {
@@ -354,43 +349,43 @@ $container-xl: ($xl-min + $gutter-width);
   }
 
   .start-sm {
-    @include justify-content(flex-start);
+    justify-content: flex-start;
   }
 
   .center-sm {
-    @include justify-content(center);
+    justify-content: center;
   }
 
   .end-sm {
-    @include justify-content(end);
+    justify-content: flex-end;
   }
 
   .top-sm {
-    @include align-items(flex-start);
+    align-items: flex-start;
   }
 
   .middle-sm {
-    @include align-items(center);
+    align-items: center;
   }
 
   .bottom-sm {
-    @include align-items(end);
+    align-items: flex-end;
   }
 
   .around-sm {
-    @include justify-content(space-around);
+    justify-content: space-around;
   }
 
   .between-sm {
-    @include justify-content(space-between);
+    justify-content: space-between;
   }
 
   .first-sm {
-    @include order(-1);
+    order: -1;
   }
 
   .last-sm {
-    @include order(1);
+    order: 1;
   }
 }
 
@@ -425,63 +420,61 @@ $container-xl: ($xl-min + $gutter-width);
   .col-md-offset-10,
   .col-md-offset-11,
   .col-md-offset-12 {
-    @include flex(0 0);
-    padding-right: ($outer-margin)rem;
-    padding-left: ($outer-margin)rem;
+    flex: 0 0 auto;
   }
 
   .col-md {
-    @include flex-grow(1);
-    @include  flex-basis(0);
+    flex-grow: 1;
+    flex-basis: 0;
     max-width: 100%;
   }
 
   .col-md-1 {
-    @include  flex-basis(8.33333333%, true);
+    flex-basis: 8.33333333%;
   }
 
   .col-md-2 {
-    @include  flex-basis(16.66666667%, true);
+    flex-basis: 16.66666667%;
   }
 
   .col-md-3 {
-    @include  flex-basis(25%, true);
+    flex-basis: 25%;
   }
 
   .col-md-4 {
-    @include  flex-basis(33.33333333%, true);
+    flex-basis: 33.33333333%;
   }
 
   .col-md-5 {
-    @include  flex-basis(41.66666667%, true);
+    flex-basis: 41.66666667%;
   }
 
   .col-md-6 {
-    @include  flex-basis(50%, true);
+    flex-basis: 50%;
   }
 
   .col-md-7 {
-    @include  flex-basis(58.33333333%, true);
+    flex-basis: 58.33333333%;
   }
 
   .col-md-8 {
-    @include  flex-basis(66.66666667%, true);
+    flex-basis: 66.66666667%;
   }
 
   .col-md-9 {
-    @include  flex-basis(75%, true);
+    flex-basis: 75%;
   }
 
   .col-md-10 {
-    @include  flex-basis(83.33333333%, true);
+    flex-basis: 83.33333333%;
   }
 
   .col-md-11 {
-    @include  flex-basis(91.66666667%, true);
+    flex-basis: 91.66666667%;
   }
 
   .col-md-12 {
-    @include  flex-basis(100%, true);
+    flex-basis: 100%;
   }
 
   .col-md-offset-0 {
@@ -533,45 +526,46 @@ $container-xl: ($xl-min + $gutter-width);
   }
 
   .start-md {
-    @include justify-content(flex-start);
+    justify-content: flex-start;
   }
 
   .center-md {
-    @include justify-content(center);
+    justify-content: center;
   }
 
   .end-md {
-    @include justify-content(end);
+    justify-content: flex-end;
   }
 
   .top-md {
-    @include align-items(flex-start);
+    align-items: flex-start;
   }
 
   .middle-md {
-    @include align-items(center);
+    align-items: center;
   }
 
   .bottom-md {
-    @include align-items(end);
+    align-items: flex-end;
   }
 
   .around-md {
-    @include justify-content(space-around);
+    justify-content: space-around;
   }
 
   .between-md {
-    @include justify-content(space-between);
+    justify-content: space-between;
   }
 
   .first-md {
-    @include order(-1);
+    order: -1;
   }
 
   .last-md {
-    @include order(1);
+    order: 1;
   }
 }
+
 @include mq(desktop) {
   .container {
     max-width: #{$container-lg}em;
@@ -603,63 +597,61 @@ $container-xl: ($xl-min + $gutter-width);
   .col-lg-offset-10,
   .col-lg-offset-11,
   .col-lg-offset-12 {
-    @include flex(0 0);
-    padding-right: ($outer-margin)rem;
-    padding-left: ($outer-margin)rem;
+    flex: 0 0 auto;
   }
 
   .col-lg {
-    @include flex-grow(1);
-    @include  flex-basis(0);
+    flex-grow: 1;
+    flex-basis: 0;
     max-width: 100%;
   }
 
   .col-lg-1 {
-    @include  flex-basis(8.33333333%, true);
+    flex-basis: 8.33333333%;
   }
 
   .col-lg-2 {
-    @include  flex-basis(16.66666667%, true);
+    flex-basis: 16.66666667%;
   }
 
   .col-lg-3 {
-    @include  flex-basis(25%, true);
+    flex-basis: 25%;
   }
 
   .col-lg-4 {
-    @include  flex-basis(33.33333333%, true);
+    flex-basis: 33.33333333%;
   }
 
   .col-lg-5 {
-    @include  flex-basis(41.66666667%, true);
+    flex-basis: 41.66666667%;
   }
 
   .col-lg-6 {
-    @include  flex-basis(50%, true);
+    flex-basis: 50%;
   }
 
   .col-lg-7 {
-    @include  flex-basis(58.33333333%, true);
+    flex-basis: 58.33333333%;
   }
 
   .col-lg-8 {
-    @include  flex-basis(66.66666667%, true);
+    flex-basis: 66.66666667%;
   }
 
   .col-lg-9 {
-    @include  flex-basis(75%, true);
+    flex-basis: 75%;
   }
 
   .col-lg-10 {
-    @include  flex-basis(83.33333333%, true);
+    flex-basis: 83.33333333%;
   }
 
   .col-lg-11 {
-    @include  flex-basis(91.66666667%, true);
+    flex-basis: 91.66666667%;
   }
 
   .col-lg-12 {
-    @include  flex-basis(100%, true);
+    flex-basis: 100%;
   }
 
   .col-lg-offset-0 {
@@ -711,43 +703,43 @@ $container-xl: ($xl-min + $gutter-width);
   }
 
   .start-lg {
-    @include justify-content(flex-start);
+    justify-content: flex-start;
   }
 
   .center-lg {
-    @include justify-content(center);
+    justify-content: center;
   }
 
   .end-lg {
-    @include justify-content(end);
+    justify-content: flex-end;
   }
 
   .top-lg {
-    @include align-items(flex-start);
+    align-items: flex-start;
   }
 
   .middle-lg {
-    @include align-items(center);
+    align-items: center;
   }
 
   .bottom-lg {
-    @include align-items(end);
+    align-items: flex-end;
   }
 
   .around-lg {
-    @include justify-content(space-around);
+    justify-content: space-around;
   }
 
   .between-lg {
-    @include justify-content(space-between);
+    justify-content: space-between;
   }
 
   .first-lg {
-    @include order(-1);
+    order: -1;
   }
 
   .last-lg {
-    @include order(1);
+    order: 1;
   }
 }
 
@@ -782,63 +774,61 @@ $container-xl: ($xl-min + $gutter-width);
   .col-xl-offset-10,
   .col-xl-offset-11,
   .col-xl-offset-12 {
-    @include flex(0 0);
-    padding-right: ($outer-margin)rem;
-    padding-left: ($outer-margin)rem;
+    flex: 0 0 auto;
   }
 
   .col-xl {
-    @include flex-grow(1);
-    @include  flex-basis(0);
+    flex-grow: 1;
+    flex-basis: 0;
     max-width: 100%;
   }
 
   .col-xl-1 {
-    @include  flex-basis(8.33333333%, true);
+    flex-basis: 8.33333333%;
   }
 
   .col-xl-2 {
-    @include  flex-basis(16.66666667%, true);
+    flex-basis: 16.66666667%;
   }
 
   .col-xl-3 {
-    @include  flex-basis(25%, true);
+    flex-basis: 25%;
   }
 
   .col-xl-4 {
-    @include  flex-basis(33.33333333%, true);
+    flex-basis: 33.33333333%;
   }
 
   .col-xl-5 {
-    @include  flex-basis(41.66666667%, true);
+    flex-basis: 41.66666667%;
   }
 
   .col-xl-6 {
-    @include  flex-basis(50%, true);
+    flex-basis: 50%;
   }
 
   .col-xl-7 {
-    @include  flex-basis(58.33333333%, true);
+    flex-basis: 58.33333333%;
   }
 
   .col-xl-8 {
-    @include  flex-basis(66.66666667%, true);
+    flex-basis: 66.66666667%;
   }
 
   .col-xl-9 {
-    @include  flex-basis(75%, true);
+    flex-basis: 75%;
   }
 
   .col-xl-10 {
-    @include  flex-basis(83.33333333%, true);
+    flex-basis: 83.33333333%;
   }
 
   .col-xl-11 {
-    @include  flex-basis(91.66666667%, true);
+    flex-basis: 91.66666667%;
   }
 
   .col-xl-12 {
-    @include  flex-basis(100%, true);
+    flex-basis: 100%;
   }
 
   .col-xl-offset-0 {
@@ -890,42 +880,42 @@ $container-xl: ($xl-min + $gutter-width);
   }
 
   .start-xl {
-    @include justify-content(flex-start);
+    justify-content: flex-start;
   }
 
   .center-xl {
-    @include justify-content(center);
+    justify-content: center;
   }
 
   .end-xl {
-    @include justify-content(end);
+    justify-content: flex-end;
   }
 
   .top-xl {
-    @include align-items(flex-start);
+    align-items: flex-start;
   }
 
   .middle-xl {
-    @include align-items(center);
+    align-items: center;
   }
 
   .bottom-xl {
-    @include align-items(end);
+    align-items: flex-end;
   }
 
   .around-xl {
-    @include justify-content(space-around);
+    justify-content: space-around;
   }
 
   .between-xl {
-    @include justify-content(space-between);
+    justify-content: space-between;
   }
 
   .first-xl {
-    @include order(-1);
+    order: -1;
   }
 
   .last-xl {
-    @include order(1);
+    order: 1;
   }
 }

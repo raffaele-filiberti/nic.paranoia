@@ -25,31 +25,35 @@
 }
 
 @include mq(tablet) {
-    .heading {
-      h1 {
-        font-size: 7rem !important;
-        line-height: 7rem !important;
-      }
+  .heading {
+    h1 {
+      font-size: 7rem !important;
+      line-height: 7rem !important;
     }
   }
-
+}
 
 @include mq(desktop-wide) {
 
-    .heading {
-      h1 {
-        font-size: 12rem !important;
-        line-height: 12rem !important;
-      }
+  .heading {
+    h1 {
+      font-size: 12rem !important;
+      line-height: 12rem !important;
     }
   }
-
+}
 
 .text--box {
   padding: 2rem 1.25rem;
 }
 
 @include mq(tablet) {
+  .text--box {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@include mq(desktop) {
   .text--box {
     padding: 4rem 2.5rem;
   }

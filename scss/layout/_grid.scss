@@ -25,6 +25,8 @@ $container-xl: ($xl-min + $gutter-width);
   display: flex;
   flex-flow: row wrap;
   flex: 0 1 auto;
+  margin-left: -#{$half-gutter-width}rem;
+  margin-right: -#{$half-gutter-width}rem;
 }
 
 .reverse {
@@ -62,6 +64,8 @@ $container-xl: ($xl-min + $gutter-width);
 .col-offset-11,
 .col-offset-12 {
   flex: 0 0 auto;
+  padding-right: #{$half-gutter-width}rem;
+  padding-left: #{$half-gutter-width}rem;
 }
 
 .col {
@@ -244,6 +248,8 @@ $container-xl: ($xl-min + $gutter-width);
   .col-sm-offset-11,
   .col-sm-offset-12 {
     flex: 0 0 auto;
+    padding-right: #{$half-gutter-width}rem;
+    padding-left: #{$half-gutter-width}rem;
   }
 
   .col-sm {
@@ -421,6 +427,8 @@ $container-xl: ($xl-min + $gutter-width);
   .col-md-offset-11,
   .col-md-offset-12 {
     flex: 0 0 auto;
+    padding-right: #{$half-gutter-width}rem;
+    padding-left: #{$half-gutter-width}rem;
   }
 
   .col-md {
@@ -598,6 +606,8 @@ $container-xl: ($xl-min + $gutter-width);
   .col-lg-offset-11,
   .col-lg-offset-12 {
     flex: 0 0 auto;
+    padding-right: #{$half-gutter-width}rem;
+    padding-left: #{$half-gutter-width}rem;
   }
 
   .col-lg {
@@ -775,6 +785,9 @@ $container-xl: ($xl-min + $gutter-width);
   .col-xl-offset-11,
   .col-xl-offset-12 {
     flex: 0 0 auto;
+    padding-right: #{$half-gutter-width}rem;
+    padding-left: #{$half-gutter-width}rem;
+
   }
 
   .col-xl {

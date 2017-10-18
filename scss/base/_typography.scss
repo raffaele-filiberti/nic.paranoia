@@ -282,6 +282,10 @@ p {
 
 }
 
+date {
+  @extend %button;
+}
+
 q, blockquote {
   @extend %body2;
 }

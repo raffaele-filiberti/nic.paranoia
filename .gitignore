@@ -60,5 +60,6 @@ typings/
 # dotenv environment variables file
 .env
 
-#montezovo
+#dev folders
 montezovo
+icolors

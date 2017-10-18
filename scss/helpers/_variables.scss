@@ -5,10 +5,13 @@
 $red: #870000;
 $blank: #fff !default;
 $gray-primary: #6F6F6F;
-$gray-secondary: #4A4A4A;
+$gray-secondary: #DDD;
 $black: #212121 !default;
-$secondary: #FFF200;
-$primary: #303481;
+$secondary: #0E2431;
+$primary: #ff395e;
+
+$icolors-primary: #ef7500;
+$icolors-secondary: #6f6f6f;
 
 $colors: (
         primary: $primary,
@@ -57,6 +60,12 @@ $font-weight-values: (
         bold: 700,
         black: 900
 ) !default;
+
+//
+// Transition
+//
+$base-transition-duration: .25s;
+$transition-base: all $base-transition-duration cubic-bezier(.550, .055, .675, .190);
 
 
 

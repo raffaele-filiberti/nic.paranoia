@@ -1,25 +1,135 @@
 .bg-primary {
   background: $primary;
+  color: $secondary;
 
-  &.card {
+  &.card-bordered {
     border: solid $secondary;
   }
 
-  &.color-contrast {
+  .nav--link, .nav--brand {
     color: $secondary;
+
+    &.active {
+      color: $primary;
+    }
+
+    &:before {
+      background: $blank;
+    }
+
+    &.disabled {
+      color: $gray-primary;
+    }
+  }
+
+  .nav--full-screen {
+    background: $secondary;
+    color: $primary;
+
+    .nav--link {
+      color: $primary;
+    }
+  }
+
+  .frame ~ .pages {
+    li {
+      border-color: $secondary;
+
+      &.active {
+        background: $secondary;
+      }
+    }
+  }
+
+  .frame ~ .scrollbar {
+    .handle {
+      background: $secondary;
+    }
+  }
+
+  .news-row {
+    span.img--preview {
+      border-color: $secondary;
+
+      &.right,
+      &.left {
+        &:before {
+          background: $secondary;
+        }
+      }
+    }
   }
 }
 
 .bg-secondary {
   background: $secondary;
+  color: $primary;
 
-  &.card {
+  &.card-bordered {
     border: solid $primary;
   }
 
-  &.color-contrast {
+  .nav--link, .nav--brand {
     color: $primary;
+
+    &.active {
+      color: $secondary;
+    }
+
+    &:before {
+      background: $blank;
+    }
+
+    &.disabled {
+      color: $gray-primary;
+    }
   }
+
+  .nav--full-screen {
+    background: lighten($primary, 25%);
+    color: $secondary;
+
+    .nav--link {
+      color: $secondary;
+    }
+  }
+
+  .frame ~ .pages {
+    li {
+      border-color: $primary;
+
+      &.active {
+        background: $primary;
+      }
+    }
+  }
+
+  .frame ~ .scrollbar {
+    .handle {
+      background: $primary;
+    }
+  }
+
+  .news-row {
+    span.img--preview {
+      border-color: $primary;
+
+      &.right,
+      &.left {
+        &:before {
+          background: $primary;
+        }
+      }
+    }
+  }
+}
+
+section.bg-primary {
+  box-shadow: 0 6px 10px 0 rgba(255, 57, 94, 0.14), 0 1px 18px 0 rgba(255, 57, 94, 0.12), 0 3px 5px -1px rgba(255, 57, 94, 0.3);
+}
+
+section.bg-secondary {
+  box-shadow: 0 6px 10px 0 rgba(14, 36, 49, 0.14), 0 1px 18px 0 rgba(14, 36, 49, 0.12), 0 3px 5px -1px rgba(14, 36, 49, 0.3);
 }
 
 .bg-neutro {

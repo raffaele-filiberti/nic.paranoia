@@ -1,40 +1,68 @@
 //
 // extend .nav--link
 //
-.nav--light {
-  .nav--wrapper {
-    li {
-      display: block;
-    }
+.nav {
+  .nav--full-screen {
+    .nav--wrapper {
+      li {
+        opacity: 0;
+        transform: translate3d(0, 100px, 0);
+        @include transition(all 500ms);
 
-    .nav--link {
-      display: block;
-      position: relative;
-      z-index: 1;
-      @extend %button;
-      @include transition();
+        $nav-item-count: 10;
+        $transition-delay: 250ms;
+        $delay: 50ms;
 
-      &:before {
-        @include pseudo();
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 0;
-        background: $primary;
+        @for $i from 1 through $nav-item-count {
+          &:nth-of-type(#{$i}) {
+            transition-delay: $transition-delay + ($delay * $i);
+          }
+        }
+      }
+
+      .nav--link {
+        display: block;
+        position: relative;
+        z-index: 1;
+        @extend %button;
         @include transition();
-        z-index: -1;
-      }
-
-      &:hover:before {
-        height: 2px;
-      }
-
-      &.active {
-        color: $secondary;
 
         &:before {
-          height: 100%;
+          @include pseudo();
+          bottom: 0;
+          top: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 0;
+          height: 2px;
+          @include transition();
+          z-index: -1;
         }
+
+        &:hover:before {
+          width: 100%;
+        }
+
+        &.active {
+          &:before {
+            height: 100%;
+            width: 100%;
+
+          }
+        }
+
+        @include mq(desktop-wide) {
+          &:before {
+            height: 10px;
+          }
+        }
+      }
+    }
+    &.active {
+      li {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
       }
     }
   }

@@ -58,7 +58,11 @@ $(document).ready(function () {
     });
 
     controller.scrollTo(function (newpos) {
-        TweenMax.to(window, 0.75, {scrollTo: {y: newpos}});
+        if ($window.width() >= 768) {
+            TweenMax.to(window, 0.75, {scrollTo: {y: newpos}});
+        } else {
+            TweenMax.to(window, 0.75, {scrollTo: {y: newpos - $('.nav').height()}});
+        }
     });
 
 
@@ -73,7 +77,7 @@ $(document).ready(function () {
 
     $(document).on("click", "a.nav--link[href^='#']", function (e) {
         var id = $(this).attr("href");
-        $(this).parent().parent().find('.active').removeClass('active');
+        $('.nav').find('.active').removeClass('active');
         $(this).addClass('active');
         if ($(id).length > 0) {
             e.preventDefault();
@@ -123,5 +127,21 @@ $(document).ready(function () {
     $('.nav--burger').on('click', function () {
         $(this).toggleClass('active');
         $(this).parent().find('.nav--collapse').slideToggle(250);
+        $('.nav--full-screen').toggleClass('active');
     });
+
+    //  Section swipe
+    // get all slides
+    var slides = document.querySelectorAll("section.panel");
+
+    // create scene for every slide
+    for (var i=0; i<slides.length; i++) {
+        new ScrollMagic.Scene({
+            triggerElement: slides[i],
+            triggerHook: 'onLeave'
+        })
+            .setPin(slides[i])
+            .addIndicators() // add indicators (requires plugin)
+            .addTo(controller);
+    }
 });

@@ -2,9 +2,6 @@
 // Navbar
 //
 
-$navbar-light-color: $primary;
-$navbar-light-active-color: $primary;
-$navbar-light-disabled-color: $gray-primary;
 $nav-padding-y: 20px;
 $nav-padding-x: 40px;
 $nav-fixed-margin-y: 0;
@@ -13,48 +10,6 @@ $nav-brand-padding-y: 5px;
 $nav-brand-padding-x: 5px;
 $nav-link-padding-y: 8px;
 $nav-link-padding-x: 12px;
-
-//
-//  Basic theming
-//
-
-.nav--light {
-
-  .nav--brand {
-    color: $navbar-light-active-color;
-
-    @include hover-focus {
-      color: $navbar-light-active-color;
-    }
-  }
-
-  .nav--wrapper {
-    .nav--link {
-      color: $navbar-light-color;
-
-      @include hover-focus {
-        color: $navbar-light-active-color;
-      }
-
-      &.disabled {
-        color: $navbar-light-disabled-color;
-      }
-    }
-
-    .active > .nav--link,
-    .nav--link.active {
-      color: $navbar-light-active-color;
-    }
-  }
-}
-
-.nav--dark {
-
-  .nav--link {
-    color: map_get($colors, blank);
-
-  }
-}
 
 //
 //  Nav Container - Designed for sub menu containing
@@ -160,6 +115,38 @@ $nav-link-padding-x: 12px;
   // Responsive
   //
 
+  .nav--full-screen {
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: -100%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 998;
+    @include transition();
+
+    &.active {
+      right: 0;
+    }
+
+    .nav--wrapper {
+      .nav--link {
+        padding: .25rem .5rem;
+        font-size: 1.25rem;
+        line-height: 2.5rem;
+        margin: .25rem 0;
+      }
+
+      @include mq(desktop-wide) {
+        .nav--link {
+          padding: .5rem 1rem;
+          font-size: 5rem;
+          line-height: 5rem;
+        }
+      }
+    }
+  }
+
   &.nav--expand .nav--collapse {
     flex-basis: 100%;
     flex-grow: 1;
@@ -175,6 +162,7 @@ $nav-link-padding-x: 12px;
     display: flex;
     align-items: center;
     cursor: pointer;
+    z-index: 999;
 
     span {
       position: relative;
@@ -190,9 +178,28 @@ $nav-link-padding-x: 12px;
       &:after {
         width: 35px;
         height: 2px;
-        background: map_get($colors, primary);
-        @include transition($transition-base);
+        background: map_get($colors, blank);
+        @include transition();
       }
+
+      @include mq(desktop-wide) {
+        &,
+        &:before,
+        &:after {
+          width: 45px;
+          height: 5px;
+        }
+      }
+
+      @include mq(tablet) {
+        &,
+        &:before,
+        &:after {
+          width: 40px;
+          height: 4px;
+        }
+      }
+
 
       &:before {
         transform: translate3d(0, -10px, 0);
@@ -208,9 +215,11 @@ $nav-link-padding-x: 12px;
         width: 0;
 
         &:before {
+          background: map_get($colors, blank);
           transform: translate3d(-27.5px, 0, 0) rotateZ(45deg);
         }
         &:after {
+          background: map_get($colors, blank);
           transform: translate3d(-27.5px, 0, 0) rotateZ(-45deg);
         }
       }

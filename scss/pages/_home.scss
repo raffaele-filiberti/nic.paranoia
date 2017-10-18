@@ -44,6 +44,7 @@
 }
 
 .text--box {
+  position: relative;
   padding: 2rem 1.25rem;
 }
 
@@ -55,7 +56,7 @@
 
 @include mq(desktop) {
   .text--box {
-    padding: 4rem 2.5rem;
+    padding: 3rem 2rem;
   }
 }
 
@@ -64,10 +65,35 @@
   margin-right: 0;
   margin-bottom: 1rem;
   margin-left: 0;
-  border-width: .2rem;
   position: relative;
-  background: #fafafa;
-  border: solid $gray-primary;
+  background: lighten($gray-primary, 50%);
+  border-radius: .25rem;
+
+  .frame & {
+    margin-left: 2.5rem;
+  }
+
+  .card--img {
+    img {
+      height: 350px;
+      width: auto;
+      margin: 0 auto;
+    }
+
+    & + .text--box {
+      padding: 0;
+      margin-top: 2.5rem;
+    }
+  }
+
+  .text--box {
+    padding: 0;
+  }
+
+  &.card-bordered {
+    border-width: .2rem;
+    border: solid $gray-primary;
+  }
 }
 
 .parallax--container {
@@ -77,7 +103,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
   margin: 0;
 }
 
@@ -86,3 +111,59 @@
   min-height: 100vh;
   height: 100%;
 }
+
+.news-row {
+  @extend .row;
+  padding: 3.5em 0;
+
+  span.img--preview {
+    display: block;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-width: 4px;
+    border-style: solid;
+    z-index: 2;
+
+    @include mq(phone) {
+      &.right,
+      &.left {
+        &:before {
+          @include pseudo();
+          top: 50%;
+          height: 4px;
+          width: 50%;
+          z-index: 0;
+        }
+      }
+
+      &.right {
+        &:before {
+          right: 100%;
+        }
+      }
+
+      &.left {
+        &:before {
+          left: 100%;
+        }
+      }
+    }
+
+    @include mq(tablet) {
+      &.left:before,
+      &.right:before {
+        width: 100%;
+      }
+    }
+
+    @include mq(desktop) {
+      &.left:before,
+      &.right:before {
+        width: 175%;
+      }
+    }
+  }
+}
+

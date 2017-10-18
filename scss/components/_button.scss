@@ -14,7 +14,6 @@ $btn-border-radius: .25rem;
 
 // Transition
 $btn-transition-duration: .25s;
-$transition-base: all $btn-transition-duration cubic-bezier(.550, .055, .675, .190);
 $btn-transition: all $btn-transition-duration ease;
 
 // Border
@@ -30,19 +29,19 @@ $btn-border-width: 2px;
   padding: $btn-padding-y $btn-padding-x;
   border-radius: $btn-border-radius;
   transition: $btn-transition;
+  cursor: pointer;
   @extend %button;
 }
 
 @each $theming, $color in $btn-colors {
   .btn-#{$theming} {
-    background-color: lighten($color, 25%);
-    border-color: lighten($color, 25%);
-    color: map_get($colors, blank);
+    background-color: transparent;
+    border-color: $color;
+    color:$color;
 
     @include hover-focus() {
       background-color: $color;
-      border-color: $color;
-
+      color: map_get($colors, blank);
     }
   }
 }

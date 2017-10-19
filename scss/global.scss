@@ -1,38 +1,42 @@
 /*
-Base
-*/
+ *  Base
+ */
 @import 'base/_reset.scss';
 
 /*
-Helpers
-*/
+ *  Helpers
+ */
 @import 'helpers/_variables.scss';
 @import 'helpers/_functions.scss';
 @import 'helpers/_mixins.scss';
 @import 'helpers/_helpers.scss';
 
 /*
-Reset
+ *  Theme
+ */
+@import 'themes/_theme.scss';
+
+/*
+ *  Typography
  */
 @import 'base/_typography.scss';
 
 /*
-Components
-*/
+ *  Components
+ */
 @import 'components/_button.scss';
 @import 'components/_navbar.scss';
 @import 'components/_form-group.scss';
 
 /*
-Layout
-*/
+ *  Layout
+ */
 @import 'layout/_grid.scss';
 @import 'layout/_header.scss';
 @import 'layout/_footer.scss';
 @import 'layout/_forms.scss';
 
 /*
-Pages
-*/
+ *  Pages
+ */
 @import 'pages/_home.scss';
-@import 'themes/_theme.scss';

@@ -10,26 +10,6 @@ $black: #212121 !default;
 $secondary: #0E2431;
 $primary: #ff395e;
 
-$icolors-primary: #ef7500;
-$icolors-secondary: #6f6f6f;
-
-$colors: (
-        primary: $primary,
-        secondary: $secondary,
-        disabled: $gray-primary,
-        blank: $blank,
-        gray: $gray-secondary,
-        dark: $black,
-);
-
-$btn-colors: (
-        primary: $primary,
-        secondary: $secondary,
-        disabled: $gray-primary,
-        gray: $gray-secondary,
-        dark: $black
-);
-
 //
 //      Shadow
 //

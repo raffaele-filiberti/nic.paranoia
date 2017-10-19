@@ -96,8 +96,13 @@ $nav-link-padding-x: 12px;
     //
 
     .nav--link {
+      display: block;
+      position: relative;
       padding: ($nav-link-padding-y / 2) 0;
       margin: $nav-link-padding-y 0;
+      z-index: 1;
+      @extend %button;
+      @include transition();
     }
   }
 
@@ -111,8 +116,14 @@ $nav-link-padding-x: 12px;
     padding-bottom: $nav-link-padding-y;
   }
 
-  //
+
+
+  /*************************************/
   // Responsive
+  /*************************************/
+
+  //
+  // Navbar with fullpage menu
   //
 
   .nav--full-screen {
@@ -123,7 +134,7 @@ $nav-link-padding-x: 12px;
     width: 100vw;
     height: 100vh;
     z-index: 998;
-    @include transition();
+    @include transition(all .5s ease-in);
 
     &.active {
       right: 0;
@@ -146,6 +157,10 @@ $nav-link-padding-x: 12px;
       }
     }
   }
+
+  //
+  // Navbar with bootstrap menu
+  //
 
   &.nav--expand .nav--collapse {
     flex-basis: 100%;
@@ -215,11 +230,9 @@ $nav-link-padding-x: 12px;
         width: 0;
 
         &:before {
-          background: map_get($colors, blank);
           transform: translate3d(-27.5px, 0, 0) rotateZ(45deg);
         }
         &:after {
-          background: map_get($colors, blank);
           transform: translate3d(-27.5px, 0, 0) rotateZ(-45deg);
         }
       }

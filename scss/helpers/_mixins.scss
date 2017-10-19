@@ -83,6 +83,7 @@ $breakpoints: (
 
   &:focus,
   &:active,
+  &.active,
   &:hover {
     @content;
   }

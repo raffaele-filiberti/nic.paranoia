@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#ff395e">
     <link rel="stylesheet" href="dist/css/global.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
@@ -505,17 +506,16 @@
 <script>
     var frame = $('#basic');
     var fullpageFrame = $('#fullpage');
-    var slidee = frame.children('ul').eq(0);
-    var fullpageSlidee = fullpageFrame.children('ul').eq(0);
     var wrap = frame.parent();
     var fullpageWrap = fullpageFrame.parent();
 
     // Call Sly on frame
     var basicOptions = {
         horizontal: 1,
-        itemNav: 'basic',
-        smart: 1,
         activateOn: 'click',
+        itemNav: 'forceCentered',
+        activateMiddle: true,
+        smart: 1,
         mouseDragging: 1,
         touchDragging: 1,
         releaseSwing: 1,
@@ -536,13 +536,14 @@
 
     var fullpageOptions = {
         horizontal: 1,
-        itemNav: 'basic',
+        itemNav: 'forceCentered',
+        activateMiddle: true,
         smart: 1,
-        activateOn: 'click',
         mouseDragging: 1,
         touchDragging: 1,
         releaseSwing: 1,
         startAt: 0,
+        activateOn: 'click',
         scrollBy: 1,
         pagesBar: fullpageWrap.find('.pages'),
         scrollBar: fullpageWrap.find('.scrollbar'),

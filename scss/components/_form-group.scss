@@ -1,8 +1,8 @@
 $form-el-padding-y: .5rem;
 $form-el-padding-x: .75rem;
-$form-el-color: $gray-primary;
-$form-el-bg: $blank;
-$form-el-border: 2px solid $gray-secondary;
+$form-el-color: map_get($colors, disabled);
+$form-el-bg: map_get($colors, blank);
+$form-el-border: 2px solid map_get($colors, gray);
 $form-el-border-radius: .25rem;
 
 .form-inline {
@@ -56,9 +56,9 @@ $form-el-border-radius: .25rem;
     @extend %subheading2;
 
     &:focus {
-      color: $primary;
-      background-color: $blank;
-      border-color: $secondary;
+      color: map_get($colors, primary);
+      background-color: map_get($colors, blank);
+      border-color: map_get($colors, secondary);
       outline: 0;
     }
   }
@@ -70,7 +70,7 @@ $form-el-border-radius: .25rem;
   .form-text {
     display: block;
     margin-top: .25rem;
-    color: lighten($gray-primary, 20%);
+    color: lighten(map_get($colors, disabled), 20%);
     @extend %caption;
   }
 

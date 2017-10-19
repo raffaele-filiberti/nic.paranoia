@@ -1,60 +1,110 @@
+//
+//  Theme Variables
+//  @var: general, btns
+//  *** IMPORTANT ***: copy & paste each time you start a new project
+//
+$colors: (
+        primary: $primary,
+        secondary: $secondary,
+        disabled: $gray-primary,
+        blank: $blank,
+        gray: $gray-secondary,
+        dark: $black,
+);
+
+$btn-colors: (
+        primary: $primary,
+        secondary: $secondary,
+        disabled: $gray-primary,
+        gray: $gray-secondary,
+        dark: $black,
+);
+
+//
+// Theme Behaviour
+//
+
 .bg-primary {
-  background: $primary;
-  color: $secondary;
+  background: map_get($colors, primary);
+  color: map_get($colors, secondary);
 
   &.card-bordered {
-    border: solid $secondary;
+    border: solid map_get($colors, secondary);
   }
 
   .nav--link, .nav--brand {
-    color: $secondary;
+    color: map_get($colors, secondary);
 
-    &.active {
-      color: $primary;
+    @include hover-focus-active() {
+      color: lighten(map_get($colors, secondary), 25%);
     }
 
     &:before {
-      background: $blank;
+      background: map_get($colors, blank);
     }
 
     &.disabled {
-      color: $gray-primary;
+      color: map_get($colors, disabled);
+    }
+  }
+
+  .nav--burger {
+    span {
+      &,
+      &:before,
+      &:after {
+        background: map_get($colors, secondary);
+      }
+    }
+
+    &.active {
+      span {
+        &,
+        &:before,
+        &:after {
+          background: map_get($colors, primary);
+        }
+      }
     }
   }
 
   .nav--full-screen {
-    background: $secondary;
-    color: $primary;
+    background: lighten(map_get($colors, secondary), 25%);
+    color: map_get($colors, primary);
 
     .nav--link {
-      color: $primary;
+      color: map_get($colors, primary);
+
+      @include hover-focus-active() {
+        color: map_get($colors, secondary);
+      }
     }
   }
 
   .frame ~ .pages {
     li {
-      border-color: $secondary;
+      border-color: map_get($colors, secondary);
 
       &.active {
-        background: $secondary;
+        background: map_get($colors, secondary);
       }
     }
   }
 
   .frame ~ .scrollbar {
     .handle {
-      background: $secondary;
+      background: map_get($colors, secondary);
     }
   }
 
   .news-row {
     span.img--preview {
-      border-color: $secondary;
+      border-color: map_get($colors, secondary);
 
       &.right,
       &.left {
         &:before {
-          background: $secondary;
+          background: map_get($colors, secondary);
         }
       }
     }
@@ -62,62 +112,85 @@
 }
 
 .bg-secondary {
-  background: $secondary;
-  color: $primary;
+  background: map_get($colors, secondary);
+  color: map_get($colors, primary);
 
   &.card-bordered {
-    border: solid $primary;
+    border: solid map_get($colors, primary);
   }
 
   .nav--link, .nav--brand {
-    color: $primary;
+    color: map_get($colors, primary);
 
-    &.active {
-      color: $secondary;
+    @include hover-focus-active() {
+      color: lighten(map_get($colors, primary), 25%);
     }
-
     &:before {
-      background: $blank;
+      background: map_get($colors, blank);
     }
 
     &.disabled {
-      color: $gray-primary;
+      color: map_get($colors, disabled);
     }
   }
 
   .nav--full-screen {
-    background: lighten($primary, 25%);
-    color: $secondary;
+    background: lighten(map_get($colors, primary), 25%);
+    color: map_get($colors, secondary);
 
     .nav--link {
-      color: $secondary;
+      color: map_get($colors, secondary);
+
+      @include hover-focus-active() {
+        color: map_get($colors, primary);
+      }
+    }
+  }
+
+  .nav--burger {
+    span {
+      &,
+      &:before,
+      &:after {
+        background: map_get($colors, primary);
+      }
+    }
+
+    &.active {
+      span {
+        &,
+        &:before,
+        &:after {
+          background: map_get($colors, secondary);
+        }
+      }
     }
   }
 
   .frame ~ .pages {
     li {
-      border-color: $primary;
+      border-color: map_get($colors, primary);
 
       &.active {
-        background: $primary;
+        background: map_get($colors, primary);
       }
     }
   }
 
   .frame ~ .scrollbar {
     .handle {
-      background: $primary;
+      background: map_get($colors, primary);
     }
   }
 
   .news-row {
     span.img--preview {
-      border-color: $primary;
+      border-color: map_get($colors, primary);
 
       &.right,
       &.left {
         &:before {
-          background: $primary;
+          background: map_get($colors, primary);
         }
       }
     }
@@ -125,11 +198,11 @@
 }
 
 section.bg-primary {
-  box-shadow: 0 6px 10px 0 rgba(255, 57, 94, 0.14), 0 1px 18px 0 rgba(255, 57, 94, 0.12), 0 3px 5px -1px rgba(255, 57, 94, 0.3);
+  box-shadow: 0 6px 10px 0 rgba(map_get($colors, primary), 0.14), 0 1px 18px 0 rgba(map_get($colors, primary), 0.12), 0 3px 5px -1px rgba(map_get($colors, primary), 0.3);
 }
 
 section.bg-secondary {
-  box-shadow: 0 6px 10px 0 rgba(14, 36, 49, 0.14), 0 1px 18px 0 rgba(14, 36, 49, 0.12), 0 3px 5px -1px rgba(14, 36, 49, 0.3);
+  box-shadow: 0 6px 10px 0 rgba(map_get($colors, secondary), 0.14), 0 1px 18px 0 rgba(map_get($colors, secondary), 0.12), 0 3px 5px -1px rgba(map_get($colors, secondary), 0.3);
 }
 
 .bg-neutro {
@@ -141,5 +214,5 @@ section.bg-secondary {
 }
 
 .bg-dark {
-  background: $gray-secondary;
+  background: map_get($colors, gray);
 }

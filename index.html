@@ -6,14 +6,14 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#ff395e">
-    <link rel="stylesheet" href="dist/css/global.css">
+    <link rel="stylesheet" href="/dist/css/global.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
     <title>W e b S t a r t e r</title>
 </head>
 <body>
 <div class="nav--container nav--fixed">
-    <div class="nav bg-secondary">
+    <div class="nav bg-dark">
         <a class="nav--brand" href="">
             Logo<br>
             <span class="nav--sub-brand">Motto del brand</span>
@@ -498,16 +498,23 @@
             <div class="mousearea"></div>
         </div>
     </div>
-    <ul class="pages"></ul>
+    <ul class="pages on-frame"></ul>
 </section>
-<script src="dist/js/libs.min.js"></script>
-<script src="dist/js/all.min.js"></script>
-<script src="libs/sly.min.js"></script>
+<script src="/dist/js/libs.min.js"></script>
+<script src="/dist/js/all.min.js"></script>
+<script src="/libs/sly.min.js"></script>
 <script>
     var frame = $('#basic');
     var fullpageFrame = $('#fullpage');
     var wrap = frame.parent();
     var fullpageWrap = fullpageFrame.parent();
+    var fullpageSlidee = fullpageFrame.children().eq(0);
+
+
+    $.each(fullpageSlidee.children(), function () {
+        $(this).css('width', fullpageFrame.parent().width());
+        console.log(fullpageFrame.parent().width());
+    });
 
     // Call Sly on frame
     var basicOptions = {

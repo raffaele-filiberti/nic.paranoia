@@ -65,6 +65,7 @@ gulp.task('scripts', function() {
 });
 
 // Watch Files For Changes
+// Added icolors folder
 gulp.task('watch', function() {
     gulp.watch('js/index.js', ['lint', 'scripts']);
     gulp.watch(
@@ -75,6 +76,7 @@ gulp.task('watch', function() {
             'scss/layout/*.scss',
             'scss/pages/*.scss',
             'scss/themes/*.scss',
+            'scss/themes/icolors/*.scss',
             'scss/vendor/*.scss',
             'scss/*.scss'
         ], ['sass']);

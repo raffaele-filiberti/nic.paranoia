@@ -23,13 +23,11 @@ $shadow-5: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.1
 //
 //      Fonts
 //
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:400');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,600');
 
 $font-family: (
         heading: 'Roboto Slab',
-        body: 'Roboto Slab',
+        body: 'Roboto Slab'
 ) !default;
 
 $font-weight-values: (
@@ -46,6 +44,5 @@ $font-weight-values: (
 //
 $base-transition-duration: .25s;
 $transition-base: all $base-transition-duration cubic-bezier(.550, .055, .675, .190);
-
 
 

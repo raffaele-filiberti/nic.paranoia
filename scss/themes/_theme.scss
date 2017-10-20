@@ -204,15 +204,3 @@ section.bg-primary {
 section.bg-secondary {
   box-shadow: 0 6px 10px 0 rgba(map_get($colors, secondary), 0.14), 0 1px 18px 0 rgba(map_get($colors, secondary), 0.12), 0 3px 5px -1px rgba(map_get($colors, secondary), 0.3);
 }
-
-.bg-neutro {
-  background: transparent;
-
-  &.color-contrast {
-    color: transparent;
-  }
-}
-
-.bg-dark {
-  background: map_get($colors, gray);
-}

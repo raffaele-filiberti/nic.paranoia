@@ -36,11 +36,18 @@ $nav-link-padding-x: 12px;
   padding: ($nav-padding-y / 2) ($nav-padding-x / 2);
 }
 
+.nav--sub {
+  padding: 0 ($nav-padding-x / 2);
+  display: flex;
+  flex-wrap: wrap;
+}
+
 //
 //  General nav
 //
 
-.nav {
+.nav,
+.nav--sub {
   position: relative;
 
   //
@@ -50,8 +57,14 @@ $nav-link-padding-x: 12px;
   &,
   > .container,
   > .container-fluid {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  &,
+  > .container:not(.end),
+  > .container-fluid:not(.end) {
     @extend .center;
     @extend .between;
   }
@@ -114,9 +127,12 @@ $nav-link-padding-x: 12px;
     display: inline-block;
     padding-top: $nav-link-padding-y;
     padding-bottom: $nav-link-padding-y;
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
   }
-
-
 
   /*************************************/
   // Responsive
@@ -193,7 +209,6 @@ $nav-link-padding-x: 12px;
       &:after {
         width: 35px;
         height: 2px;
-        background: map_get($colors, blank);
         @include transition();
       }
 
@@ -214,7 +229,6 @@ $nav-link-padding-x: 12px;
           height: 4px;
         }
       }
-
 
       &:before {
         transform: translate3d(0, -10px, 0);
@@ -241,6 +255,10 @@ $nav-link-padding-x: 12px;
 }
 
 @include mq(tablet) {
+  .nav--sub {
+    padding: 0 $nav-padding-x;
+
+  }
   .nav {
     padding: $nav-padding-y $nav-padding-x;
     &.nav--expand {

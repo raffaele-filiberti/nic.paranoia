@@ -38,24 +38,24 @@ $(document).ready(function () {
     }
 
     //  Smooth scroll
-    var scrollTime = 2;
-    var scrollDistance = 300;
-
-    $window.on("mousewheel DOMMouseScroll", function (event) {
-
-        event.preventDefault();
-
-        var delta = event.originalEvent.wheelDelta / 120 || -event.originalEvent.detail / 3;
-        var scrollTop = $window.scrollTop();
-        var finalScroll = scrollTop - parseInt(delta * scrollDistance);
-
-        TweenMax.to($window, scrollTime, {
-            scrollTo: {y: finalScroll, autoKill: true},
-            ease: Power1.easeOut,
-            overwrite: 5
-        });
-
-    });
+    // var scrollTime = 2;
+    // var scrollDistance = 300;
+    //
+    // $window.on("mousewheel DOMMouseScroll", function (event) {
+    //
+    //     event.preventDefault();
+    //
+    //     var delta = event.originalEvent.wheelDelta / 120 || -event.originalEvent.detail / 3;
+    //     var scrollTop = $window.scrollTop();
+    //     var finalScroll = scrollTop - parseInt(delta * scrollDistance);
+    //
+    //     TweenMax.to($window, scrollTime, {
+    //         scrollTo: {y: finalScroll, autoKill: true},
+    //         ease: Power1.easeOut,
+    //         overwrite: 5
+    //     });
+    //
+    // });
 
     controller.scrollTo(function (newpos) {
         if ($window.width() >= 768) {

@@ -8,7 +8,7 @@ body {
 section {
   position: relative;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -167,7 +167,6 @@ img {
 
     li {
       float: left;
-      margin: 0 5px 0 0;
       padding: 0;
       width: 50vh;
       height: 100%;
@@ -180,21 +179,7 @@ img {
 
   &.frame--full-page {
     height: 100vh;
-
     .slidee {
-
-      li {
-        width: 100vw;
-      }
-    }
-
-    & ~ .pages {
-      position: absolute;
-      display: block;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      bottom: 30px;
     }
 
     & ~ .scrollbar {
@@ -242,6 +227,15 @@ img {
     &.active {
       border-style: solid;
     }
+  }
+
+  &.on-frame {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 30px;
   }
 }
 

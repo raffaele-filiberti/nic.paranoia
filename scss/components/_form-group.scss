@@ -10,7 +10,7 @@ $form-el-border-radius: .25rem;
   flex-flow: row wrap;
   align-items: center;
 
-  @include mq(phone) {
+  @include mq(sm) {
     .form-group {
       display: flex;
       flex: 0 0 auto;

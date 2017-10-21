@@ -57,7 +57,7 @@ img {
   width: 100%;
 }
 
-@include mq(tablet) {
+@include mq(md) {
   .grid-sizer,
   .grid-item {
     width: 25%;

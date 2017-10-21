@@ -51,7 +51,7 @@
           }
         }
 
-        @include mq(desktop-wide) {
+        @include mq(xl) {
           &:before {
             height: 10px;
           }

@@ -62,13 +62,6 @@ $nav-link-padding-x: 12px;
     flex-wrap: wrap;
   }
 
-  &,
-  > .container:not(.end),
-  > .container-fluid:not(.end) {
-    @extend .center;
-    @extend .between;
-  }
-
   //
   // Navbar brand
   //
@@ -99,7 +92,6 @@ $nav-link-padding-x: 12px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    @extend .middle;
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
@@ -146,7 +138,7 @@ $nav-link-padding-x: 12px;
     position: fixed;
     display: flex;
     top: 0;
-    right: -100%;
+    right: -100vw;
     width: 100vw;
     height: 100vh;
     z-index: 998;
@@ -164,7 +156,7 @@ $nav-link-padding-x: 12px;
         margin: .25rem 0;
       }
 
-      @include mq(desktop-wide) {
+      @include mq(xl) {
         .nav--link {
           padding: .5rem 1rem;
           font-size: 5rem;
@@ -181,7 +173,6 @@ $nav-link-padding-x: 12px;
   &.nav--expand .nav--collapse {
     flex-basis: 100%;
     flex-grow: 1;
-    @extend .middle;
   }
 
   //
@@ -212,7 +203,7 @@ $nav-link-padding-x: 12px;
         @include transition();
       }
 
-      @include mq(desktop-wide) {
+      @include mq(xl) {
         &,
         &:before,
         &:after {
@@ -221,7 +212,7 @@ $nav-link-padding-x: 12px;
         }
       }
 
-      @include mq(tablet) {
+      @include mq(md) {
         &,
         &:before,
         &:after {
@@ -254,7 +245,7 @@ $nav-link-padding-x: 12px;
   }
 }
 
-@include mq(tablet) {
+@include mq(md) {
   .nav--sub {
     padding: 0 $nav-padding-x;
 
@@ -302,7 +293,7 @@ $nav-link-padding-x: 12px;
   }
 }
 
-@include mq(tablet, max) {
+@include mq(md, max) {
   .nav--expand {
     > .container,
     > .container-fluid {

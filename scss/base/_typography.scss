@@ -120,7 +120,7 @@
   text-transform: uppercase
 }
 
-@include mq(tablet) {
+@include mq(md) {
   %display4 {
     font-size: 2.5rem;
     line-height: 2.5rem;
@@ -162,7 +162,7 @@
   }
 }
 
-@include mq(desktop) {
+@include mq(lg) {
   %display4 {
     font-size: 7rem;
     line-height: 7rem;

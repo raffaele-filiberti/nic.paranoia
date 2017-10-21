@@ -16,7 +16,7 @@
   }
 }
 
-@include mq(phone) {
+@include mq(sm) {
   .hero {
     &.nav--padding {
       padding: 0;
@@ -24,7 +24,7 @@
   }
 }
 
-@include mq(tablet) {
+@include mq(md) {
   .heading {
     h1 {
       font-size: 7rem !important;
@@ -33,7 +33,7 @@
   }
 }
 
-@include mq(desktop-wide) {
+@include mq(xl) {
 
   .heading {
     h1 {
@@ -48,13 +48,13 @@
   padding: 2rem 1.25rem;
 }
 
-@include mq(tablet) {
+@include mq(md) {
   .text--box {
     padding: 3rem 1.5rem;
   }
 }
 
-@include mq(desktop) {
+@include mq(lg) {
   .text--box {
     padding: 3rem 2rem;
   }
@@ -126,7 +126,7 @@
     border-style: solid;
     z-index: 2;
 
-    @include mq(phone) {
+    @include mq(sm) {
       &.right,
       &.left {
         &:before {
@@ -151,14 +151,14 @@
       }
     }
 
-    @include mq(tablet) {
+    @include mq(md) {
       &.left:before,
       &.right:before {
         width: 100%;
       }
     }
 
-    @include mq(desktop) {
+    @include mq(lg) {
       &.left:before,
       &.right:before {
         width: 175%;

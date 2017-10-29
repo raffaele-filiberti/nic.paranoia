@@ -1,0 +1,25 @@
+.grid {
+  margin: 5em 0;
+}
+
+.grid-sizer,
+.grid-item,
+.grid-item--width-2,
+.grid-item--width-3 {
+  width: 100%;
+}
+
+@include mq(md) {
+  .grid-sizer,
+  .grid-item {
+    width: 25%;
+  }
+
+  .grid-item--width-2 {
+    width: 50%;
+  }
+
+  .grid-item--width-3 {
+    width: 75%;
+  }
+}

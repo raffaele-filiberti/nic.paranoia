@@ -28,11 +28,7 @@ $container-max-widths: (
   margin-left: auto;
   padding-right: #{$gutter-width}rem;
   padding-left: #{$gutter-width}rem;
-}
-
-.container-fluid {
-  padding-right: #{$outer-margin}rem;
-  padding-left: #{$outer-margin}rem;
+  width: 100%;
 }
 
 .row {
@@ -59,15 +55,6 @@ $columns: 12;
   min-height: 1px;
   padding-right: #{$half-gutter-width}rem;
   padding-left: #{$half-gutter-width}rem;
-}
-
-@function breakpoint-min($name, $breakpoints: $breakpoints) {
-  $min: map-get($breakpoints, $name);
-  @return if($min != 0, $min, null);
-}
-
-@function breakpoint-infix($name, $breakpoints: $breakpoints) {
-  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
 }
 
 @each $breakpoint, $px in $breakpoints {
@@ -99,46 +86,46 @@ $columns: 12;
           margin-left: 100% / ( $columns ) * $i;
         }
       }
-    }
 
-    .start#{$infix} {
-      justify-content: flex-start;
-    }
+      .start#{$infix} {
+        justify-content: flex-start;
+      }
 
-    .center#{$infix} {
-      justify-content: center;
-    }
+      .center#{$infix} {
+        justify-content: center;
+      }
 
-    .end#{$infix} {
-      justify-content: flex-end;
-    }
+      .end#{$infix} {
+        justify-content: flex-end;
+      }
 
-    .top#{$infix} {
-      align-items: flex-start;
-    }
+      .top#{$infix} {
+        align-items: flex-start;
+      }
 
-    .middle#{$infix} {
-      align-items: center;
-    }
+      .middle#{$infix} {
+        align-items: center;
+      }
 
-    .bottom#{$infix} {
-      align-items: flex-end;
-    }
+      .bottom#{$infix} {
+        align-items: flex-end;
+      }
 
-    .around#{$infix} {
-      justify-content: space-around;
-    }
+      .around#{$infix} {
+        justify-content: space-around;
+      }
 
-    .between#{$infix} {
-      justify-content: space-between;
-    }
+      .between#{$infix} {
+        justify-content: space-between;
+      }
 
-    .first#{$infix} {
-      order: -1;
-    }
+      .first#{$infix} {
+        order: -1;
+      }
 
-    .last#{$infix} {
-      order: 1;
+      .last#{$infix} {
+        order: 1;
+      }
     }
   }
 }

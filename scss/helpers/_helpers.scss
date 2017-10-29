@@ -31,83 +31,48 @@ img {
   display: block;
 }
 
-.txt-align-center {
+.txt-center {
   text-align: center !important;
 }
 
-.txt-align-right {
+.txt-right {
   text-align: right !important;
 }
 
-.txt-align-left {
+.txt-left {
   text-align: left !important;
 }
 
-//
-// Masonry pkgd plugin
-//
-.grid {
-  margin: 5em 0;
-}
+/*
+    Margin and padding
 
-.grid-sizer,
-.grid-item,
-.grid-item--width-2,
-.grid-item--width-3 {
-  width: 100%;
-}
+ */
+@each $breakpoint in map-keys($breakpoints) {
+  $infix: breakpoint-infix($breakpoint, $breakpoints);
 
-@include mq(md) {
-  .grid-sizer,
-  .grid-item {
-    width: 25%;
+  @each $prop, $abbrev in (margin: m, padding: p) {
+    @each $size, $length in $spacers {
+
+      .#{$abbrev}#{$infix}-#{$size} {
+        #{$prop}: $length !important;
+      }
+      .#{$abbrev}t#{$infix}-#{$size},
+      .#{$abbrev}y#{$infix}-#{$size} {
+        #{$prop}-top: $length !important;
+      }
+      .#{$abbrev}r#{$infix}-#{$size},
+      .#{$abbrev}x#{$infix}-#{$size} {
+        #{$prop}-right: $length !important;
+      }
+      .#{$abbrev}b#{$infix}-#{$size},
+      .#{$abbrev}y#{$infix}-#{$size} {
+        #{$prop}-bottom: $length !important;
+      }
+      .#{$abbrev}l#{$infix}-#{$size},
+      .#{$abbrev}x#{$infix}-#{$size} {
+        #{$prop}-left: $length !important;
+      }
+    }
   }
-
-  .grid-item--width-2 {
-    width: 50%;
-  }
-
-  .grid-item--width-3 {
-    width: 75%;
-  }
 }
 
-//
-//Material Icons
-//
-.material-icons {
-  vertical-align: top;
-  font-weight: inherit;
-}
-
-.material-icons-18 {
-  font-size: 18px !important;
-}
-
-.material-icons-24 {
-  font-size: 24px !important;
-}
-
-.material-icons-36 {
-  font-size: 36px !important;
-}
-
-.material-icons-48 {
-  font-size: 48px !important;
-}
-
-.material-icons-dark {
-  color: rgba(0, 0, 0, 0.54);
-}
-
-.material-icons-dark.material-icons-inactive {
-  color: rgba(0, 0, 0, 0.26);
-}
-
-.material-icons-light {
-  color: rgba(255, 255, 255, 1);
-}
-
-.material-icons-light.material-icons-inactive {
-  color: rgba(255, 255, 255, 0.3);
-}

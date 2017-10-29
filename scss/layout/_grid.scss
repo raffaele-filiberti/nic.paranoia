@@ -26,6 +26,8 @@ $container-max-widths: (
 .container {
   margin-right: auto;
   margin-left: auto;
+  padding-right: #{$gutter-width}rem;
+  padding-left: #{$gutter-width}rem;
 }
 
 .container-fluid {
@@ -84,58 +86,60 @@ $columns: 12;
     .col#{$infix}-#{$i},
     .col#{$infix}-offset-#{$i} {
       @extend %columns;
-      flex: 0 0 auto;
     }
 
-    .col#{$infix}-#{$i} {
-      flex-basis: 100% / ( $columns ) * $i;
-    }
+    @include mq($breakpoint) {
 
-    .col#{$infix}-offset-#{$i} {
-      @if not ($i == $columns) {
-        margin-left: 100% / ( $columns ) * $i;
+      .col#{$infix}-#{$i} {
+        flex: 0 0 percentage($i / $columns);
+      }
+
+      .col#{$infix}-offset-#{$i} {
+        @if not ($i == $columns) {
+          margin-left: 100% / ( $columns ) * $i;
+        }
       }
     }
-  }
 
-  .start#{$infix} {
-    justify-content: flex-start;
-  }
+    .start#{$infix} {
+      justify-content: flex-start;
+    }
 
-  .center#{$infix} {
-    justify-content: center;
-  }
+    .center#{$infix} {
+      justify-content: center;
+    }
 
-  .end#{$infix} {
-    justify-content: flex-end;
-  }
+    .end#{$infix} {
+      justify-content: flex-end;
+    }
 
-  .top#{$infix} {
-    align-items: flex-start;
-  }
+    .top#{$infix} {
+      align-items: flex-start;
+    }
 
-  .middle#{$infix} {
-    align-items: center;
-  }
+    .middle#{$infix} {
+      align-items: center;
+    }
 
-  .bottom#{$infix} {
-    align-items: flex-end;
-  }
+    .bottom#{$infix} {
+      align-items: flex-end;
+    }
 
-  .around#{$infix} {
-    justify-content: space-around;
-  }
+    .around#{$infix} {
+      justify-content: space-around;
+    }
 
-  .between#{$infix} {
-    justify-content: space-between;
-  }
+    .between#{$infix} {
+      justify-content: space-between;
+    }
 
-  .first#{$infix} {
-    order: -1;
-  }
+    .first#{$infix} {
+      order: -1;
+    }
 
-  .last#{$infix} {
-    order: 1;
+    .last#{$infix} {
+      order: 1;
+    }
   }
 }
 

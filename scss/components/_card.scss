@@ -1,0 +1,35 @@
+
+
+.card {
+  padding: 3rem 2.5rem;
+  margin-right: 0;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  position: relative;
+  border-radius: .25rem;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: stretch;
+
+  .card--img {
+    img {
+      height: 350px;
+      width: auto;
+      margin: 0 auto;
+    }
+
+    & + .text--box {
+      padding: 0;
+      margin-top: 2.5rem;
+    }
+  }
+
+  .text--box {
+    padding: 0;
+  }
+
+  &.card-bordered {
+    border-width: .2rem;
+    border: solid map_get($colors, disabled);
+  }
+}

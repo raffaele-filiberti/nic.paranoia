@@ -1,0 +1,145 @@
+.slider {
+  overflow: hidden;
+}
+
+.frame {
+  position: relative;
+  height: 50vh;
+  padding: 0;
+
+  .prev {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    margin: auto;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .next {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .next,
+  .prev {
+    opacity: 1;
+    @include transition();
+  }
+
+  .next.disabled,
+  .prev.disabled {
+    opacity: 0;
+  }
+
+  .slidee {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+
+    li {
+      float: left;
+      padding: 0;
+      width: 50vh;
+      height: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      flex: 0 1 auto;
+      align-items: center;
+    }
+  }
+
+  &.frame--full-page {
+    height: 100vh;
+
+    & ~ .scrollbar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+      height: 8px;
+      background: transparent;
+
+      .handle {
+        position: relative;
+        top: inherit;
+      }
+
+      .mousearea {
+        display: none;
+      }
+    }
+
+    & ~ .pages {
+      position: absolute;
+      display: block;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      bottom: 30px;
+    }
+  }
+
+
+}
+
+.pages {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 0 4px;
+    text-indent: -999px;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    border-width: 2px;
+    border-style: dotted;
+    @include transition();
+
+    &.active {
+      border-style: solid;
+    }
+  }
+}
+
+.scrollbar {
+  position: relative;
+  margin: 3rem 0;
+  width: 100%;
+  height: 1px;
+  background: map_get($colors, blank);
+
+  .handle {
+    position: absolute;
+    top: -3.5px;
+    width: 100px;
+    height: 8px;
+
+    .mousearea {
+      position: absolute;
+      top: -9px;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      cursor: pointer;
+    }
+  }
+}

@@ -11,44 +11,75 @@
 
 %display4 {
   font-family: map-get($font-family, heading);
-  font-size: 2.25rem;
-  line-height: 2.25rem;
+  font-size:7rem;
+  line-height: 7rem;
   font-weight: map-get($font-weight-values, light);
   letter-spacing: -.04em;
-  margin: 0 0 2rem 0;
+  margin: 0 0 3rem 0;
 }
 
 %display3 {
   font-family: map-get($font-family, heading);
-  font-size: 1.875rem; /* 56px */
-  line-height: 2rem; /* 56px */
+  font-size: 3.5rem; /* 56px */
+  line-height: 3.5rem; /* 56px */
   font-weight: map-get($font-weight-values, regular);
   letter-spacing: -.02em;
-  margin: 0 0 1.75rem 0;
+  margin: 0 0 3rem 0;
 }
 
 %display2 {
   font-family: map-get($font-family, heading);
-  font-size: 1.5rem; /* 45px */
-  line-height: 1.875rem; /* 48px */
+  font-size: 2.813rem; /* 45px */
+  line-height: 2.5rem; /* 48px */
   font-weight: map-get($font-weight-values, regular);
   letter-spacing: normal;
-  margin: 0 0 1.35rem 0;
+  margin: 0 0 3rem 0;
 }
 
 %display1 {
   font-family: map-get($font-family, heading);
-  font-size: 1.25rem; /* 34sp */
-  line-height: 1.575rem; /* 40sp */
+  font-size: 2.125rem; /* 34sp */
+  line-height: 2.5rem; /* 40sp */
   font-weight: map-get($font-weight-values, regular);
   letter-spacing: normal;
-  margin: 0 0 1.15rem 0;
+  margin: 0 0 3rem 0;
 }
+
+@include mq(lg, max) {
+  %display4 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+
+  %display2 {
+
+  }
+
+  %display3 {
+
+  }
+}
+
+@include mq(sm, max) {
+  %display4 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  %display2 {
+
+  }
+
+  %display3 {
+
+  }
+}
+
 
 %headline {
   font-family: map-get($font-family, heading);
-  font-size: 1rem; /* 24sp */
-  line-height: 1.25rem; /* 32sp */
+  font-size: 1.5rem; /* 24sp */
+  line-height: 2rem; /* 32sp */
   font-weight: map-get($font-weight-values, regular);
   letter-spacing: normal;
   margin: 0 0 1rem 0;
@@ -56,12 +87,11 @@
 
 %title {
   font-family: map-get($font-family, heading);
-  font-size: .875rem; /* 20sp */
-  line-height: 1.15rem; /* 32sp */
+  font-size: 1.25rem; /* 20sp */
+  line-height: 2rem; /* 32sp */
   font-weight: map-get($font-weight-values, medium);
   letter-spacing: .02em;
   margin: 0 0 1rem 0;
-  text-transform: uppercase;
 }
 
 %subheading2 {
@@ -79,7 +109,7 @@
   line-height: 1.5rem; /* 24sp */
   font-weight: map-get($font-weight-values, regular);
   letter-spacing: .04em;
-  margin: 0 0 .813rem 0;
+  margin: 0 0 1rem 0;
 }
 
 %body2 {
@@ -88,16 +118,16 @@
   line-height: 1.5rem; /* 24sp */
   font-weight: map-get($font-weight-values, medium);
   letter-spacing: .04em;
-  margin: 0 0 .75rem 0;
+  margin: 0 0 1rem 0;
 }
 
 %body1 {
   font-family: map-get($font-family, body);
   font-size: .875rem; /* 14sp */
-  line-height: 1.5rem; /* 20sp */
+  line-height: 1.25rem; /* 20sp */
   font-weight: map-get($font-weight-values, regular);
   letter-spacing: .04em;
-  margin: 0 0 .75rem 0;
+  margin: 0 0 1rem 0;
 }
 
 %caption {
@@ -111,7 +141,7 @@
 
 %button {
   font-family: map-get($font-family, heading);
-  font-size: .75rem; /* 14sp */
+  font-size: .875rem; /* 14sp */
   line-height: 1.5rem; /* 36sp */
   font-weight: map-get($font-weight-values, medium);
   letter-spacing: .04em;
@@ -120,172 +150,90 @@
   text-transform: uppercase
 }
 
-@include mq(md) {
-  %display4 {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-    margin: 0 0 2rem 0;
-  }
-
-  %display3 {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-    margin: 0 0 1.75rem 0;
-  }
-
-  %display2 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-    margin: 0 0 1.35rem 0;
-  }
-
-  %display1 {
-    font-size: 1.875rem;
-    line-height: 2rem;
-    margin: 0 0 1.15rem 0;
-  }
-
-  %headline {
-    font-size: 1.5rem;
-    line-height: 1.875rem;
-    margin: 0 0 1rem 0;
-  }
-
-  %title {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-    margin: 0 0 1rem 0;
-  }
-
-  %button {
-    font-size: .875rem;
-  }
-}
-
-@include mq(lg) {
-  %display4 {
-    font-size: 7rem;
-    line-height: 7rem;
-    margin: 0 0 3.5rem 0;
-  }
-
-  %display3 {
-    font-size: 3.5rem;
-    line-height: 3.5rem;
-    margin: 0 0 3rem 0;
-  }
-
-  %display2 {
-    font-size: 2.813rem;
-    line-height: 3rem;
-    margin: 0 0 3rem 0;
-  }
-
-  %display1 {
-    font-size: 2.125rem;
-    line-height: 2.5rem;
-    margin: 0 0 3rem 0;
-  }
-
-  %headline {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    margin: 0 0 1rem 0;
-  }
-
-  %title {
-    font-size: 1.25rem;
-    line-height: 2rem;
-    margin: 0 0 1rem 0;
-  }
-
-  %subheading2 {
-    font-size: 1rem;
-    line-height: 1.75rem;
-    margin: 0 0 1rem 0;
-  }
-
-  %subheading1 {
-    font-size: .938rem;
-    line-height: 1.5rem;
-    margin: 0 0 .813rem 0;
-  }
-
-  %body2 {
-    font-size: .875rem;
-    line-height: 1.5rem;
-    margin: 0 0 .75rem 0;
-
-  }
-
-  %body1 {
-    font-size: .875rem;
-    line-height: 1.5rem;
-    margin: 0 0 .75rem 0;
-  }
-
-  %caption {
-    font-size: .75rem;
-    line-height: 1.25rem;
-    margin: 0 0 1rem 0;
-  }
-
-  %button {
-    font-size: .875rem;
-    line-height: 1.75rem;
-  }
-}
-
 h1, h2, h3, h4, h5, h6, p, q, i, em {
   @extend %typo-base;
 }
 
-h1, .count {
+h1.display-4 {
   @extend %display4;
 }
 
-.count {
-  font-weight: 700;
-}
-
-h2 {
+h1.display-3 {
   @extend %display3;
 }
 
-h3 {
+h1.display-2 {
   @extend %display2;
 }
 
-h4 {
+h1.display-1 {
   @extend %display1;
 }
 
-h5 {
+h1,
+.post__title {
   @extend %headline;
 }
 
-h6 {
+h2 {
   @extend %title;
 }
 
-p {
+h3 {
+  @extend %subheading2;
+}
+
+h4 {
+  @extend %subheading1;
+}
+
+p, li {
   @extend %body1;
-
-  &.info {
-    @extend %caption;
-  }
-
-  span {
-    font-weight: map-get($font-weight-values, medium);
-    line-height: 1.5rem;
-  }
-
 }
 
-date {
-  @extend %button;
-}
-
-q, blockquote {
+span.body-2 {
   @extend %body2;
+}
+
+data,
+q,
+blockquote {
+  @extend %caption;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px dashed rgba(0,0,0,.1);
+}
+
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.4);
+  overflow: auto;
+  @extend %body1;
+  & code {
+    padding: 1rem;
+    font-size: inherit;
+    color: inherit;
+    background: #fff1a5;
+    border-radius: 0;
+  }
+}
+
+dl, ul, ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+/*
+  Custom
+ */
+.count {
+  @extend %display4;
+  font-weight: 700;
 }

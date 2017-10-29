@@ -1,45 +1,10 @@
+.post {
+  margin-bottom: 4rem;
+}
+
 .hero {
   &.nav--padding {
     padding-top: 5rem;
-  }
-}
-
-.heading {
-  text-align: right;
-  h1 {
-    font-size: 5rem !important;
-    line-height: 5rem !important;
-  }
-
-  span {
-    font-weight: 700;
-  }
-}
-
-@include mq(sm) {
-  .hero {
-    &.nav--padding {
-      padding: 0;
-    }
-  }
-}
-
-@include mq(md) {
-  .heading {
-    h1 {
-      font-size: 7rem !important;
-      line-height: 7rem !important;
-    }
-  }
-}
-
-@include mq(xl) {
-
-  .heading {
-    h1 {
-      font-size: 12rem !important;
-      line-height: 12rem !important;
-    }
   }
 }
 
@@ -57,42 +22,6 @@
 @include mq(lg) {
   .text--box {
     padding: 3rem 2rem;
-  }
-}
-
-.card {
-  padding: 3rem 2.5rem;
-  margin-right: 0;
-  margin-bottom: 1rem;
-  margin-left: 0;
-  position: relative;
-  background: lighten(map_get($colors, disabled), 50%);
-  border-radius: .25rem;
-
-  .frame & {
-    margin-left: 2.5rem;
-  }
-
-  .card--img {
-    img {
-      height: 350px;
-      width: auto;
-      margin: 0 auto;
-    }
-
-    & + .text--box {
-      padding: 0;
-      margin-top: 2.5rem;
-    }
-  }
-
-  .text--box {
-    padding: 0;
-  }
-
-  &.card-bordered {
-    border-width: .2rem;
-    border: solid map_get($colors, disabled);
   }
 }
 

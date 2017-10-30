@@ -2,18 +2,6 @@ $gutter-width: 1;
 $outer-margin: 2;
 $gutter-compensation: (($gutter-width * 0.5) * -1);
 $half-gutter-width: ($gutter-width * 0.5);
-$sm-min: 32;
-$md-min: 44;
-$lg-min: 58;
-$xl-min: 71;
-$screen-sm-min: ($sm-min);
-$screen-md-min: ($md-min);
-$screen-md-min: ($md-min);
-$screen-lg-min: ($lg-min);
-$container-sm: ($sm-min + $gutter-width);
-$container-md: ($md-min + $gutter-width);
-$container-lg: ($lg-min + $gutter-width);
-$container-xl: ($xl-min + $gutter-width);
 
 $container-max-widths: (
         sm: 540px,
@@ -86,48 +74,52 @@ $columns: 12;
           margin-left: 100% / ( $columns ) * $i;
         }
       }
-
-      .start#{$infix} {
-        justify-content: flex-start;
-      }
-
-      .center#{$infix} {
-        justify-content: center;
-      }
-
-      .end#{$infix} {
-        justify-content: flex-end;
-      }
-
-      .top#{$infix} {
-        align-items: flex-start;
-      }
-
-      .middle#{$infix} {
-        align-items: center;
-      }
-
-      .bottom#{$infix} {
-        align-items: flex-end;
-      }
-
-      .around#{$infix} {
-        justify-content: space-around;
-      }
-
-      .between#{$infix} {
-        justify-content: space-between;
-      }
-
-      .first#{$infix} {
-        order: -1;
-      }
-
-      .last#{$infix} {
-        order: 1;
-      }
     }
   }
+
+  @include mq($breakpoint) {
+
+    .start#{$infix} {
+      justify-content: flex-start;
+    }
+
+    .center#{$infix} {
+      justify-content: center;
+    }
+
+    .end#{$infix} {
+      justify-content: flex-end;
+    }
+
+    .top#{$infix} {
+      align-items: flex-start;
+    }
+
+    .middle#{$infix} {
+      align-items: center;
+    }
+
+    .bottom#{$infix} {
+      align-items: flex-end;
+    }
+
+    .around#{$infix} {
+      justify-content: space-around;
+    }
+
+    .between#{$infix} {
+      justify-content: space-between;
+    }
+
+    .first#{$infix} {
+      order: -1;
+    }
+
+    .last#{$infix} {
+      order: 1;
+    }
+  }
+
 }
 
 @each $breakpoint, $px in $container-max-widths {

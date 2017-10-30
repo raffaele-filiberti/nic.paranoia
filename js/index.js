@@ -144,4 +144,12 @@ $(document).ready(function () {
             .addIndicators() // add indicators (requires plugin)
             .addTo(controller);
     }
+
+    var videoBackground = $('#intro').data('vide');
+
+        videoBackground.getVideoObject().play();
+
+    $(window).on('resize', function () {
+        videoBackground.resize();
+    })
 });

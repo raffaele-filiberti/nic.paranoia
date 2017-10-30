@@ -42,8 +42,9 @@ gulp.task('init', function () {
         'node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
         'node_modules/gsap/ScrollToPlugin.js',
         'libs/imagesLoaded.pkgd.min.js',
-        'libs/masonry.pkgd.min.js'
-        ])
+        'libs/masonry.pkgd.min.js',
+        'libs/sly.min.js'
+    ])
         .pipe(concat('libs.js'))
         .pipe(gulp.dest('dist/js'))
         .pipe(rename('libs.min.js'))

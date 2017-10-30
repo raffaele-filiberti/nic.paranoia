@@ -57,10 +57,16 @@
       flex-flow: row wrap;
       flex: 0 1 auto;
       align-items: center;
+      margin: 0 10px 0 0;
     }
   }
 
   &.frame--full-page {
+    .slidee {
+      li {
+        margin: 0;
+      }
+    }
     height: 100vh;
 
     & ~ .scrollbar {

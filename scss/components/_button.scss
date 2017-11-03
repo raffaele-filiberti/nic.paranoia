@@ -4,13 +4,13 @@
 
 // Btn padding
 $btn-padding-y: .5rem;
-$btn-padding-x: .75rem;
+$btn-padding-x: 1rem;
 
 // Btn block spacing
 $btn-block-spacing-y: 10px;
 
 // Radius
-$btn-border-radius: .25rem;
+$btn-border-radius: 1rem;
 
 // Transition
 $btn-transition-duration: .25s;
@@ -28,20 +28,73 @@ $btn-border-width: 2px;
   border: $btn-border-width solid transparent;
   padding: $btn-padding-y $btn-padding-x;
   border-radius: $btn-border-radius;
-  transition: $btn-transition;
-  cursor: pointer;
-  @extend %button;
 }
 
-@each $theming, $color in $btn-colors {
-  .btn-#{$theming} {
+
+
+.caret {
+  margin-left: 0;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.btn,
+.btn__link,
+.nav__link {
+  cursor: pointer;
+  @extend %button;
+  @include transition($btn-transition);
+}
+
+@each $theming, $color in $colors {
+  .btn--#{$theming} {
     background-color: transparent;
+    color: ($color);
+
     border-color: $color;
-    color:$color;
 
     @include hover-focus() {
       background-color: $color;
-      color: map_get($colors, blank);
+      color: color-yiq($color);
     }
+  }
+
+  .btn__link--#{$theming},
+  .nav__link--#{$theming} {
+    color:$color;
+
+    @include hover-focus() {
+      color: lighten($color, 25%);
+    }
+  }
+}
+
+.btn__group,
+.btn__group-vertical {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  width: 100%;
+  justify-content: center;
+
+  > .btn {
+    position: relative;
+    flex: 0 1 auto;
+
+    @include hover-focus-active {
+      z-index: 1;
+    }
+  }
+
+  .btn + .btn,
+  .btn + .btn__group,
+  .btn__group + .btn,
+  .btn__group + .btn__group {
+    margin-left: -$btn-border-width;
   }
 }

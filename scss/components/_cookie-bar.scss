@@ -1,0 +1,37 @@
+.cookie--msg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: .625rem 2rem;
+  background: map_get($colors, blank);
+  border-bottom: 1px solid map_get($colors, disabled);
+  z-index: 901;
+
+  &.cookie--msg-closed + .nav--fixed {
+    top: 0;
+  }
+}
+
+
+.cookie--msg p {
+  margin: 0;
+  font-size: .75rem;
+}
+
+.cookie--msg a {
+  margin: .25rem 1rem;
+  padding: .25rem 1.75rem;
+  border: none;
+}
+
+@each $theming, $color in $btn-colors {
+  .cookie--msg-#{$theming} {
+    border-bottom: 1px solid darken($color, 10%);
+    background-color: $color;
+
+    & p, .cookie--msg-blue a {
+      color: color-yiq($color);
+    }
+  }
+}

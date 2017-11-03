@@ -1,18 +1,41 @@
-//
-// Section
-//
+
 body {
   color: map_get($colors, dark);
 }
 
-.full--height {
-  height: 100vh;
+@include mq(lg) {
+  .full--height {
+    min-height: 100vh;
+  }
+
+  .half--height {
+    min-height: 50vh;
+  }
 }
 
-.half--height {
-  height: 50vh;
+.custom--height {
+  min-height: 65vh;
 }
 
+.list--inline {
+  list-style-type: none;
+  display: flex;
+  flex-flow: column nowrap;
+  padding-left: 0;
+
+  li {
+    padding-left: 2rem;
+    flex: 1 0 0;
+    max-width: 100%;
+  }
+  @include mq(md) {
+    flex-flow: row wrap;
+  }
+}
+
+//
+// Section
+//
 section {
   position: relative;
   height: auto;
@@ -31,49 +54,78 @@ img {
   width: 100%;
   height: auto;
   display: block;
+
+  &.small--thumbnail {
+    width: 125px;
+    margin: 0 0 1.5rem;
+  }
+}
+//
+// Parallax
+//
+.parallax--container {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
 }
 
-.txt-center {
-  text-align: center !important;
+.parallax--background {
+  width: 100vw;
+  min-height: 100vh;
 }
 
-.txt-right {
-  text-align: right !important;
-}
-
-.txt-left {
-  text-align: left !important;
-}
-
-/*
-    Margin and padding
-
- */
+//
+//    Margin, padding, txt align & hide elements
+//
 @each $breakpoint in map-keys($breakpoints) {
   $infix: breakpoint-infix($breakpoint, $breakpoints);
 
-  @each $prop, $abbrev in (margin: m, padding: p) {
-    @each $size, $length in $spacers {
+  @include mq($breakpoint) {
+    .txt-#{$infix}-center {
+      text-align: center !important;
+    }
 
-      .#{$abbrev}#{$infix}-#{$size} {
-        #{$prop}: $length !important;
+    .txt-#{$infix}-right {
+      text-align: right !important;
+    }
+
+    .txt-#{$infix}-left {
+      text-align: left !important;
+    }
+
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $length in $spacers {
+
+        .#{$abbrev}#{$infix}-#{$size} {
+          #{$prop}: $length !important;
+        }
+        .#{$abbrev}t#{$infix}-#{$size},
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-top: $length !important;
+        }
+        .#{$abbrev}r#{$infix}-#{$size},
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-right: $length !important;
+        }
+        .#{$abbrev}b#{$infix}-#{$size},
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-bottom: $length !important;
+        }
+        .#{$abbrev}l#{$infix}-#{$size},
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-left: $length !important;
+        }
       }
-      .#{$abbrev}t#{$infix}-#{$size},
-      .#{$abbrev}y#{$infix}-#{$size} {
-        #{$prop}-top: $length !important;
-      }
-      .#{$abbrev}r#{$infix}-#{$size},
-      .#{$abbrev}x#{$infix}-#{$size} {
-        #{$prop}-right: $length !important;
-      }
-      .#{$abbrev}b#{$infix}-#{$size},
-      .#{$abbrev}y#{$infix}-#{$size} {
-        #{$prop}-bottom: $length !important;
-      }
-      .#{$abbrev}l#{$infix}-#{$size},
-      .#{$abbrev}x#{$infix}-#{$size} {
-        #{$prop}-left: $length !important;
-      }
+    }
+  }
+
+  @include mq($breakpoint, max) {
+    .hide-on#{$infix} {
+      display: none;
     }
   }
 }

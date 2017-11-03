@@ -6,9 +6,10 @@
 /*
  *  Helpers
  */
+
+@import 'helpers/_variables.scss';
 @import 'helpers/_functions.scss';
 @import 'helpers/_mixins.scss';
-@import 'helpers/_variables.scss';
 @import 'helpers/_helpers.scss';
 
 /*
@@ -45,3 +46,4 @@
  *  Pages
  */
 @import 'pages/_home.scss';
+@import 'pages/_mondo-sirea.scss';

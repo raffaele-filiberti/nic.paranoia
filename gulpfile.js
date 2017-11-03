@@ -1,27 +1,32 @@
 // Include gulp
 var gulp = require('gulp');
+
 // Include browserSync
 var browserSync = require('browser-sync').create();
 
-// Include Our Plugins
+// Include Plugins
 var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
-const autoprefixer = require('gulp-autoprefixer');
-const sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('gulp-autoprefixer');
+var sourcemaps = require('gulp-sourcemaps');
+var data = require('gulp-data');
+var fs = require('fs');
 
+// Template Engine
+var nunjucksRender = require('gulp-nunjucks-render');
 
 // Lint Task
-gulp.task('lint', function() {
+gulp.task('lint', function () {
     return gulp.src('js/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
 
 // Compile Our Sass
-gulp.task('sass', function() {
+gulp.task('sass', function () {
     return gulp.src([
         'scss/*.scss'
     ])
@@ -53,10 +58,29 @@ gulp.task('init', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('scripts', function() {
+gulp.task('nunjucks', function () {
+    // Gets .html and .nunjucks files in pages
+    return gulp.src('app/pages/**/*.+(html|nunjucks)')
+    // Adding data to Nunjucks
+        .pipe(data(function(file) {
+            return JSON.parse(fs.readFileSync('./app/data.json'));
+        }))
+        // Renders template with nunjucks
+        .pipe(nunjucksRender({
+            path: ['app/templates'],
+            envOptions: {
+                autoescape: false
+            }
+        }))
+        // output files in app folder
+        .pipe(gulp.dest('./'))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('scripts', function () {
     return gulp.src([
         'js/index.js'
-        ])
+    ])
         .pipe(concat('all.js'))
         .pipe(gulp.dest('dist/js'))
         .pipe(rename('all.min.js'))
@@ -67,25 +91,40 @@ gulp.task('scripts', function() {
 
 // Watch Files For Changes
 // Added icolors folder
-gulp.task('watch', function() {
-    gulp.watch('js/index.js', ['lint', 'scripts']);
+gulp.task('watch', function () {
+
     gulp.watch(
         [
-            'scss/base/*.scss',
-            'scss/components/*.scss',
-            'scss/helpers/*.scss',
-            'scss/layout/*.scss',
-            'scss/pages/*.scss',
-            'scss/themes/*.scss',
-            'scss/themes/icolors/*.scss',
-            'scss/vendor/*.scss',
-            'scss/*.scss'
-        ], ['sass']);
-    gulp.watch("*.html").on('change', browserSync.reload);
-});
+            'js/index.js'
+        ],
+        [
+            'lint',
+            'scripts'
+        ]
+    );
+
+    gulp.watch(
+        [
+            'scss/**/*.scss'
+        ],
+        [
+            'sass'
+        ]
+    );
+
+    gulp.watch(
+        [
+            'app/**/**/*.+(html|nunjucks)',
+            'app/data.json'
+        ],
+        [
+            'nunjucks'
+        ]
+    )
+}).on('end', browserSync.reload);
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['lint', 'init', 'sass', 'scripts', 'watch'], function() {
+gulp.task('serve', ['lint', 'init', 'sass', 'scripts', 'nunjucks', 'watch'], function () {
     browserSync.init({
         server: "./"
     });

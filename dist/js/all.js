@@ -11,14 +11,13 @@ $(document).ready(function () {
             var tween = new TimelineMax()
                 .add([
                     TweenMax.fromTo($(this).find('.parallax--background'), 1, {
-                        scale: 1.2,
-                        y: -200
+                        y: -225
                     }, {
                         y: 0,
                         ease: Linear.easeNone
                     }),
-                    TweenMax.fromTo($(this).find('.parallax--text'), 1, {y: 150}, {
-                        y: 0,
+                    TweenMax.fromTo($(this).find('.parallax--text'), 1, {y: 50}, {
+                        y: -250,
                         ease: Linear.easeNone
                     }),
                     TweenMax.fromTo($(this).find('.parallax--img'), 1, {y: -100}, {
@@ -26,8 +25,6 @@ $(document).ready(function () {
                         ease: Linear.easeNone
                     })
                 ]);
-
-            console.log($(this));
 
             var scene = new ScrollMagic.Scene({triggerElement: this, triggerHook: 1, duration: "200%"})
                 .setTween(tween)
@@ -66,32 +63,6 @@ $(document).ready(function () {
     });
 
 
-    //  bind scroll to anchor links
-    var navLinks = $('a.nav--link[href^="#"]');
-    $.each(navLinks, function (e) {
-        console.log($(this).attr("href").toString());
-        new ScrollMagic.Scene({triggerElement: $(this).attr("href"), duration: $('section').height()})
-            .setClassToggle("a.nav--link[href='" + $(this).attr("href") + "']", 'active')
-            .addTo(controller);
-    });
-
-    $(document).on("click", "a.nav--link[href^='#']", function (e) {
-        var id = $(this).attr("href");
-        $('.nav').find('.active').removeClass('active');
-        $(this).addClass('active');
-        if ($(id).length > 0) {
-            e.preventDefault();
-
-            // trigger scroll
-            controller.scrollTo(id);
-
-            // if supported by the browser we can even update the URL.
-            if (window.history && window.history.pushState) {
-                history.pushState("", document.title, id);
-            }
-        }
-    });
-
     //counter
     new ScrollMagic.Scene({triggerElement: document.querySelector('[data-animation="counter"]'), triggerHook: 1})
         .on('enter', function () {
@@ -124,10 +95,10 @@ $(document).ready(function () {
 
 
     // navigation
-    $('.nav--burger').on('click', function () {
+    $('.nav__burger').on('click', function () {
         $(this).toggleClass('active');
         $(this).parent().find('.nav--collapse').slideToggle(250);
-        $('.nav--full-screen').toggleClass('active');
+        $('.nav__menu--full').toggleClass('active');
     });
 
     //  Section swipe
@@ -135,7 +106,7 @@ $(document).ready(function () {
     var slides = document.querySelectorAll("section.panel");
 
     // create scene for every slide
-    for (var i=0; i<slides.length; i++) {
+    for (var i = 0; i < slides.length; i++) {
         new ScrollMagic.Scene({
             triggerElement: slides[i],
             triggerHook: 'onLeave'
@@ -145,11 +116,20 @@ $(document).ready(function () {
             .addTo(controller);
     }
 
+    var navbar = $('#nav'),
+        home = $('#hero');
+
+    home.css('marginTop', navbar.outerHeight());
+
     var videoBackground = $('#intro').data('vide');
 
-        videoBackground.getVideoObject().play();
+    videoBackground.getVideoObject().play();
 
     $(window).on('resize', function () {
         videoBackground.resize();
-    })
+    });
+
+    //calc first section top margin
+
+
 });

@@ -1,0 +1,78 @@
+.nav {
+
+  .nav__wrapper,
+  .nav__dropdown__menu {
+
+    @include mq(md) {
+
+      .nav__dropdown.active {
+        > a:before {
+          @include pseudo();
+          height: 0;
+          width: 0;
+          border-bottom: 15px solid $gray-secondary;
+          border-right: 15px solid transparent;
+          border-left: 15px solid transparent;
+          bottom: -40px;
+          left: calc(50% - 15px);
+        }
+      }
+
+      &.bg--gray {
+        .nav__dropdown.active {
+          > a:before {
+            border-bottom: 8px solid $primary;
+            border-right: 8px solid transparent;
+            border-left: 8px solid transparent;
+            bottom: -8px;
+            left: calc(50% - 15px);
+          }
+        }
+      }
+    }
+
+    @include mq(md, max) {
+
+      > li {
+        position: relative;
+
+        a {
+          text-align: center;
+        }
+
+        &.nav__dropdown.active {
+
+          > a:before {
+            @include pseudo();
+            height: 0;
+            width: 0;
+            border-bottom: 10px solid $gray-secondary;
+            border-right: 10px solid transparent;
+            border-left: 10px solid transparent;
+            bottom: -8px;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+          }
+        }
+
+        .bg--gray {
+          .nav__dropdown.active {
+            > a:before {
+              @include pseudo();
+              height: 0;
+              width: 0;
+              border-bottom: 8px solid $primary;
+              border-right: 8px solid transparent;
+              border-left: 8px solid transparent;
+              bottom: -8px;
+              right: 0;
+              left: 0;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

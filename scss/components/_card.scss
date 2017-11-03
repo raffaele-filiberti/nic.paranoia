@@ -1,17 +1,20 @@
-
+$card-border-radius: 0;
+$card-padding-y: 3rem;
+$card-padding-x: 3rem;
+$card-margin-b: 0;
 
 .card {
-  padding: 3rem 2.5rem;
+  padding: $card-padding-y $card-padding-x;
   margin-right: 0;
-  margin-bottom: 1rem;
+  margin-bottom: $card-margin-b;
   margin-left: 0;
   position: relative;
-  border-radius: .25rem;
+  border-radius: $card-border-radius;
   display: flex;
   flex-flow: column wrap;
   align-content: stretch;
 
-  .card--img {
+  .card__img {
     img {
       height: 350px;
       width: auto;
@@ -28,7 +31,7 @@
     padding: 0;
   }
 
-  &.card-bordered {
+  &.card--bordered {
     border-width: .2rem;
     border: solid map_get($colors, disabled);
   }

@@ -10,17 +10,20 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.9.13",
+    "gsap": "^1.20.3",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^2.3.1",
     "gulp-concat": "^2.6.1",
+    "gulp-data": "^1.2.1",
     "gulp-jshint": "^2.0.4",
+    "gulp-nunjucks": "^3.0.0",
+    "gulp-nunjucks-render": "^2.2.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
-    "jshint": "^2.9.5",
-    "gulp-autoprefixer": "^2.3.1",
     "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^3.0.0",
     "jquery": "^3.2.1",
-    "scrollmagic": "^2.0.5",
-    "gsap": "^1.20.3"
+    "jshint": "^2.9.5",
+    "scrollmagic": "^2.0.5"
   }
 }

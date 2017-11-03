@@ -1,3 +1,4 @@
+//responsive shortcuts
 @function breakpoint-min($name, $breakpoints: $breakpoints) {
   $min: map-get($breakpoints, $name);
   @return if($min != 0, $min, null);
@@ -5,4 +6,22 @@
 
 @function breakpoint-infix($name, $breakpoints: $breakpoints) {
   @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+}
+
+$yiq-text-dark: map_get($colors, dark);
+$yiq-text-light: map_get($colors, blank);
+
+// color yiq
+@function color-yiq($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+  @if ($yiq >= 150) {
+    @return $yiq-text-dark;
+  } @else {
+    @return $yiq-text-light;
+  }
 }

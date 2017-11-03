@@ -11,14 +11,6 @@
   position: $pos;
 }
 
-//  Media Query
-$breakpoints: (
-        xs: 0px,
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px,
-);
 @mixin mq($width, $type: min) {
   @if map_has_key($breakpoints, $width) {
     $width: map_get($breakpoints, $width);
@@ -45,6 +37,19 @@ $breakpoints: (
 @mixin hover {
   &:hover {
     @content;
+  }
+}
+
+//  Hover behaviour
+@mixin hover-mobile($mq) {
+  &:hover {
+    @content;
+  }
+
+  & {
+    @include mq($mq, max) {
+      @content;
+    }
   }
 }
 

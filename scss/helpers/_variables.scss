@@ -5,10 +5,10 @@
 $red: #870000;
 $blank: #fff !default;
 $gray-primary: #6F6F6F;
-$gray-secondary: #E8F1F5;
-$black: #212121 !default;
+$gray-secondary: #EEE;
+$black: #515151 !default;
 $secondary: #283E56;
-$primary: #FFDE25;
+$primary: #289548;
 
 $colors: (
         primary: $primary,
@@ -26,6 +26,18 @@ $btn-colors: (
         gray: $gray-secondary,
         dark: $black,
 );
+
+//
+// Breakpoints
+//
+$breakpoints: (
+        xs: 0px,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        mc: 1680px
+);
 //
 //      Shadow
 //
@@ -39,11 +51,13 @@ $shadow-5: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.1
 //
 //      Fonts
 //
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500|Merriweather:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Baloo|Bad+Script|Kadwa');
+
 
 $font-family: (
-        heading: 'Merriweather',
-        body: 'Fira Mono'
+        heading: 'Baloo',
+        body: 'Kadwa',
+        span: 'Bad Script'
 ) !default;
 
 $font-weight-values: (
@@ -67,10 +81,10 @@ $transition-base: all $base-transition-duration cubic-bezier(.550, .055, .675, .
 $spacer: 1rem !default;
 $spacers: (
         0: 0,
-        1: ($spacer * .25),
-        2: ($spacer * .5),
-        3: $spacer,
-        4: ($spacer * 1.5),
-        5: ($spacer * 3)
+        1: $spacer,
+        2: ($spacer * 2),
+        3: ($spacer * 3),
+        4: ($spacer * 4),
+        5: ($spacer * 5)
 ) !default;
 

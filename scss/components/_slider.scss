@@ -4,34 +4,27 @@
 
 .frame {
   position: relative;
-  height: 50vh;
+  height: auto;
   padding: 0;
 
   .prev {
-    display: flex;
-    position: absolute;
-    top: 0;
     left: 0;
-    height: 100%;
-    margin: auto;
-    align-items: center;
-    cursor: pointer;
   }
 
   .next {
-    display: flex;
-    position: absolute;
-    top: 0;
     right: 0;
-    height: 100%;
-    margin: auto;
-    align-items: center;
-    cursor: pointer;
   }
 
   .next,
   .prev {
     opacity: 1;
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom:0;
+    margin: auto;
+    align-items: center;
+    cursor: pointer;
     @include transition();
   }
 
@@ -51,23 +44,27 @@
     li {
       float: left;
       padding: 0;
-      width: 50vh;
+      width: 70vw;
       height: 100%;
       display: flex;
       flex-flow: row wrap;
       flex: 0 1 auto;
       align-items: center;
       margin: 0 10px 0 0;
+
+      @include mq(sm, max) {
+        width: 100vw;
+      }
     }
   }
 
-  &.frame--full-page {
+  &.full--height,
+  &.el--on-frame {
     .slidee {
       li {
         margin: 0;
       }
     }
-    height: 100vh;
 
     & ~ .scrollbar {
       position: absolute;
@@ -94,10 +91,9 @@
       left: 0;
       right: 0;
       margin: 0 auto;
-      bottom: 30px;
+      bottom: 10px;
     }
   }
-
 
 }
 
@@ -116,7 +112,7 @@
     border-radius: 10px;
     cursor: pointer;
     overflow: hidden;
-    border-width: 2px;
+    border-width: 3px;
     border-style: dotted;
     @include transition();
 

@@ -1,0 +1,7 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+    {% include "partials/navigation.nunjucks" %}
+
+{% endblock %}

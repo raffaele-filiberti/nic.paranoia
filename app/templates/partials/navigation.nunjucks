@@ -1,0 +1,21 @@
+<nav class="nav__container nav--fixed">
+    <div class="nav nav--light middle between">
+        <a class="nav__brand" href="">
+            Logo<br>
+            <span class="nav__sub-brand">Motto del brand</span>
+        </a>
+        <div class="nav__burger">
+            <span></span>
+        </div>
+        <div class="nav__menu--full middle center">
+            <ul class="nav__wrapper">
+                <li><a href="#!" class="nav__link">intro</a></li>
+                <li><a href="#!" class="nav__link">typography</a></li>
+                <li><a href="#!" class="nav__link">images</a></li>
+                <li><a href="#!" class="nav__link">Parallax</a></li>
+                <li><a href="#!" class="nav__link">Form</a></li>
+                <li><a href="#!" class="nav__link">Grid</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

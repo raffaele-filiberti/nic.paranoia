@@ -3,38 +3,7 @@
   <component name="ChangeListManager">
     <list id="44466655-ee33-4e61-8645-cf27dc60c7cd" name="theming" comment="theming" />
     <list default="true" id="dbbe8b4c-96fb-43b5-983a-5aa7a3adb45a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/data.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/pages/index.nunjucks" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/layout.nunjucks" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/partials/footer.nunjucks" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/partials/navigation.nunjucks" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/css/global.css" afterPath="$PROJECT_DIR$/app/dist/css/global.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/js/all.js" afterPath="$PROJECT_DIR$/app/dist/js/all.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/js/all.min.js" afterPath="$PROJECT_DIR$/app/dist/js/all.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/js/libs.js" afterPath="$PROJECT_DIR$/app/dist/js/libs.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/js/libs.min.js" afterPath="$PROJECT_DIR$/app/dist/js/libs.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/img/bottle.png" afterPath="$PROJECT_DIR$/app/img/bottle.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/img/img01.jpg" afterPath="$PROJECT_DIR$/app/img/img01.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/img/img02.jpg" afterPath="$PROJECT_DIR$/app/img/img02.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/img/img03.jpg" afterPath="$PROJECT_DIR$/app/img/img03.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/img/img04.jpg" afterPath="$PROJECT_DIR$/app/img/img04.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/img/img05.jpg" afterPath="$PROJECT_DIR$/app/img/img05.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/img/poster01.jpg" afterPath="$PROJECT_DIR$/app/img/poster01.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/img/video01.mp4" afterPath="$PROJECT_DIR$/app/img/video01.mp4" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/libs/imagesLoaded.pkgd.min.js" afterPath="$PROJECT_DIR$/js/libs/imagesLoaded.pkgd.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/libs/instafeed.min.js" afterPath="$PROJECT_DIR$/js/libs/instafeed.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/libs/masonry.pkgd.min.js" afterPath="$PROJECT_DIR$/js/libs/masonry.pkgd.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/libs/sly.min.js" afterPath="$PROJECT_DIR$/js/libs/sly.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/libs/vide.min.js" afterPath="$PROJECT_DIR$/js/libs/vide.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/grid.html" afterPath="$PROJECT_DIR$/components/grid.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/index.html" afterPath="$PROJECT_DIR$/components/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/typography.html" afterPath="$PROJECT_DIR$/components/typography.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/global.scss" afterPath="$PROJECT_DIR$/scss/global.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/pages/_home.scss" afterPath="$PROJECT_DIR$/scss/pages/_home.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,8 +20,8 @@
       <file leaf-file-name="index.nunjucks" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/pages/index.nunjucks">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="102">
+              <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -62,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/app/data.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+              <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -72,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/app/templates/partials/navigation.nunjucks">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+              <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -81,7 +50,7 @@
       <file leaf-file-name="_theme.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/themes/_theme.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="731">
               <caret line="43" column="11" lean-forward="false" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="11" />
               <folding />
             </state>
@@ -92,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/app/templates/layout.nunjucks">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+              <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -131,7 +100,7 @@
       <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
+            <state relative-caret-position="1275">
               <caret line="75" column="30" lean-forward="false" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
               <folding />
             </state>
@@ -331,6 +300,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -441,7 +411,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -512,7 +481,8 @@
       <workItem from="1508576536198" duration="27000" />
       <workItem from="1508576575226" duration="2962000" />
       <workItem from="1508579965644" duration="12000" />
-      <workItem from="1509781401655" duration="3827000" />
+      <workItem from="1509781401655" duration="3922000" />
+      <workItem from="1509786431945" duration="15000" />
     </task>
     <task id="LOCAL-00001" summary="basic setup">
       <created>1507545619814</created>
@@ -563,11 +533,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508488327083</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="intro to nunjucks template engine">
+      <created>1509786071324</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1509786071324</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164565000" />
+    <option name="totallyTimeSpent" value="164675000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -584,12 +561,12 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12539515" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960477" sideWeight="0.5015625" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32603937" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329188" sideWeight="0.4984375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32603937" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10292524" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10292524" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -657,7 +634,8 @@
     <MESSAGE value="Revert &quot;slider &amp; theming&quot;&#10;&#10;This reverts commit 5e00a3a" />
     <MESSAGE value="tbasic version v1.0" />
     <MESSAGE value="updated package.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated package.json" />
+    <MESSAGE value="intro to nunjucks template engine" />
+    <option name="LAST_COMMIT_MESSAGE" value="intro to nunjucks template engine" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -752,10 +730,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4046">
           <caret line="243" column="1" lean-forward="false" selection-start-line="243" selection-start-column="1" selection-end-line="243" selection-end-column="1" />
-          <folding>
-            <element signature="e#32#166#0" expanded="false" />
-            <marker date="1509780768608" expanded="true" signature="178:239" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -764,9 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-          <folding>
-            <marker date="1509780768655" expanded="true" signature="883:887" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -781,7 +752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1394">
           <caret line="82" column="13" lean-forward="false" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -803,9 +773,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="45" column="1" lean-forward="false" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
-          <folding>
-            <marker date="1509780768670" expanded="true" signature="2052:2054" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -827,7 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -835,7 +801,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1394">
           <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -847,14 +812,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/partials/slider.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/partials/slider.html" />
     <entry file="file://$PROJECT_DIR$/app/templates/partials/footer.nunjucks">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -871,25 +829,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="477" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="477" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html" />
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="875">
           <caret line="130" column="0" lean-forward="true" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
+        <state relative-caret-position="1275">
           <caret line="75" column="30" lean-forward="false" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
           <folding />
         </state>
@@ -905,7 +855,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/themes/_theme.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="731">
           <caret line="43" column="11" lean-forward="false" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="11" />
           <folding />
         </state>
@@ -914,7 +864,7 @@
     <entry file="file://$PROJECT_DIR$/app/templates/layout.nunjucks">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -922,7 +872,7 @@
     <entry file="file://$PROJECT_DIR$/app/templates/partials/navigation.nunjucks">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -930,15 +880,15 @@
     <entry file="file://$PROJECT_DIR$/app/data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/pages/index.nunjucks">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="102">
+          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
           <folding />
         </state>
       </provider>

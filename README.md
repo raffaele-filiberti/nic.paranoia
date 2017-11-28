@@ -1,1 +1,2 @@
-# BrowserSync + Gulp Web Starter
+# Web Starter
+

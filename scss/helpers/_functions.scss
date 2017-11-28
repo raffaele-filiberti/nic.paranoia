@@ -25,3 +25,8 @@ $yiq-text-light: map_get($colors, blank);
     @return $yiq-text-light;
   }
 }
+
+//color
+@function color($color) {
+  @return map_get($colors, $color);
+}

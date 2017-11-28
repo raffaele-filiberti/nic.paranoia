@@ -4,11 +4,16 @@ $gutter-compensation: (($gutter-width * 0.5) * -1);
 $half-gutter-width: ($gutter-width * 0.5);
 
 $container-max-widths: (
-        sm: 540px,
-        md: 720px,
-        lg: 960px,
-        xl: 1140px
+        sm: 29rem,
+        md: 47rem,
+        lg: 63rem,
+        xl: 74rem,
 ) !default;
+
+.outer-container {
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
 
 .container-fluid,
 .container {
@@ -51,13 +56,7 @@ $columns: 12;
 
   @for $i from 1 through $columns {
 
-    .col#{$infix} {
-      @extend %columns;
-      flex-grow: 1;
-      flex-basis: 0;
-      max-width: 100%;
-    }
-
+    .col#{$infix},
     .col#{$infix}-#{$i},
     .col#{$infix}-offset-#{$i} {
       @extend %columns;
@@ -78,6 +77,11 @@ $columns: 12;
   }
 
   @include mq($breakpoint) {
+    .col#{$infix} {
+      flex-grow: 1;
+      flex-basis: 0;
+      max-width: 100%;
+    }
 
     .start#{$infix} {
       justify-content: flex-start;

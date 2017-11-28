@@ -33,7 +33,7 @@ gulp.task('sass', function () {
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(autoprefixer())
-        .pipe(gulp.dest('app/dist/css'))
+        .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.stream());
 });
 
@@ -46,15 +46,15 @@ gulp.task('init', function () {
         'node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
         'node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
         'node_modules/gsap/ScrollToPlugin.js',
-        'js/libs/imagesLoaded.pkgd.min.js',
-        'js/libs/masonry.pkgd.min.js',
-        'js/libs/sly.min.js'
+        'libs/imagesLoaded.pkgd.min.js',
+        'libs/isotope.pkgd.min.js',
+        'libs/sly.min.js',
     ])
         .pipe(concat('libs.js'))
-        .pipe(gulp.dest('app/dist/js'))
+        .pipe(gulp.dest('dist/js'))
         .pipe(rename('libs.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('app/dist/js'))
+        .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream());
 });
 
@@ -73,7 +73,7 @@ gulp.task('nunjucks', function () {
             }
         }))
         // output files in app folder
-        .pipe(gulp.dest('./app'))
+        .pipe(gulp.dest('./'))
         .pipe(browserSync.stream());
 });
 
@@ -82,10 +82,10 @@ gulp.task('scripts', function () {
         'js/index.js'
     ])
         .pipe(concat('all.js'))
-        .pipe(gulp.dest('app/dist/js'))
+        .pipe(gulp.dest('dist/js'))
         .pipe(rename('all.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('app/dist/js'))
+        .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream());
 });
 
@@ -126,7 +126,7 @@ gulp.task('watch', function () {
 // Static Server + watching scss/html files
 gulp.task('serve', ['lint', 'init', 'sass', 'scripts', 'nunjucks', 'watch'], function () {
     browserSync.init({
-        server: "./app"
+        server: "./"
     });
 });
 

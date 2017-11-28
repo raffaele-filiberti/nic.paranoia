@@ -47,7 +47,7 @@ $btn-border-width: 2px;
 .btn__link,
 .nav__link {
   cursor: pointer;
-  @extend %button;
+  @extend .txt--button;
   @include transition($btn-transition);
 }
 

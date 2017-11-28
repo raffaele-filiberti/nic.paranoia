@@ -1,239 +1,53 @@
 //
-// Typography
+// Typography mixins
 //
 
-%typo-base {
+@mixin mdc-typography-base {
+  font-family: $typography-font-family;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  text-decoration: inherit;
-  text-transform: inherit
 }
 
-%display4 {
-  font-family: map-get($font-family, heading);
-  font-size: 5rem;
-  line-height: 5rem;
-  font-weight: map-get($font-weight-values, light);
-  letter-spacing: -.04em;
-  margin: 0 0 3rem 0;
-}
+@mixin mdc-typography($style) {
+  $style-props: map-get($typography-styles, $style);
 
-%display3 {
-  font-family: map-get($font-family, heading);
-  font-size: 3.5rem; /* 56px */
-  line-height: 3.5rem; /* 56px */
-  font-weight: map-get($font-weight-values, regular);
-  letter-spacing: -.02em;
-  margin: 0 0 3rem 0;
-}
-
-%display2 {
-  font-family: map-get($font-family, heading);
-  font-size: 2.813rem; /* 45px */
-  line-height: 2.5rem; /* 48px */
-  font-weight: map-get($font-weight-values, regular);
-  letter-spacing: normal;
-  margin: 0 0 3rem 0;
-}
-
-%display1 {
-  font-family: map-get($font-family, heading);
-  font-size: 2.125rem; /* 34sp */
-  line-height: 2.5rem; /* 40sp */
-  font-weight: map-get($font-weight-values, regular);
-  letter-spacing: normal;
-  margin: 0 0 3rem 0;
-}
-
-%display {
-  font-size: 1.813rem;
-  line-height: 2.5rem;
-  font-weight: map-get($font-weight-values, regular);
-}
-
-@include mq(lg, max) {
-  %display4 {
-    font-size: 4.25rem;
-    line-height: 4.25rem;
-    margin: 0 0 1rem 0;
+  @if not map-has-key($typography-styles, $style) {
+    @error "Invalid style specified! Choose one of #{map-keys($typography-styles)}";
   }
 
-  %display {
-    font-size: 1.25rem;
-    line-height: 2rem;
-  }
+  @include mdc-typography-base;
+
+  font-size: map-get($style-props, font-size);
+  font-weight: #{map-get($style-props, font-weight)};
+  letter-spacing: map-get($style-props, letter-spacing);
+  line-height: map-get($style-props, line-height);
+  text-decoration: map-get($style-props, text-decoration);
+  text-transform: map-get($style-props, text-transform);
 }
 
-@include mq(md, max) {
-  %display4 {
-    font-size: 3.5rem;
-    line-height: 3.5rem;
-  }
-
-  %display {
-    font-size: .875rem;
-    line-height: 1.5rem;
-  }
+@mixin mdc-typography-adjust-margin($style) {
+  margin: map-get(map-get($typography-styles, $style), margin);
 }
 
-@include mq(sm, max) {
-  %display4 {
-    font-size: 2.75rem;
-    line-height: 2.75rem;
-  }
+// Element must be `display: block` or `display: inline-block` for this to work.
+@mixin mdc-typography-overflow-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 
-  %display3 {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-    margin: 0 0 2rem 0;
-  }
+.txt {
+  @include mdc-typography-base;
+}
 
-  %display2 {
-    font-size: 2.25rem;
-    line-height: 2.25rem;
-    margin: 0 0 2rem 0;
+@each $style in map-keys($typography-styles) {
+  .txt--#{$style} {
+    @include mdc-typography($style);
   }
 
-  %display1 {
-    font-size: 2rem;
-    line-height: 2.125rem;
-    margin: 0 0 2rem 0;
+  .txt--margin.txt--#{$style} {
+    @include mdc-typography-adjust-margin($style);
   }
-}
-
-%headline {
-  font-family: map-get($font-family, heading);
-  font-size: 1.5rem; /* 24sp */
-  line-height: 2rem; /* 32sp */
-  font-weight: map-get($font-weight-values, regular);
-  letter-spacing: normal;
-  margin: 0 0 1rem 0;
-}
-
-%title {
-  font-family: map-get($font-family, heading);
-  font-size: 1.25rem; /* 20sp */
-  line-height: 2rem; /* 32sp */
-  font-weight: map-get($font-weight-values, medium);
-  letter-spacing: .02em;
-  margin: 0 0 1rem 0;
-}
-
-%subheading2 {
-  font-family: map-get($font-family, heading);
-  font-size: 1rem; /* 16sp */
-  line-height: 1.75rem; /* 28sp */
-  font-weight: map-get($font-weight-values, regular);
-  letter-spacing: .04em;
-  margin: 0 0 1rem 0;
-}
-
-%subheading1 {
-  font-family: map-get($font-family, heading);
-  font-size: .938rem; /* 15sp */
-  line-height: 1.5rem; /* 24sp */
-  font-weight: map-get($font-weight-values, regular);
-  letter-spacing: .04em;
-  margin: 0 0 1rem 0;
-}
-
-%body2 {
-  font-family: map-get($font-family, body);
-  font-size: .875rem; /* 14sp */
-  line-height: 1.5rem; /* 24sp */
-  font-weight: map-get($font-weight-values, medium);
-  letter-spacing: .04em;
-  margin: 0 0 1rem 0;
-}
-
-%body1 {
-  font-family: map-get($font-family, body);
-  font-size: .875rem; /* 14sp */
-  line-height: 1.5rem; /* 20sp */
-  font-weight: map-get($font-weight-values, regular);
-  letter-spacing: .04em;
-  margin: 0 0 1rem 0;
-}
-
-%caption {
-  font-family: map-get($font-family, body);
-  font-size: .75rem; /* 12sp */
-  line-height: 1.25rem; /* 20sp */
-  font-weight: map-get($font-weight-values, regular);
-  letter-spacing: .08em;
-  margin: 0 0 1rem 0;
-}
-
-%button {
-  font-family: map-get($font-family, heading);
-  font-size: .875rem; /* 14sp */
-  line-height: 1.5rem; /* 36sp */
-  font-weight: map-get($font-weight-values, regular);
-  letter-spacing: .04em;
-  margin: inherit;
-  text-decoration: none;
-  text-transform: uppercase
-}
-
-h1, h2, h3, h4, h5, h6, p, q, i, em {
-  @extend %typo-base;
-}
-
-.display-4 {
-  @extend %display4;
-}
-
-.display-3 {
-  @extend %display3;
-}
-
-.display-2 {
-  @extend %display2;
-}
-
-.display-1 {
-  @extend %display1;
-}
-
-h1,
-.post__title {
-  @extend %headline;
-}
-
-h2 {
-  @extend %title;
-}
-
-h3 {
-  @extend %subheading2;
-}
-
-h4 {
-  @extend %subheading1;
-}
-
-p, li {
-  @extend %body1;
-}
-
-p.display {
-  @extend %display;
-}
-
-span.caption {
-  font-family: map-get($font-family, span);
-  @extend %display;
-  margin: 0 0 1.5rem 0;
-}
-
-span.body-2 {
-  @extend %body2;
-}
-
-data,
-q,
-blockquote {
-  @extend %caption;
 }
 
 hr {
@@ -243,13 +57,20 @@ hr {
   border-top: 1px dashed rgba(0, 0, 0, .1);
 }
 
+blockquote {
+  @extend .txt--caption;
+  @extend .txt--margin;
+
+}
+
 pre {
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
   color: rgba(0, 0, 0, 0.4);
   overflow: auto;
-  @extend %body1;
+  @extend .txt--body1;
+
   & code {
     padding: 1rem;
     font-size: inherit;
@@ -263,13 +84,4 @@ dl, ul, ol {
   margin-top: 0;
   margin-bottom: 1rem;
   padding-left: 2rem;
-}
-
-/*
-  Custom
- */
-.count,
-.circle__text {
-  @extend %display4;
-  font-weight: 700;
 }

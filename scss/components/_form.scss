@@ -53,7 +53,7 @@ $form-el-border-radius: .25rem;
     border: $form-el-border;
     border-radius: $form-el-border-radius;
     transition: $transition-base;
-    @extend %subheading2;
+    @extend .txt--subheading2;
 
     &:focus {
       color: map_get($colors, primary);
@@ -71,13 +71,13 @@ $form-el-border-radius: .25rem;
     display: block;
     margin-top: .25rem;
     color: lighten(map_get($colors, disabled), 20%);
-    @extend %caption;
+    @extend .txt--caption;
   }
 
   label {
     display: inline-block;
     margin-bottom: .5rem;
-    @extend %subheading2;
+    @extend .txt--subheading2;
   }
 }
 
@@ -90,7 +90,7 @@ $form-el-border-radius: .25rem;
     display: inline-block;
     padding-left: 1.25rem;
     margin-bottom: 0;
-    @extend %subheading2;
+    @extend .txt--subheading2;
   }
 
   .form-check-input {

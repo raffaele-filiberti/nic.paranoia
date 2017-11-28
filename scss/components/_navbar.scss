@@ -81,7 +81,6 @@ $nav-link-padding-x: 12px;
     display: inline-block;
     padding-top: $nav-brand-padding-y;
     padding-bottom: $nav-brand-padding-y;
-    @extend %headline;
     white-space: nowrap;
     margin: 0 $nav-padding-x 0 0;
     align-self: center;

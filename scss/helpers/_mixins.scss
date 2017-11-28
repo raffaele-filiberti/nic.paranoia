@@ -15,7 +15,7 @@
   @if map_has_key($breakpoints, $width) {
     $width: map_get($breakpoints, $width);
     @if $type == max {
-      $width: $width - 1px;
+      $width: $width - (( 1 / $body-font-size) + rem);
     }
     @media only screen and (#{$type}-width: $width) {
       @content;
@@ -31,7 +31,6 @@
     transition: $transition;
   }
 }
-
 
 //  Hover behaviour
 @mixin hover {
@@ -53,7 +52,7 @@
   }
 }
 
- //share content among hover and focus
+//share content among hover and focus
 @mixin hover-focus {
   @include hover {
     @content;
@@ -66,7 +65,7 @@
 
 }
 
- //share content among plain, hover and focus
+//share content among plain, hover and focus
 @mixin plain-hover-focus {
   @include hover {
     @content;
@@ -80,7 +79,7 @@
 
 }
 
- //share content among active, hover and focus
+//share content among active, hover and focus
 @mixin hover-focus-active {
 
   @include hover {
@@ -97,32 +96,32 @@
 
 // Border-radius
 @mixin border-radius($radius: $border-radius) {
-    border-radius: $radius;
+  border-radius: $radius;
 }
 
 @mixin border-top-radius($radius) {
-    border-top-left-radius: $radius;
-    border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
 }
 
 @mixin border-right-radius($radius) {
-    border-top-right-radius: $radius;
-    border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
 }
 
 @mixin border-bottom-radius($radius) {
-    border-bottom-right-radius: $radius;
-    border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
 }
 
 @mixin border-left-radius($radius) {
-    border-top-left-radius: $radius;
-    border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+  border-bottom-left-radius: $radius;
 }
 
 //  Box-shadow
 @mixin box-shadow($shadow) {
-    box-shadow: $shadow;
+  box-shadow: $shadow;
 }
 
 

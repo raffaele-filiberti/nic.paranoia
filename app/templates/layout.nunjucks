@@ -15,7 +15,6 @@
 
 {% block content %} {% endblock %}
 
-<script src="/dist/js/libs.min.js"></script>
-<script src="/dist/js/all.min.js"></script>
+<script src="/dist/js/bundle.js"></script>
 </body>
 </html>

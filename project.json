@@ -1,0 +1,24 @@
+{
+  "title": "Rodolfi",
+  "foldersName": {
+    "entry" : "src",
+    "build" :  "build"
+  },
+  "env": {
+    "dev": {
+      "siteURL": "",
+      "baseURL": "/",
+      "scriptURL": "/",
+      "assetsURL": "/assets/",
+      "env" : "dev"
+    },
+    "live": {
+      "siteURL": "",
+      "baseURL": "/",
+      "scriptURL": "/",
+      "assetsURL": "/assets/",
+      "env" : "live"
+    }
+  },
+  "port": 3000
+}

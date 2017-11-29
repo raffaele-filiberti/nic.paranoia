@@ -36,3 +36,7 @@ $card-margin-b: 0;
     border: solid map_get($colors, disabled);
   }
 }
+
+.box {
+  padding: 3rem 2.5rem;
+}

@@ -27,7 +27,6 @@ section {
   flex-wrap: wrap;
   flex-direction: row;
   background: map_get($colors, blank);
-  min-height: 1px;
 }
 
 //
@@ -37,27 +36,4 @@ img {
   width: 100%;
   height: auto;
   display: block;
-
-  &.small--thumbnail {
-    width: 125px;
-    margin: 0 0 1.5rem;
-  }
-}
-
-//
-// Parallax
-//
-.parallax--container {
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0;
-}
-
-.parallax--background {
-  width: 100vw;
-  min-height: 100vh;
 }

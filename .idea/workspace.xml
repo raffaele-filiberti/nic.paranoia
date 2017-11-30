@@ -3,9 +3,27 @@
   <component name="ChangeListManager">
     <list id="44466655-ee33-4e61-8645-cf27dc60c7cd" name="theming" comment="theming" />
     <list default="true" id="dbbe8b4c-96fb-43b5-983a-5aa7a3adb45a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/gulp/task/server.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/gulp/task/styles.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/gulp/task/watch.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/img/img01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/css/global.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/js/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/js/app.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/js/vendors/vendors.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gulp/tasks/assets.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gulp/tasks/build.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gulp/tasks/clean.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gulp/tasks/html.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gulp/tasks/scripts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gulp/tasks/server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gulp/tasks/styles.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gulp/tasks/vendors.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gulp/tasks/watch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gulp/utils/on-error.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/js/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/js/vendors/vendors.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/layout/_sidebar.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/pages/_home.scss" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/scss/layout/_forms.scss" afterPath="$PROJECT_DIR$/src/assets/.gitkeep" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -427,26 +445,6 @@
               <item name="rodolfi" type="b2602c69:ProjectViewProjectNode" />
               <item name="rodolfi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rodolfi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rodolfi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rodolfi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rodolfi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rodolfi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rodolfi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="gulp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -462,53 +460,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="gulp" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rodolfi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rodolfi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rodolfi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rodolfi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="vendors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rodolfi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rodolfi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rodolfi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rodolfi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rodolfi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rodolfi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rodolfi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rodolfi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rodolfi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rodolfi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -670,7 +621,7 @@
       <workItem from="1509786431945" duration="15000" />
       <workItem from="1511879694391" duration="5778000" />
       <workItem from="1511943051437" duration="20306000" />
-      <workItem from="1512041831101" duration="17000" />
+      <workItem from="1512041831101" duration="109000" />
     </task>
     <task id="LOCAL-00001" summary="basic setup">
       <created>1507545619814</created>
@@ -756,11 +707,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511976277965</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="split task in sub task">
+      <created>1512041854536</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1512041854536</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190776000" />
+    <option name="totallyTimeSpent" value="190868000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

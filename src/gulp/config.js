@@ -34,7 +34,7 @@ var options = {
     jsDest     : project.foldersName.build + '/js/',
     jsVendorsEntry  : project.foldersName.entry + '/js/vendors/',
     jsVendorsDest   : project.foldersName.build + '/js/vendors/',
-    nunjucksEntry: project.foldersName.entry + '/app/',
+    nunjucksEntry: project.foldersName.entry,
     nunjucksDest: project.foldersName.build,
     mainJS     : 'app.js',
     imageEntry : project.foldersName.entry + '/assets/img/',

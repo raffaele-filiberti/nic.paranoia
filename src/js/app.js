@@ -1,35 +1,28 @@
-/**********************************************************************
-
- APP
-
- **********************************************************************/
-
 import './vendors/vendors.js';
-import 'glidejs';
+import VerticalSlideshow from './vendors/slider';
 
-let variable = 'Coucou';
+let vs = new VerticalSlideshow(document.querySelector('.slideshow'));
 
-console.log(variable);
+var last_known_scroll_position = 0;
+var ticking = false;
 
-$('.container').css('background', '#f5f5f5');
-
-$('.glide').glide({
-    type: "slider",
-    autoplay: 6000
-});
-
-function square() {
-    let example = () => {
-        let numbers = [];
-        for (let number of arguments) {
-            numbers.push(number * number);
-        }
-
-        return numbers;
-    };
-
-    console.log(example());
+function doSomething(scroll_pos) {
+    // do something with the scroll position
 }
 
-// returns: [4, 16, 56.25, 64, 132.25, 441]
-square(2, 4, 7.5, 8, 11.5, 21);
+window.addEventListener('scroll', function(e) {
+
+    last_known_scroll_position = window.scrollY;
+
+    if (!ticking) {
+
+        window.requestAnimationFrame(function() {
+           console.log(last_known_scroll_position);
+            ticking = false;
+        });
+
+        ticking = true;
+
+    }
+
+});

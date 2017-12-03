@@ -12,12 +12,12 @@ var gulp = require('gulp'),
 var paths = project.env[config.envOpts.env];
 
 gulp.task('html', function () {
-    return gulp.src(config.nunjucksEntry + 'pages/**/*.+(html|nunjucks)')
+    return gulp.src(config.nunjucksEntry + '/*.+(html|nunjucks)')
         .pipe(data((file) => {
-            return JSON.parse(fs.readFileSync(config.nunjucksEntry + 'data.json'));
+            return JSON.parse(fs.readFileSync(config.nunjucksEntry + '/data.json'));
         }))
         .pipe(nunjucksRender({
-            path: [config.nunjucksEntry + 'templates'],
+            path: [config.nunjucksEntry + '/templates'],
             envOptions: {
                 autoescape: false
             }

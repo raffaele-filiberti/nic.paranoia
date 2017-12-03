@@ -3,8 +3,6 @@
     <CLASSES>
       <root url="file://$PROJECT_DIR$/dist/gulpfile.babel.js" />
       <root url="file://$PROJECT_DIR$/dist/dist/js/bundle.js" />
-      <root url="file://$PROJECT_DIR$/dist/gulpfile.babel.js" />
-      <root url="file://$PROJECT_DIR$/dist/dist/js/bundle.js" />
     </CLASSES>
     <SOURCES />
   </library>

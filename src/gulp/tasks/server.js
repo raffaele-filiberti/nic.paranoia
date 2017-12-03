@@ -10,7 +10,6 @@ notify      = require('gulp-notify');
 var serverConfig = {
 	server: "./" + project.foldersName.build,
 	port: project.port || 3000,
-	browser: ['google chrome'],
 	notify: false,
 	minify: true,
 	ghostMode: false,

@@ -5,6 +5,8 @@
   left: 0;
   width: 100vw;
   min-height: 100vh;
+  visibility: hidden;
+  opacity: 0;
 
   &__background {
     position: absolute;
@@ -236,7 +238,6 @@ ul.social {
   bottom: 0;
   right: 0;
   z-index: 9999;
-  background: #161616;
 
   .txt {
     position: absolute;

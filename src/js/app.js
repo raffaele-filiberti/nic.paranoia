@@ -134,6 +134,7 @@ class App {
             _loadComplete() {
                 let completeTl = new TimelineMax();
                 completeTl
+                    .set([document.querySelector('.page'), document.querySelectorAll('.nav'), document.querySelector('.progress')], {autoAlpha: 1})
                     .to(this.preloader.txt, .25, {y: -50, autoAlpha: 0})
                     .to(this.preloader.container, .5, {y: '-100%'})
                     .from(document.querySelectorAll('.el-from-top:not(span)'), .25, {y: '-100%', autoAlpha: 0})
@@ -145,7 +146,6 @@ class App {
                 return completeTl;
             }
         });
-
         this.profile = Barba.BaseView.extend({
             namespace: "profile",
             onEnter: function () {
@@ -210,6 +210,7 @@ class App {
                         this.done()
                     }
                 });
+
                 enterTl
                     .set(this.oldContainer, {autoAlpha: 0})
                     .set(this.newContainer, {autoAlpha: 1})
@@ -219,6 +220,7 @@ class App {
                     .from(document.querySelectorAll('.social'), .35, {x: '50%', autoAlpha: 0})
                     .from(document.querySelectorAll('.develop'), .35, {y: '-50%', autoAlpha: 0}, '-=.35');
             }
+
             });
 
         Barba.Pjax.getTransition = function () {
@@ -254,5 +256,4 @@ class App {
         }
     }
 }
-
 let app = new App();

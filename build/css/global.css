@@ -3979,7 +3979,9 @@ code {
           justify-content: space-between;
   z-index: 999;
   padding: 2rem 3rem;
-  background: transparent; }
+  background: transparent;
+  visibility: hidden;
+  opacity: 0; }
   .nav--footer {
     padding: 1.5rem 3rem;
     top: auto;
@@ -3998,7 +4000,9 @@ code {
   width: 100%;
   height: 10px;
   z-index: 1;
-  background: transparent; }
+  background: transparent;
+  visibility: hidden;
+  opacity: 0; }
   .progress .bar {
     position: absolute;
     top: 0;
@@ -5308,7 +5312,9 @@ code {
   top: 0;
   left: 0;
   width: 100vw;
-  min-height: 100vh; }
+  min-height: 100vh;
+  visibility: hidden;
+  opacity: 0; }
   .page__background,
   .archive__background {
     position: absolute;
@@ -5506,8 +5512,7 @@ ul.social {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 9999;
-  background: #161616; }
+  z-index: 9999; }
   #preloader .txt {
     position: absolute;
     top: 50%;

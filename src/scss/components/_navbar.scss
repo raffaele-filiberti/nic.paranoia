@@ -9,6 +9,8 @@
   z-index: 999;
   padding: 2rem 3rem;
   background: transparent;
+  visibility: hidden;
+  opacity: 0;
 
   &--footer {
     padding: 1.5rem 3rem;
@@ -34,6 +36,8 @@
   height: 10px;
   z-index: 1;
   background: transparent;
+  visibility: hidden;
+  opacity: 0;
 
   .bar {
     position: absolute;

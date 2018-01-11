@@ -11543,11 +11543,10 @@ var App = function () {
                 },
                 _loadComplete: function _loadComplete() {
                     var completeTl = new _gsap.TimelineMax();
-                    completeTl.to(this.preloader.txt, .25, { y: -50, autoAlpha: 0 }).to(this.preloader.container, .5, { y: '-100%' }).from(document.querySelectorAll('.el-from-top:not(span)'), .25, { y: '-100%', autoAlpha: 0 }).from(document.querySelectorAll('.el-from-bottom:not(span)'), .25, { y: '100%', autoAlpha: 0 }).from(document.querySelector('.breadcrumb'), .5, { y: '50%', autoAlpha: 0 }).from(document.querySelectorAll('.block'), .5, { y: '100%', autoAlpha: 0 }, '-=.25').from(document.querySelectorAll('.img__txt .el-from-right'), .35, { x: '50%', autoAlpha: 0 }).from(document.querySelectorAll('.img__txt .el-from-top'), .35, { y: '-50%', autoAlpha: 0 }, '-=.35');
+                    completeTl.set([document.querySelector('.page'), document.querySelectorAll('.nav'), document.querySelector('.progress')], { autoAlpha: 1 }).to(this.preloader.txt, .25, { y: -50, autoAlpha: 0 }).to(this.preloader.container, .5, { y: '-100%' }).from(document.querySelectorAll('.el-from-top:not(span)'), .25, { y: '-100%', autoAlpha: 0 }).from(document.querySelectorAll('.el-from-bottom:not(span)'), .25, { y: '100%', autoAlpha: 0 }).from(document.querySelector('.breadcrumb'), .5, { y: '50%', autoAlpha: 0 }).from(document.querySelectorAll('.block'), .5, { y: '100%', autoAlpha: 0 }, '-=.25').from(document.querySelectorAll('.img__txt .el-from-right'), .35, { x: '50%', autoAlpha: 0 }).from(document.querySelectorAll('.img__txt .el-from-top'), .35, { y: '-50%', autoAlpha: 0 }, '-=.35');
                     return completeTl;
                 }
             });
-
             this.profile = _barba2.default.BaseView.extend({
                 namespace: "profile",
                 onEnter: function onEnter() {
@@ -11606,7 +11605,8 @@ var App = function () {
                             _this2.done();
                         }
                     });
-                    enterTl.set(this.oldContainer, { autoAlpha: 0 }).set(this.newContainer, { autoAlpha: 1 }).set(document.body, { className: '+=negative' }).from(document.querySelector('.breadcrumb'), .5, { y: '50%', autoAlpha: 0 }).from(document.querySelectorAll('.el-from-bottom'), .5, { y: '100%', autoAlpha: 0 }, '-=.25').from(document.querySelectorAll('.social'), .35, { x: '50%', autoAlpha: 0 }).from(document.querySelectorAll('.develop'), .35, { y: '-50%', autoAlpha: 0 }, '-=.35');
+
+                    enterTl.set(this.oldContainer, { autoAlpha: 0 }).set(this.newContainer, { autoAlpha: 1 }).set(document.body, { className: '+=negative' }).set(document.querySelector('.page'), { autoAlpha: 1 }).from(document.querySelector('.breadcrumb'), .5, { y: '50%', autoAlpha: 0 }).from(document.querySelectorAll('.el-from-bottom'), .5, { y: '100%', autoAlpha: 0 }, '-=.25').from(document.querySelectorAll('.social'), .35, { x: '50%', autoAlpha: 0 }).from(document.querySelectorAll('.develop'), .35, { y: '-50%', autoAlpha: 0 }, '-=.35');
                 }
             });
 

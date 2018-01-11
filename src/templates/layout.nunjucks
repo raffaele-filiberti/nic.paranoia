@@ -5,13 +5,13 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="{{ env.meta.theme-color }}">
+    <meta name="theme-color" content="#161616">
     <link rel="stylesheet" href="css/global.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
     <title>{{ env.title }}</title>
 </head>
-<body>
+<body id="scene__wrapper" class="{{ bodyClass }}">
 
 {% block content %} {% endblock %}
 

@@ -1,147 +1,156 @@
-import anime from 'animejs';
+import {
+    EventEmitter
+} from 'events';
+import VirtualScroll from 'virtual-scroll';
+import raf from 'raf';
+import transform from 'prefix';
+import {TweenLite, TimelineMax} from 'gsap';
 
-export default class VerticalSlideshow {
 
-    constructor(wrapper) {
-        this.wrapper = wrapper;
-        this.settings = {
-            animation: {
-                slides: {
-                    duration: 600,
-                    easing: 'easeOutQuint'
-                },
-                shape: {
-                    duration: 300,
-                    easing: {in: 'easeOutQuint', out: 'easeOutQuad'}
-                }
-            },
-            frameFill: '#f1f1f1'
+export default class Slider extends EventEmitter {
+    constructor(opts) {
+        super();
+        this._bind();
+
+        this.options = Object.assign({
+            container: opts.container,
+            blocks: opts.blocks,
+            progress: opts.progress,
+            isAnimated: true,
+            spring: opts.spring || 0.1,
+            skewReducer: opts.skewReducer || 20,
+            skewLimit: opts.skewLimit || 30
+        }, opts);
+
+        this.vars = {
+            scrollValue: 0,
+            oldScrollValue: 0,
+            scrollTarget: 0,
+            scrollLeft: 0,
+            scrollRight: 0,
+            spring: this.options.spring,
+            direction: 0,
+            speed: 0,
+            speedTarget: 0,
         };
 
-        this._init();
+        this.openModalTl = new TimelineMax({
+            paused: true,
+            onStart:() => {
+                this.options.isAnimated = false;
+            },
+            onComplete: () => {
+                this.options.isAnimated = true;
+            }
+        });
+
+        this.openModalTl
+            .to(document.querySelectorAll('.img__txt .el-from-right'), .25, {x: '50%', autoAlpha: 0})
+            .to(document.querySelectorAll('.img__txt .el-from-top'), .25, {y: '-50%', autoAlpha: 0})
+            .fromTo(document.querySelectorAll('img'), .5, {scale: 1, force3D:true}, {scale: 1.5, force3D:true});
+
+        this.wrapper = document.createElement('div');
+        this.wrapper.setAttribute('class', 'slidee');
+
+        this.vs = new VirtualScroll();
+        this.raf = raf;
+
+        this.transform = transform('transform');
+
+        this._setUI();
+        this._addEvents();
+        this._onResize();
     }
 
-    _debounce(func, wait, immediate) {
-        let timeout;
-        return function () {
-            let context = this, args = arguments;
-            let later = function () {
-                timeout = null;
-                if (!immediate) func.apply(context, args);
-            };
-            let callNow = immediate && !timeout;
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-            if (callNow) func.apply(context, args);
+    //private methods
+    _bind() {
+        this._update = this._update.bind(this);
+        this._toggleModal = this._toggleModal.bind(this);
+        this._onResize = this._onResize.bind(this);
+    }
+
+    _addEvents() {
+        this.vs.on(this._onScroll, this);
+        this.raf(this._update);
+        Array.prototype.forEach.call(this.options.blocks, block => {
+            block.addEventListener('click', this._toggleModal);
+        });
+        window.addEventListener('resize', this._onResize);
+    }
+
+    _removeEvents() {
+        this.raf.cancel(this._update);
+        this.raf(this._update);
+        window.removeEventListener('resize', this._onResize);
+    }
+
+    _toggleModal(e) {
+        e.preventDefault();
+
+        if (e.target.tagName.toLowerCase() === 'img' && window.innerWidth > 767) {
+            document.body.classList.contains('detail') ? this.openModalTl.reverse() : this.openModalTl.play();
+            document.body.classList.toggle('detail');
         }
     }
 
-    _init() {
-        this.slides = Array.from(this.wrapper.querySelectorAll('.slides--images > .slide'));
-        this.titles = this.wrapper.querySelector('.slides--titles');
-        this.titlesPosY = (window.innerHeight / 2);
-        this.titles.style["transform"] = "translateY(" + this.titlesPosY + "px)";
-        this.titlesSlides = Array.from(this.titles.querySelectorAll('.slide'));
-        this.slidesTotal = this.slides.length;
-        this.nav = this.wrapper.querySelector('.slidenav');
-        this.ctrl = {};
-        this.ctrl.next = this.nav.querySelector('.slidenav__item--next');
-        this.ctrl.prev = this.nav.querySelector('.slidenav__item--prev');
-        this.current = 0;
-        this._initEvents();
-    }
-
-    _initEvents() {
-        this.ctrl.next.addEventListener('click', () => this._navigate('next'));
-        this.ctrl.prev.addEventListener('click', () => this._navigate('prev'));
-
-        document.addEventListener('keydown', (ev) => {
-            const keyCode = ev.keyCode || ev.which;
-            if (keyCode === 38) {
-                this._navigate('prev');
-            }
-            else if (keyCode === 40) {
-                this._navigate('next');
-            }
+    _setUI() {
+        Object.assign(this.wrapper.style, {
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            'backface-visibilty': 'hidden',
+            'will-change': 'transform',
         });
+
+        Object.assign(this.options.container[0].style, {
+            'white-space': 'nowrap',
+            position: 'relative',
+        });
+
+        Array.prototype.forEach.call(this.options.blocks, block => {
+            block.style.display = 'inline-block';
+            block.style.width = window.innerWidth + 'px';
+            block.style.height = window.innerHeight + 'px';
+            this.options.container[0].replaceChild(this.wrapper, block);
+            this.wrapper.appendChild(block);
+        });
+
+        this.options.container[0].appendChild(this.wrapper);
+        this.options.progress[0].style[this.transform] = `translate3d( -100%,0, 0)`;
+
     }
 
-    _navigate(dir = 'next') {
-        const animateSlides = () => {
-            return new Promise((resolve, reject) => {
-                    const currentSlide = this.slides[this.current];
-                    anime({
-                        targets: currentSlide,
-                        duration: this.settings.animation.slides.duration,
-                        easing: this.settings.animation.slides.easing,
-                        translateY: dir === 'next' ? -1 * window.innerHeight : window.innerHeight,
-                        complete: () => {
-                            currentSlide.classList.remove('slide--current');
-                            resolve();
-                        }
-                    });
+    _onScroll(e) {
+        this.vars.direction = e.deltaY > 0 ? 1 : -1;
+        this.vars.scrollTarget += e.deltaY * -1;
+        this.vars.scrollTarget = Math.round(Math.max(this.vars.scrollLeft, Math.min(this.vars.scrollTarget, this.vars.scrollRight)));
+    }
 
-                    const currentTitleSlide = this.titlesSlides[this.current];
-                    this.titlesPosY = dir === 'next' ?
-                        this.current < this.slidesTotal - 1 ? this.titlesPosY - 100 : (window.innerHeight / 2) :
-                        this.current > 0 ? this.titlesPosY + 100 : this.titlesPosY - ((this.slidesTotal - 1) * 100);
+    _update() {
+        if (this.options.isAnimated) {
+            this.vars.scrollValue += (this.vars.scrollTarget - this.vars.scrollValue) * this.vars.spring;
+            let delta = this.vars.scrollTarget - this.vars.scrollValue;
 
-                    anime({
-                        targets: this.titles,
-                        duration: this.settings.animation.slides.duration,
-                        easing: this.settings.animation.slides.easing,
-                        delay: (t, i, total) => dir === 'next' ? i * 100 : (total - i - 1) * 100,
-                        translateY: this.titlesPosY,
-                        complete: () => {
-                            currentTitleSlide.classList.remove('slide--current');
-                            resolve();
-                        }
-                    });
+            let skew = delta / this.options.skewReducer;
+            this.vars.speed = Slider._clamp(-skew, -this.options.skewLimit, this.options.skewLimit);
 
-                    anime({
-                        targets: currentTitleSlide.children,
-                        duration: this.settings.animation.slides.duration,
-                        easing: this.settings.animation.slides.easing,
-                        opacity: [1, .5],
-                        fontSize: ["7rem", "5rem"]
-                    });
+            this.wrapper.style[this.transform] = `translate3d(-${this.vars.scrollValue}px, 0 ,0) skewX(${this.vars.speed}deg)`;
+            this.options.progress[0].style[this.transform] = `translate3d(-${100 - (this.vars.scrollValue * 100) / (this.wrapper.getBoundingClientRect().width - window.innerWidth)}%,0 ,0) skewX(${this.vars.speed}deg)`;
+        }
+        this.vars.oldScrollValue = this.vars.scrollValue;
+        this.raf(this._update);
+    }
 
-                    this.current = dir === 'next' ?
-                        this.current < this.slidesTotal - 1 ? this.current + 1 : 0 :
-                        this.current > 0 ? this.current - 1 : this.slidesTotal - 1;
+    static _clamp(num, min, max) {
+        return Math.min(Math.max(num, min), max);
+    }
 
-                    const newSlide = this.slides[this.current];
-                    newSlide.classList.add('slide--current');
-                    anime({
-                        targets: newSlide,
-                        duration: this.settings.animation.slides.duration,
-                        easing: this.settings.animation.slides.easing,
-                        translateY: [dir === 'next' ? window.innerHeight : -1 * window.innerHeight, 0]
-                    });
+    _onResize() {
+        this.vars.scrollLeft = 0;
+        this.vars.scrollRight = this.wrapper.getBoundingClientRect().width - window.innerWidth;
+    }
 
-                    const newSlideImg = newSlide.querySelector('.slide__img');
-                    anime.remove(newSlideImg);
-                    anime({
-                        targets: newSlideImg,
-                        duration: this.settings.animation.slides.duration * 4,
-                        easing: this.settings.animation.slides.easing,
-                        translateY: [dir === 'next' ? 200 : -200, 0]
-                    });
-
-                    const newTitleSlide = this.titlesSlides[this.current];
-                    newTitleSlide.classList.add('slide--current');
-                    anime({
-                        targets: newTitleSlide.children,
-                        duration: this.settings.animation.slides.duration * 2,
-                        easing: this.settings.animation.slides.easing,
-                        delay: (t, i, total) => dir === 'next' ? i * 100 + 100 : (total - i - 1) * 100 + 100,
-                        fontSize: ["5rem", "7rem"],
-                        opacity: [.5, 1]
-                    });
-                }
-            );
-        };
-
-        animateSlides()
+    destroy() {
+        this._removeEvents();
     }
 }

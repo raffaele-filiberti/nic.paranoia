@@ -15,7 +15,7 @@
   @if map_has_key($breakpoints, $width) {
     $width: map_get($breakpoints, $width);
     @if $type == max {
-      $width: $width - (( 1 / $body-font-size) + rem);
+      $width: $width - 1;
     }
     @media only screen and (#{$type}-width: $width) {
       @content;

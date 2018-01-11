@@ -2,10 +2,6 @@ html {
   font-size: $body-font-size;
 }
 
-body {
-  color: color(dark);
-}
-
 @include mq(lg) {
   .full--height {
     min-height: 100vh;
@@ -36,4 +32,103 @@ img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+$spacer: 1rem;
+
+$spacers: (
+        0: 0,
+        1: $spacer,
+        2: $spacer * 2,
+        3: $spacer * 3,
+        4: $spacer * 4,
+        5: $spacer * 5
+);
+
+.f {
+  display: flex;
+}
+
+@each $breakpoint, $px in $breakpoints {
+
+  $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+  .f {
+
+    @include mq($breakpoint) {
+
+      &#{$infix}-m {
+        align-items: center;
+      }
+
+      &#{$infix}-t {
+        align-items: flex-start;
+      }
+
+      &#{$infix}-b {
+        align-items: flex-end;
+      }
+
+      &#{$infix}-c {
+        justify-content: center;
+      }
+
+      &#{$infix}-s {
+        justify-content: flex-start;
+      }
+
+      &#{$infix}-e {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  @include mq($breakpoint) {
+
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $length in $spacers {
+
+        .#{$abbrev}#{$infix}-#{$size} {
+          #{$prop}: $length !important;
+        }
+        .#{$abbrev}t#{$infix}-#{$size},
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-top: $length !important;
+        }
+        .#{$abbrev}r#{$infix}-#{$size},
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-right: $length !important;
+        }
+        .#{$abbrev}b#{$infix}-#{$size},
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-bottom: $length !important;
+        }
+        .#{$abbrev}l#{$infix}-#{$size},
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-left: $length !important;
+        }
+      }
+    }
+
+    // Some special margin utils
+    .m#{$infix}-auto {
+      margin: auto !important;
+    }
+    .mt#{$infix}-auto,
+    .my#{$infix}-auto {
+      margin-top: auto !important;
+    }
+    .mr#{$infix}-auto,
+    .mx#{$infix}-auto {
+      margin-right: auto !important;
+    }
+    .mb#{$infix}-auto,
+    .my#{$infix}-auto {
+      margin-bottom: auto !important;
+    }
+    .ml#{$infix}-auto,
+    .mx#{$infix}-auto {
+      margin-left: auto !important;
+    }
+  }
 }

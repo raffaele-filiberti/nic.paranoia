@@ -8,7 +8,6 @@ var gulp = require('gulp'),
 gulp.task('watch', function () {
 
     gulp.watch(config.cssEntry + "**/*.scss", ['styles']);
-    gulp.watch(config.nunjucksEntry + "/*.+(html|nunjucks|json)", ['html']);
+    gulp.watch(config.nunjucksEntry + "**/*.+(html|nunjucks|json)", ['html']);
     gulp.watch(config.imageEntry + "*", ['assets']);
-
 });

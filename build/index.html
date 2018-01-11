@@ -5,53 +5,222 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="NaN">
+    <meta name="theme-color" content="#161616">
     <link rel="stylesheet" href="css/global.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
     <title>L e l e W e b S t a r t e r</title>
 </head>
-<body>
+<body id="scene__wrapper" class="">
 
 
 
-    <div class="slideshow">
-        <div class="slides slides--images">
-            <div class="slide slide--current">
-                <div class="slide__img" style="background-image: url(assets/img/img01.jpg)"></div>
-            </div>
-            <div class="slide">
-                <div class="slide__img" style="background-image: url(assets/img/img02.jpg)"></div>
-            </div>
-            <div class="slide">
-                <div class="slide__img" style="background-image: url(assets/img/img03.jpg)"></div>
-            </div>
-            <div class="slide">
-                <div class="slide__img" style="background-image: url(assets/img/img04.jpg)"></div>
-            </div>
+    <div id="preloader">
+        <div class="txt">
+            <p class="lead"><span class="txt-perc"></span><span class="txt-index"></span></p>
         </div>
-        <div class="slides slides--titles">
-            <div class="slide slide--current">
-                <h2 class="slide__title txt--blank txt--margin txt--display4">#wonder</h2>
-            </div>
-            <div class="slide">
-                <h2 class="slide__title txt--blank txt--margin txt--display4">#gigantic</h2>
-            </div>
-            <div class="slide">
-                <h2 class="slide__title txt--blank txt--margin txt--display4">#serenity</h2>
-            </div>
-            <div class="slide">
-                <h2 class="slide__title txt--blank txt--margin txt--display4">#summer</h2>
-            </div>
-        </div>
-        <nav class="slidenav">
-            <button class="slidenav__item slidenav__item--prev">Previous</button>
-            <span>/</span>
-            <button class="slidenav__item slidenav__item--next">Next</button>
-        </nav>
+        <div class="progress-bar"><span></span></div>
     </div>
 
+    <div class="nav">
+        <a href="/" class="link lead el-from-top">nic.paranoia</a>
+        <a href="/about.html" class="link lead el-from-top" id="about">Profile</a>
+    </div>
 
+    <div class="nav nav--footer">
+        <div class="scroll el-from-bottom">
+            Scroll
+        </div>
+    </div>
+
+    <div class="progress">
+        <div class="bar"></div>
+    </div>
+
+    <canvas id="noise" width="150" height="150"></canvas>
+
+    <div class="scene__container" data-namespace="home">
+        <div class="page">
+
+            <div class="page__background">
+                <div class="page__title breadcrumb">Portfolio</div>
+            </div>
+
+            <div class="block__container">
+                
+                    <div class="block">
+                        <div class="block__wrapper">
+                            <div class="img__container">
+                                <img src="/assets/img/img01.jpg" alt="">
+                                <div class="img__txt img__txt--title">
+                                    <p>
+                                        <span class="el-from-top">Michael J. Fox</span>
+                                        
+                                            <span class="el-from-top">The Night Skinny (feat. Tedua).</span>
+                                        
+                                    </p>
+                                </div>
+                                <div class="img__txt img__txt--info txt--title">
+                                    <p>
+                                        <span class="el-from-right">Artwork</span>
+                                        <span class="el-from-right">2017</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="block">
+                        <div class="block__wrapper">
+                            <div class="img__container">
+                                <img src="/assets/img/img02.jpg" alt="">
+                                <div class="img__txt img__txt--title">
+                                    <p>
+                                        <span class="el-from-top">Please, kill the aesthetic.</span>
+                                        
+                                    </p>
+                                </div>
+                                <div class="img__txt img__txt--info txt--title">
+                                    <p>
+                                        <span class="el-from-right">Artwork</span>
+                                        <span class="el-from-right">2017</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="block">
+                        <div class="block__wrapper">
+                            <div class="img__container">
+                                <img src="/assets/img/img03.jpg" alt="">
+                                <div class="img__txt img__txt--title">
+                                    <p>
+                                        <span class="el-from-top">Please, kill the aesthetic.</span>
+                                        
+                                    </p>
+                                </div>
+                                <div class="img__txt img__txt--info txt--title">
+                                    <p>
+                                        <span class="el-from-right">Artwork</span>
+                                        <span class="el-from-right">2017</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="block">
+                        <div class="block__wrapper">
+                            <div class="img__container">
+                                <img src="/assets/img/img04.jpg" alt="">
+                                <div class="img__txt img__txt--title">
+                                    <p>
+                                        <span class="el-from-top">Please, kill the aesthetic.</span>
+                                        
+                                    </p>
+                                </div>
+                                <div class="img__txt img__txt--info txt--title">
+                                    <p>
+                                        <span class="el-from-right">Artwork</span>
+                                        <span class="el-from-right">2017</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="block">
+                        <div class="block__wrapper">
+                            <div class="img__container">
+                                <img src="/assets/img/img05.jpg" alt="">
+                                <div class="img__txt img__txt--title">
+                                    <p>
+                                        <span class="el-from-top">Equilibrio</span>
+                                        
+                                            <span class="el-from-top"> The Night Skinny (feat. Mecna, Coco).</span>
+                                        
+                                    </p>
+                                </div>
+                                <div class="img__txt img__txt--info txt--title">
+                                    <p>
+                                        <span class="el-from-right">Artwork</span>
+                                        <span class="el-from-right">2017</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="block">
+                        <div class="block__wrapper">
+                            <div class="img__container">
+                                <img src="/assets/img/img06.jpg" alt="">
+                                <div class="img__txt img__txt--title">
+                                    <p>
+                                        <span class="el-from-top">Equilibrio</span>
+                                        
+                                            <span class="el-from-top"> The Night Skinny (feat. Mecna, Coco).</span>
+                                        
+                                    </p>
+                                </div>
+                                <div class="img__txt img__txt--info txt--title">
+                                    <p>
+                                        <span class="el-from-right">Artwork</span>
+                                        <span class="el-from-right">2017</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="block">
+                        <div class="block__wrapper">
+                            <div class="img__container">
+                                <img src="/assets/img/img07.jpg" alt="">
+                                <div class="img__txt img__txt--title">
+                                    <p>
+                                        <span class="el-from-top">Equilibrio</span>
+                                        
+                                            <span class="el-from-top"> The Night Skinny (feat. Mecna, Coco).</span>
+                                        
+                                    </p>
+                                </div>
+                                <div class="img__txt img__txt--info txt--title">
+                                    <p>
+                                        <span class="el-from-right">Artwork</span>
+                                        <span class="el-from-right">2017</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="block">
+                        <div class="block__wrapper">
+                            <div class="img__container">
+                                <img src="/assets/img/img08.jpg" alt="">
+                                <div class="img__txt img__txt--title">
+                                    <p>
+                                        <span class="el-from-top">Equilibrio</span>
+                                        
+                                            <span class="el-from-top"> The Night Skinny (feat. Mecna, Coco).</span>
+                                        
+                                    </p>
+                                </div>
+                                <div class="img__txt img__txt--info txt--title">
+                                    <p>
+                                        <span class="el-from-right">Artwork</span>
+                                        <span class="el-from-right">2017</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
 
 
 <script src="js/app.js"></script>

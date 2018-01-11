@@ -1,329 +1,65 @@
-//
-// Navbar
-//
-
-$nav-padding-y: 20px;
-$nav-padding-x: 40px;
-$nav-fixed-margin-y: 0;
-$nav-fixed-margin-x: 50px;
-$nav-brand-padding-y: 5px;
-$nav-brand-padding-x: 5px;
-$nav-link-padding-y: 8px;
-$nav-link-padding-x: 12px;
-
-//
-//  Nav Container - Designed for sub menu containing
-//
-.nav__container {
-  @extend .container;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-
-//
-//  Fixed Navbar
-//
-.nav--fixed {
-  position: fixed;
-  top: $nav-fixed-margin-y;
-  left: 0;
-  right: 0;
-  z-index: 900;
-}
-
 .nav {
-  padding: ($nav-padding-y / 2) ($nav-padding-x / 2);
-}
-
-.nav__sub {
-  padding: 0 ($nav-padding-x / 2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  z-index: 999;
+  padding: 2rem 3rem;
+  background: transparent;
+
+  &--footer {
+    padding: 1.5rem 3rem;
+    top: auto;
+    bottom: 0;
+    background: transparent;
+  }
 }
 
-//
-//  General nav
-//
+.scroll {
+  color: #fff;
 
-.nav,
-.nav__sub {
-
-  &:not(.nav--fixed) {
-    position: relative;
+  .negative & {
+    color: #161616;
   }
+}
 
-  //
-  // Container inside nav
-  //
+.progress {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 10px;
+  z-index: 1;
+  background: transparent;
 
-  &,
-  > .container,
-  > .container-fluid {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  ul {
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-  }
-
-  //
-  // Navbar brand
-  //
-
-  .nav__brand {
-    display: inline-block;
-    padding-top: $nav-brand-padding-y;
-    padding-bottom: $nav-brand-padding-y;
-    white-space: nowrap;
-    margin: 0 $nav-padding-x 0 0;
-    align-self: center;
-
-    @include hover-focus {
-      text-decoration: none;
-    }
-
-    .nav__sub__brand {
-      font-size: .975rem;
-    }
-  }
-
-  //
-  // Nav wrapper
-  //
-
-  .nav__wrapper,
-  .nav__dropdown__menu ul {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-
-    li {
-      margin: 0;
-    }
-
-    //
-    // Nav link
-    //
-
-    .nav__link {
-      display: block;
-      position: relative;
-      padding: ($nav-link-padding-y / 2) 0;
-      margin: $nav-link-padding-y 0;
-      z-index: 1;
-    }
-  }
-
-  //
-  // Navbar text
-  //
-
-  .nav__text {
-    display: inline-block;
-    padding-top: $nav-link-padding-y;
-    padding-bottom: $nav-link-padding-y;
-
-    * {
-      padding: 0;
-      margin: 0;
-    }
-  }
-
-  //
-  // Navbar with fullpage menu
-  //
-
-  .nav__menu--full {
-    position: fixed;
-    display: flex;
+  .bar {
+    position: absolute;
     top: 0;
-    right: -100vw;
-    width: 100vw;
-    height: 100vh;
-    z-index: 998;
-    @include transition(all .5s ease-in);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#fff;
 
-    &.active {
+    &:before {
+      @include pseudo();
+      bottom: 0;
+      height: 10px;
       right: 0;
+      width: 2px;
+      background: #fff;
+      transition: height .2s ease-in-out;
     }
 
-    .nav__wrapper {
-      .nav__link {
-        padding: .25rem .5rem;
-        font-size: 1.25rem;
-        line-height: 2.5rem;
-        margin: .25rem 0;
-      }
-
-      @include mq(xl) {
-        .nav__link {
-          padding: .5rem 1rem;
-          font-size: 5rem;
-          line-height: 5rem;
-        }
-      }
-    }
-  }
-
-  //
-  // Navbar with bootstrap menu
-  //
-
-  &.nav--expand .nav--collapse {
-    flex-basis: 100%;
-    flex-grow: 1;
-  }
-
-  //
-  // Burger menu icon
-  //
-
-  .nav__burger {
-    padding: 20px 10px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    z-index: 999;
-
-    span {
-      position: relative;
-      display: block;
-
-      &:before,
-      &:after {
-        @include pseudo();
-      }
-
-      &,
-      &:before,
-      &:after {
-        width: 35px;
-        height: 2px;
-        @include transition();
-      }
-
-      @include mq(xl) {
-        &,
-        &:before,
-        &:after {
-          width: 45px;
-          height: 5px;
-        }
-      }
-
-      @include mq(md) {
-        &,
-        &:before,
-        &:after {
-          width: 40px;
-          height: 4px;
-        }
-      }
+    .negative & {
+      background: #161616;
 
       &:before {
-        transform: translate3d(0, -10px, 0);
-      }
-
-      &:after {
-        transform: translate3d(0, 10px, 0);
+        height: 20px;
+        background: #161616;
       }
     }
-
-    &.active {
-      span {
-        width: 0;
-
-        &:before {
-          transform: translate3d(-27.5px, 0, 0) rotateZ(45deg);
-        }
-        &:after {
-          transform: translate3d(-27.5px, 0, 0) rotateZ(-45deg);
-        }
-      }
-    }
-  }
-}
-
-.nav__dropdown {
-}
-
-.nav__dropdown__menu {
-  display: none;
-
-  &.show {
-    display: block;
-  }
-}
-
-@include mq(md) {
-  .nav__sub {
-    padding: 0 $nav-padding-x;
-
-  }
-  .nav {
-    padding: $nav-padding-y $nav-padding-x;
-    &.nav--expand {
-      flex-flow: row nowrap;
-      justify-content: flex-start;
-
-      .nav__wrapper,
-      .nav__dropdown__menu ul {
-        flex-direction: row;
-
-        .nav__link {
-          padding-right: .5rem;
-          padding-left: .5rem;
-          margin-right: .25rem;
-          margin-left: .25rem;
-        }
-      }
-
-      .nav__dropdown__menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-      }
-
-      > .container,
-      > .container-fluid {
-        flex-wrap: nowrap;
-
-      }
-
-      .nav--collapse {
-        display: flex !important;
-        flex-basis: auto;
-      }
-
-      .nav__burger {
-        display: none;
-      }
-    }
-  }
-}
-
-@include mq(md, max) {
-  .nav--expand {
-    > .container,
-    > .container-fluid {
-      padding-right: 0;
-      padding-left: 0;
-    }
-  }
-
-  .collapse {
-    display: none;
-  }
-
-  .show {
-    display: block;
   }
 }

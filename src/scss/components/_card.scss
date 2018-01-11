@@ -38,5 +38,9 @@ $card-margin-b: 0;
 }
 
 .box {
-  padding: 3rem 2.5rem;
+  padding: 2rem;
+
+  @include mq(lg) {
+    padding: 3rem 2.5rem;
+  }
 }

@@ -1,0 +1,52 @@
+{% extends "layout.nunjucks" %}
+{% set bodyClass = "negative" %}
+
+{% block content %}
+
+    <div class="nav">
+        <a href="/" class="nav__item link lead">Home</a>
+        <a href="/" class="nav__item link lead" id="about">Works</a>
+    </div>
+    <canvas id="noise" width="150" height="150"></canvas>
+
+    <div class="scene__container" data-namespace="profile">
+        <div class="page">
+            <div class="page__background">
+                <div class="page__title breadcrumb">Profile</div>
+            </div>
+            <div class="page__scroll">
+                <div class="container">
+                    <div class="row reverse end">
+                        <div class="col-12 col-md-8 col-xl-6">
+                            <div class="box">
+                                <p class="lead m-0 el-from-bottom">Hi! I'm <a href="#!" class="link">Nicolò Amoretti</a>,
+                                    a Graphic
+                                    Designer based in Parma, Italy. I've been performing digital and print design, brand
+                                    identity and interactive experiences. I had the chance to collaborate with different
+                                    agencies such as <a href="#!" class="link">AdStore</a>.<br>
+                                    Let's get in touch, for any project inquiries or even simply say hello, just drop me
+                                    a
+                                    line :)</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 col-xl-2">
+                            <div class="box">
+                                <ul class="social">
+                                    <li><a href="#!" class="link link--fb lead">Facebook</a></li>
+                                    <li><a href="#!" class="link link--tw lead">Twitter</a></li>
+                                    <li><a href="#!" class="link link--in lead">Instagram</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row end">
+                        <div class="col-12 col-md-8 col-xl-6">
+                            <div class="box">
+                                <p class="developer">Coded by <a href="#!" class="link">Raffaele Filiberti</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

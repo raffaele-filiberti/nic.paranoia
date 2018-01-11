@@ -2,7 +2,65 @@
   "env": {
     "title": "L e l e W e b S t a r t e r",
     "meta": {
-      "theme-colors": "#444"
+      "theme-colors": "#161616"
     }
-  }
+  },
+  "fakers": [
+    {
+      "img": "/assets/img/img01.jpg",
+      "type": "Artwork",
+      "year": "2017",
+      "title": "Michael J. Fox",
+      "artist": "The Night Skinny (feat. Tedua)."
+    },
+    {
+      "img": "/assets/img/img02.jpg",
+      "type": "Artwork",
+      "year": "2017",
+      "title": "Please, kill the aesthetic.",
+      "artist": false
+    },
+    {
+      "img": "/assets/img/img03.jpg",
+      "type": "Artwork",
+      "year": "2017",
+      "title": "Please, kill the aesthetic.",
+      "artist": false
+    },
+    {
+      "img": "/assets/img/img04.jpg",
+      "type": "Artwork",
+      "year": "2017",
+      "title": "Please, kill the aesthetic.",
+      "artist": false
+    },
+    {
+      "img": "/assets/img/img05.jpg",
+      "type": "Artwork",
+      "year": "2017",
+      "title": "Equilibrio",
+      "artist": " The Night Skinny (feat. Mecna, Coco)."
+    },
+    {
+      "img": "/assets/img/img06.jpg",
+      "type": "Artwork",
+      "year": "2017",
+      "title": "Equilibrio",
+      "artist": " The Night Skinny (feat. Mecna, Coco)."
+    },
+    {
+      "img": "/assets/img/img07.jpg",
+      "type": "Artwork",
+      "year": "2017",
+      "title": "Equilibrio",
+      "artist": " The Night Skinny (feat. Mecna, Coco)."
+    },
+    {
+      "img": "/assets/img/img08.jpg",
+      "type": "Artwork",
+      "year": "2017",
+      "title": "Equilibrio",
+      "artist": " The Night Skinny (feat. Mecna, Coco)."
+    }
+  ]
 }

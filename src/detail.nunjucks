@@ -1,0 +1,17 @@
+{% extends "layout.nunjucks" %}
+{% set bodyClass = "detail" %}
+
+{% block content %}
+
+    <div class="nav">
+        <a href="/" class="link lead el-from-top" id="about">Back</a>
+    </div>
+
+    <div class="detail">
+        <div class="detail__block">
+            <div class="detail__block__content">
+                <img src="{{ fakers[0].img }}" alt="">
+            </div>
+        </div>
+    </div>
+{% endblock %}

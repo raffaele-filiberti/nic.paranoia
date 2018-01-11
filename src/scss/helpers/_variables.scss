@@ -1,15 +1,13 @@
 //
 //      Color
 //
-
 $red: #870000;
 $blank: #fff !default;
-$gray-primary: #6F6F6F;
+$gray-primary: #DDD;
 $gray-secondary: #EEE;
-$black: #515151 !default;
+$black: #161616 !default;
 $secondary: #283E56;
 $primary: #289548;
-
 $colors: (
         primary: $primary,
         secondary: $secondary,
@@ -18,7 +16,6 @@ $colors: (
         gray: $gray-secondary,
         dark: $black,
 );
-
 $btn-colors: (
         primary: $primary,
         secondary: $secondary,
@@ -26,163 +23,81 @@ $btn-colors: (
         gray: $gray-secondary,
         dark: $black,
 );
-
+//
+// Breakpoints
+//
 //
 // Breakpoints
 //
 $breakpoints: (
-        xs: 0rem,
-        sm: 30rem,
-        md: 48rem,
-        lg: 64rem,
-        xl: 75rem,
+        xs: 0px,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1680px
 );
+
+$grid-breakpoints: (
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1680px
+);
+
 //
 //      Shadow
 //
-
 $shadow-1: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 $shadow-2: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
 $shadow-3: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
 $shadow-4: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
-$shadow-5: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
-
-//
+$shadow-5: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3); //
 //      Fonts
 //
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@font-face {
+  font-family: Okomito;
+  src: url("/assets/fonts/Okomito/Black/Okomito-Black.otf");
+  font-weight: 900;
+}
 
-$body-font-size: 14px;
-//
+@font-face {
+  font-family: Okomito;
+  src: url("/assets/fonts/Okomito/Regular/Okomito-Regular.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Okomito;
+  src: url("/assets/fonts/Okomito/Medium/Okomito-Medium.otf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Okomito;
+  src: url("/assets/fonts/Okomito/Light/Okomito-Light.otf");
+  font-weight: 300;
+}
+
+$body-font-size: 14px; //
 // Transition
 //
-$base-transition-duration: .25s;
-$transition-base: all $base-transition-duration cubic-bezier(.550, .055, .675, .190);
+$base-transition-duration: 0.25s;
+$transition-base: all $base-transition-duration cubic-bezier(.550, .055, .675, .190); //
+
 
 //
-// Spacers
+// Typography
 //
-$typography-font-family: Roboto, sans-serif !default;
+$base-font-family: Okomito, sans-serif !default;
+$heading-font-family: $base-font-family;
 
-$typography-font-weight-values: (
+$font-weight-values: (
         thin: 100,
         light: 300,
         regular: 400,
         medium: 500,
         bold: 700,
         black: 900
-) !default;
-
-//
-// Typography
-//
-$typography-styles: (
-        display4: (
-                font-size: 7rem, /* 112sp */
-                line-height: 7rem, /* 112sp */
-                font-weight: map-get($typography-font-weight-values, light),
-                letter-spacing: -.04em,
-                margin: -1rem 0 3.5rem -.085em /* -16sp 0 56sp -.085em */,
-                text-decoration: inherit,
-                text-transform: inherit
-        ),
-        display3: (
-                font-size: 3.5rem, /* 56px */
-                line-height: 3.5rem, /* 56px */
-                font-weight: map-get($typography-font-weight-values, regular),
-                letter-spacing: -.02em,
-                margin: -8px 0 64px -.07em,
-                text-decoration: inherit,
-                text-transform: inherit
-        ),
-        display2: (
-                font-size: 2.813rem, /* 45px */
-                line-height: 3rem, /* 48px */
-                font-weight: map-get($typography-font-weight-values, regular),
-                letter-spacing: normal,
-                margin: -.5rem 0 4rem -.07em /* -8sp 0 64sp -.07em */,
-                text-decoration: inherit,
-                text-transform: inherit
-        ),
-        display1: (
-                font-size: 2.125rem, /* 34sp */
-                line-height: 2.5rem, /* 40sp */
-                font-weight: map-get($typography-font-weight-values, regular),
-                letter-spacing: normal,
-                margin: -.5rem 0 4rem -.07em /* -8sp 0 64sp -.07em */,
-                text-decoration: inherit,
-                text-transform: inherit
-        ),
-        headline: (
-                font-size: 1.5rem, /* 24sp */
-                line-height: 2rem, /* 32sp */
-                font-weight: map-get($typography-font-weight-values, regular),
-                letter-spacing: normal,
-                margin: -.5rem 0 1rem -.06em /* -8sp 0 16sp -.06em */,
-                text-decoration: inherit,
-                text-transform: inherit
-        ),
-        title: (
-                font-size: 1.25rem, /* 20sp */
-                line-height: 2rem, /* 32sp */
-                font-weight: map-get($typography-font-weight-values, medium),
-                letter-spacing: .02em,
-                margin: -.5rem 0 1rem -.05em /* -8sp 0 16sp -.05em */,
-                text-decoration: inherit,
-                text-transform: inherit
-        ),
-        subheading2: (
-                font-size: 1rem, /* 16sp */
-                line-height: 1.75rem, /* 28sp */
-                font-weight: map-get($typography-font-weight-values, regular),
-                letter-spacing: .04em,
-                margin: -.5rem 0 1rem -.06em /* -8sp 0 16sp -.06em */,
-                text-decoration: inherit,
-                text-transform: inherit
-        ),
-        subheading1: (
-                font-size: .938rem, /* 15sp */
-                line-height: 1.5rem, /* 24sp */
-                font-weight: map-get($typography-font-weight-values, regular),
-                letter-spacing: .04em,
-                margin: -.313rem 0 .813rem -.06em /* -5sp 0 13sp -.06em */,
-                text-decoration: inherit,
-                text-transform: inherit
-        ),
-        body2: (
-                font-size: .875rem, /* 14sp */
-                line-height: 1.5rem, /* 24sp */
-                font-weight: map-get($typography-font-weight-values, medium),
-                letter-spacing: .04em,
-                margin: -.25rem 0 .75rem 0 /* -4sp 0 12sp 0 */,
-                text-decoration: inherit,
-                text-transform: inherit
-        ),
-        body1: (
-                font-size: .875rem, /* 14sp */
-                line-height: 1.25rem, /* 20sp */
-                font-weight: map-get($typography-font-weight-values, regular),
-                letter-spacing: .04em,
-                margin: -.25rem 0 .75rem 0 /* -4sp 0 12sp 0 */,
-                text-decoration: inherit,
-                text-transform: inherit
-        ),
-        caption: (
-                font-size: .75rem, /* 12sp */
-                line-height: 1.25rem, /* 20sp */
-                font-weight: map-get($typography-font-weight-values, regular),
-                letter-spacing: .08em,
-                margin: -.5rem 0 1rem -.04em /* -8sp 0 16sp -.04em */,
-                text-decoration: inherit,
-                text-transform: inherit
-        ),
-        button: (
-                font-size: .875rem, /* 14sp */
-                line-height: 2.25rem, /* 36sp */
-                font-weight: map-get($typography-font-weight-values, medium),
-                letter-spacing: .04em,
-                margin: inherit /* We do not have adjust margin for button */,
-                text-decoration: none,
-                text-transform: uppercase
-        )
 ) !default;

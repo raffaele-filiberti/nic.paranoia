@@ -1,34 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/scss/helpers/_variables.scss" description="lg: 992px," line="35" />
+  </component>
   <component name="ChangeListManager">
     <list id="44466655-ee33-4e61-8645-cf27dc60c7cd" name="theming" comment="theming" />
     <list default="true" id="dbbe8b4c-96fb-43b5-983a-5aa7a3adb45a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/img02.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/img03.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/img04.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/js/vendors/old_slider.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/js/vendors/slider.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/templates/partials/navigation.nunjucks" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.tern-project" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/about.nunjucks" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Black/Okomito-Black.otf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Black/Okomito-Black.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Black/Okomito-License.pdf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Bold Italic/Okomito-BoldItalic.otf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Bold Italic/Okomito-BoldItalic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Bold Italic/Okomito-License.pdf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Bold/Okomito-Bold.otf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Bold/Okomito-Bold.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Bold/Okomito-License.pdf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Italic/Okomito-Italic.otf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Italic/Okomito-Italic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Italic/Okomito-License.pdf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Light Italic/Okomito-License.pdf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Light Italic/Okomito-LightItalic.otf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Light Italic/Okomito-LightItalic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Light/Okomito-License.pdf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Light/Okomito-Light.otf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Light/Okomito-Light.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Medium Italic/Okomito-License.pdf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Medium Italic/Okomito-MediumItalic.otf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Medium Italic/Okomito-MediumItalic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Medium/Okomito-License.pdf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Medium/Okomito-Medium.otf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Medium/Okomito-Medium.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Regular/Okomito-License.pdf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Regular/Okomito-Regular.otf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/Okomito/Regular/Okomito-Regular.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/detail.nunjucks" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/grid.nunjucks" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/js/vendors/scroll.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/scss/helpers/_keyframes.scss" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/build/assets/img/img01.jpg" afterPath="$PROJECT_DIR$/build/assets/img/img01.jpg" />
       <change beforePath="$PROJECT_DIR$/build/css/global.css" afterPath="$PROJECT_DIR$/build/css/global.css" />
       <change beforePath="$PROJECT_DIR$/build/index.html" afterPath="$PROJECT_DIR$/build/index.html" />
       <change beforePath="$PROJECT_DIR$/build/js/app.js" afterPath="$PROJECT_DIR$/build/js/app.js" />
       <change beforePath="$PROJECT_DIR$/build/js/app.js.map" afterPath="$PROJECT_DIR$/build/js/app.js.map" />
+      <change beforePath="$PROJECT_DIR$/build/js/vendors/vendors.js" afterPath="$PROJECT_DIR$/build/js/vendors/vendors.js" />
       <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/src/app/data.json" afterPath="$PROJECT_DIR$/src/data.json" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/index.nunjucks" afterPath="$PROJECT_DIR$/src/index.nunjucks" />
-      <change beforePath="$PROJECT_DIR$/src/app/templates/layout.nunjucks" afterPath="$PROJECT_DIR$/src/templates/layout.nunjucks" />
-      <change beforePath="$PROJECT_DIR$/src/app/templates/partials/footer.nunjucks" afterPath="$PROJECT_DIR$/src/templates/partials/footer.nunjucks" />
-      <change beforePath="$PROJECT_DIR$/src/app/templates/partials/navigation.nunjucks" afterPath="$PROJECT_DIR$/src/gulp/tasks/images.js" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/img01.jpg" afterPath="$PROJECT_DIR$/src/assets/img/img01.jpg" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/img02.jpg" afterPath="$PROJECT_DIR$/src/assets/img/img02.jpg" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/img03.jpg" afterPath="$PROJECT_DIR$/src/assets/img/img03.jpg" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/img04.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/data.json" afterPath="$PROJECT_DIR$/src/data.json" />
       <change beforePath="$PROJECT_DIR$/src/gulp/config.js" afterPath="$PROJECT_DIR$/src/gulp/config.js" />
       <change beforePath="$PROJECT_DIR$/src/gulp/tasks/html.js" afterPath="$PROJECT_DIR$/src/gulp/tasks/html.js" />
-      <change beforePath="$PROJECT_DIR$/src/gulp/tasks/server.js" afterPath="$PROJECT_DIR$/src/gulp/tasks/server.js" />
+      <change beforePath="$PROJECT_DIR$/src/gulp/tasks/scripts.js" afterPath="$PROJECT_DIR$/src/gulp/tasks/scripts.js" />
       <change beforePath="$PROJECT_DIR$/src/gulp/tasks/watch.js" afterPath="$PROJECT_DIR$/src/gulp/tasks/watch.js" />
+      <change beforePath="$PROJECT_DIR$/src/index.nunjucks" afterPath="$PROJECT_DIR$/src/index.nunjucks" />
       <change beforePath="$PROJECT_DIR$/src/js/app.js" afterPath="$PROJECT_DIR$/src/js/app.js" />
+      <change beforePath="$PROJECT_DIR$/src/js/vendors/old_slider.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/js/vendors/slider.js" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/js/vendors/vendors.js" afterPath="$PROJECT_DIR$/src/js/vendors/vendors.js" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_slider.scss" afterPath="$PROJECT_DIR$/src/scss/components/_slider.scss" />
+      <change beforePath="$PROJECT_DIR$/src/scss/base/_typography.scss" afterPath="$PROJECT_DIR$/src/scss/base/_typography.scss" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_button.scss" afterPath="$PROJECT_DIR$/src/scss/components/_button.scss" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_card.scss" afterPath="$PROJECT_DIR$/src/scss/components/_card.scss" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_form.scss" afterPath="$PROJECT_DIR$/src/scss/components/_form.scss" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_navbar.scss" afterPath="$PROJECT_DIR$/src/scss/components/_navbar.scss" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_slider.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/scss/global.scss" afterPath="$PROJECT_DIR$/src/scss/global.scss" />
+      <change beforePath="$PROJECT_DIR$/src/scss/helpers/_helpers.scss" afterPath="$PROJECT_DIR$/src/scss/helpers/_helpers.scss" />
+      <change beforePath="$PROJECT_DIR$/src/scss/helpers/_mixins.scss" afterPath="$PROJECT_DIR$/src/scss/helpers/_mixins.scss" />
+      <change beforePath="$PROJECT_DIR$/src/scss/helpers/_variables.scss" afterPath="$PROJECT_DIR$/src/scss/helpers/_variables.scss" />
+      <change beforePath="$PROJECT_DIR$/src/scss/layout/_grid.scss" afterPath="$PROJECT_DIR$/src/scss/layout/_grid.scss" />
+      <change beforePath="$PROJECT_DIR$/src/scss/pages/_home.scss" afterPath="$PROJECT_DIR$/src/scss/pages/_home.scss" />
+      <change beforePath="$PROJECT_DIR$/src/templates/layout.nunjucks" afterPath="$PROJECT_DIR$/src/templates/layout.nunjucks" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,21 +88,63 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file leaf-file-name="index.nunjucks" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.nunjucks">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="24" column="51" lean-forward="false" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
-              <caret line="27" column="51" lean-forward="false" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
-              <caret line="30" column="51" lean-forward="false" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
-              <caret line="21" column="51" lean-forward="false" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-              <folding>
-                <element signature="e#213#264#0#HTML" expanded="true" />
-                <element signature="e#363#414#0#HTML" expanded="true" />
-                <element signature="e#513#564#0#HTML" expanded="true" />
-                <element signature="e#663#714#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="625">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.nunjucks" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/about.nunjucks">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scroll.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/vendors/scroll.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.nunjucks" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/templates/layout.nunjucks">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_home.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scss/pages/_home.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="925">
+              <caret line="266" column="19" lean-forward="false" selection-start-line="266" selection-start-column="19" selection-end-line="266" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_navbar.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scss/components/_navbar.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-200">
+              <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -63,31 +152,15 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+            <state relative-caret-position="475">
+              <caret line="213" column="42" lean-forward="false" selection-start-line="213" selection-start-column="42" selection-end-line="213" selection-end-column="42" />
               <folding>
-                <element signature="e#0#30#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#3249#4102#0" expanded="false" />
+                <element signature="e#4146#4495#0" expanded="false" />
+                <element signature="e#4527#4767#0" expanded="false" />
+                <element signature="e#4797#5724#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="assets.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gulp/tasks/assets.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="images.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gulp/tasks/images.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -95,30 +168,8 @@
       <file leaf-file-name="slider.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/vendors/slider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="42" column="81" lean-forward="true" selection-start-line="42" selection-start-column="81" selection-end-line="42" selection-end-column="81" />
-              <folding>
-                <element signature="e#2308#6047#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="old_slider.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/vendors/old_slider.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="98" column="38" lean-forward="false" selection-start-line="98" selection-start-column="38" selection-end-line="98" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_slider.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scss/components/_slider.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="35" column="4" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="23" />
+            <state relative-caret-position="575">
+              <caret line="154" column="5" lean-forward="false" selection-start-line="152" selection-start-column="4" selection-end-line="154" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -129,77 +180,78 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="SCSS File" />
         <option value="HTML File" />
         <option value="Nunjucks File" />
         <option value="JavaScript File" />
+        <option value="SCSS File" />
+        <option value="Nunjucks FIle" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>phone</find>
-      <find>tablet</find>
-      <find>desktop</find>
-      <find>lg-wide</find>
-      <find>extend</find>
-      <find>auto-height</find>
-      <find>dist</find>
-      <find>app/</find>
-      <find>app</find>
-      <find>$mdc-typography</find>
-      <find>concat</find>
-      <find>env</find>
-      <find>styles</find>
-      <find>jsmin</find>
-      <find>cssmin</find>
-      <find>index</find>
-      <find>sourcemaps</find>
-      <find>datas</find>
-      <find>imagemin</find>
-      <find>assets</find>
-      <find>lint</find>
-      <find>gulp-s</find>
-      <find>this.DOM.nextCtrl</find>
-      <find>var</find>
+      <find>dragging</find>
+      <find>headline</find>
+      <find>[0]</find>
+      <find>scripts</find>
       <find>this.wrapper</find>
-      <find>wrapperSlides</find>
-      <find>animateSlides</find>
-      <find>titleSlides</find>
-      <find>àà</find>
-      <find>isAnimating</find>
+      <find>wrapper</find>
+      <find>evt</find>
+      <find>\&lt;a href\=\&quot;\/\&quot; class\=\&quot;nav__brand link\&quot;\&gt;nic\.paranoia\&lt;\/a\&gt;\n</find>
+      <find>#000</find>
+      <find>212121</find>
+      <find>.scene_element</find>
+      <find>.is-exiting</find>
+      <find>var</find>
+      <find>scene_element</find>
+      <find>is-exiting</find>
+      <find>this.wrapper.style.transform</find>
+      <find>dev</find>
+      <find>grid</find>
+      <find>scrollLeft</find>
+      <find>transfo</find>
+      <find>onResize</find>
+      <find>isAnimated</find>
+      <find>bar</find>
+      <find>faker</find>
+      <find>page</find>
+      <find>576</find>
+      <find>0</find>
+      <find>[]</find>
+      <find>_initBarba</find>
+      <find>,</find>
     </findStrings>
     <replaceStrings>
-      <replace>map_get($colors, $blank)</replace>
-      <replace>map_get($colors, $gray-secondary)</replace>
-      <replace>map_get($colors, $secondary)</replace>
-      <replace>map_get($colors, $gray-primary)</replace>
-      <replace>map_get($colors, primary);</replace>
-      <replace>map_get($colors, blank)</replace>
-      <replace>map_get($colors, secondary);</replace>
-      <replace>map_get($colors, black);</replace>
-      <replace>map_get($colors, gray);</replace>
-      <replace>map_get($colors, disabled);</replace>
-      <replace>primary</replace>
-      <replace>map_get($colors, secondary)</replace>
-      <replace>map_get($colors, disabled)</replace>
-      <replace>map_get($colors, gray)</replace>
-      <replace>map_get($colors, dark);</replace>
-      <replace>(map_get($colors, primary),</replace>
-      <replace>.png</replace>
-      <replace>home</replace>
-      <replace>$infix</replace>
-      <replace>sm</replace>
-      <replace>md</replace>
-      <replace>lg</replace>
       <replace>xl</replace>
       <replace>/app</replace>
       <replace>$typography</replace>
       <replace>this.ctrl.next</replace>
-      <replace>let</replace>
       <replace>wrapper</replace>
       <replace>this.wrapperSlides</replace>
       <replace>titlesSlides</replace>
+      <replace>Tedua X TNS</replace>
+      <replace>The Night Skinny feat Tedua</replace>
+      <replace>this.isDragging</replace>
+      <replace>vars.isDragging</replace>
+      <replace>negative</replace>
+      <replace>subheading2</replace>
+      <replace>this.options.wrapper</replace>
+      <replace>&lt;a href=&quot;/&quot; class=&quot;nav__brand link lead&quot;&gt;nic.paranoia&lt;/a&gt;</replace>
+      <replace>#212121</replace>
+      <replace>161616</replace>
+      <replace>e</replace>
+      <replace>&amp;</replace>
+      <replace>page__element</replace>
+      <replace>scrollHeight</replace>
+      <replace>this.wrapper.style[this.transform]</replace>
+      <replace>fakers[0]</replace>
+      <replace>archive</replace>
+      <replace>_onResize</replace>
+      <replace>768</replace>
+      <replace>- [ ]</replace>
+      <replace>let</replace>
+      <replace>_init</replace>
+      <replace>;</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/scss/themes/icolors</dir>
@@ -216,34 +268,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/index.js" />
-        <option value="$PROJECT_DIR$/app/templates/partials/navigation.nunjucks" />
-        <option value="$PROJECT_DIR$/scss/helpers/_functions.scss" />
-        <option value="$PROJECT_DIR$/scss/helpers/_mixins.scss" />
-        <option value="$PROJECT_DIR$/scss/layout/_footer.scss" />
-        <option value="$PROJECT_DIR$/scss/base/_typography.scss" />
-        <option value="$PROJECT_DIR$/scss/helpers/_helpers.scss" />
-        <option value="$PROJECT_DIR$/scss/helpers/_variables.scss" />
-        <option value="$PROJECT_DIR$/.babelrc" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/dist/dist/js/bundle.js" />
-        <option value="$PROJECT_DIR$/app/templates/layout.nunjucks" />
-        <option value="$PROJECT_DIR$/js/global.js" />
-        <option value="$PROJECT_DIR$/scss/components/_slider.scss" />
-        <option value="$PROJECT_DIR$/js/main.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/scss/layout/_grid.scss" />
-        <option value="$PROJECT_DIR$/app/pages/index.nunjucks" />
-        <option value="$PROJECT_DIR$/src/gulp/scripts.js" />
-        <option value="$PROJECT_DIR$/src/gulp/styles.js" />
-        <option value="$PROJECT_DIR$/src/gulp/nunjucks.js" />
         <option value="$PROJECT_DIR$/src/gulp/html.js" />
         <option value="$PROJECT_DIR$/src/gulp/server.js" />
         <option value="$PROJECT_DIR$/src/gulp/watch.js" />
         <option value="$PROJECT_DIR$/project.json" />
         <option value="$PROJECT_DIR$/src/js/main.js" />
         <option value="$USER_HOME$/Downloads/playground-starter-master/package.json" />
-        <option value="$PROJECT_DIR$/build/index.html" />
         <option value="$PROJECT_DIR$/src/app/templates/layout.nunjucks" />
         <option value="$PROJECT_DIR$/build/css/global.css" />
         <option value="$USER_HOME$/Downloads/playground-starter-master/project.json" />
@@ -251,21 +281,43 @@
         <option value="$PROJECT_DIR$/gulpfile.babel.js" />
         <option value="$PROJECT_DIR$/build/js/app.js" />
         <option value="$PROJECT_DIR$/src/gulp/tasks/build.js" />
-        <option value="$PROJECT_DIR$/src/scss/helpers/_helpers.scss" />
-        <option value="$PROJECT_DIR$/src/scss/components/_card.scss" />
         <option value="$PROJECT_DIR$/src/app/pages/index.nunjucks" />
-        <option value="$PROJECT_DIR$/src/gulp/config.js" />
-        <option value="$PROJECT_DIR$/src/gulp/tasks/html.js" />
-        <option value="$PROJECT_DIR$/src/gulp/tasks/watch.js" />
         <option value="$PROJECT_DIR$/src/gulp/tasks/server.js" />
         <option value="$PROJECT_DIR$/../AnimatedFrameSlideshow/js/demo4.js" />
         <option value="$PROJECT_DIR$/src/js/vendors/vendors.js" />
         <option value="$PROJECT_DIR$/src/gulp/tasks/images.js" />
         <option value="$PROJECT_DIR$/src/gulp/tasks/assets.js" />
-        <option value="$PROJECT_DIR$/src/index.nunjucks" />
         <option value="$PROJECT_DIR$/src/scss/components/_slider.scss" />
         <option value="$PROJECT_DIR$/src/js/vendors/old_slider.js" />
+        <option value="$PROJECT_DIR$/src/scss/helpers/_mixins.scss" />
+        <option value="$PROJECT_DIR$/build/index.html" />
+        <option value="$PROJECT_DIR$/src/gulp/config.js" />
+        <option value="$PROJECT_DIR$/src/gulp/tasks/html.js" />
+        <option value="$PROJECT_DIR$/src/scss/layout/_grid.scss" />
+        <option value="$PROJECT_DIR$/src/scss/helpers/_helpers.scss" />
+        <option value="$PROJECT_DIR$/src/gulp/tasks/watch.js" />
+        <option value="$PROJECT_DIR$/src/scss/helpers/_variables.scss" />
+        <option value="$PROJECT_DIR$/src/scss/components/_button.scss" />
+        <option value="$PROJECT_DIR$/src/scss/components/_form.scss" />
+        <option value="$PROJECT_DIR$/src/js/vendors/test.js" />
+        <option value="$PROJECT_DIR$/src/scss/base/_typography.scss" />
+        <option value="$USER_HOME$/AppData/Local/Temp/Temp1_BlockRevealers.zip/BlockRevealers/index.html" />
+        <option value="$PROJECT_DIR$/src/js/vendors/blockRevealer.js" />
+        <option value="$PROJECT_DIR$/src/scss/helpers/keyframes.scss" />
+        <option value="$PROJECT_DIR$/src/scss/global.scss" />
+        <option value="$PROJECT_DIR$/src/scss/helpers/_keyframes.scss" />
+        <option value="$PROJECT_DIR$/src/scss/components/_card.scss" />
+        <option value="$PROJECT_DIR$/src/data.json" />
+        <option value="$PROJECT_DIR$/src/gulp/tasks/scripts.js" />
+        <option value="$PROJECT_DIR$/src/scss/components/_navbar.scss" />
+        <option value="$PROJECT_DIR$/src/grid.nunjucks" />
+        <option value="$PROJECT_DIR$/src/detail.nunjucks" />
+        <option value="$PROJECT_DIR$/src/templates/layout.nunjucks" />
         <option value="$PROJECT_DIR$/src/js/vendors/slider.js" />
+        <option value="$PROJECT_DIR$/src/js/vendors/scroll.js" />
+        <option value="$PROJECT_DIR$/src/about.nunjucks" />
+        <option value="$PROJECT_DIR$/src/index.nunjucks" />
+        <option value="$PROJECT_DIR$/src/scss/pages/_home.scss" />
         <option value="$PROJECT_DIR$/src/js/app.js" />
       </list>
     </option>
@@ -287,8 +339,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="x" value="1" />
+    <option name="width" value="1918" />
+    <option name="height" value="1020" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -306,75 +359,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="vertical-slider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vertical-slider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vertical-slider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vertical-slider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vertical-slider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vertical-slider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vertical-slider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vertical-slider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vertical-slider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vertical-slider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gulp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vertical-slider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vertical-slider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gulp" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vertical-slider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vertical-slider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vertical-slider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vertical-slider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="vendors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vertical-slider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vertical-slider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vertical-slider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vertical-slider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -447,13 +431,49 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="nic.paranoia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nic.paranoia" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nic.paranoia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nic.paranoia" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nic.paranoia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nic.paranoia" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nic.paranoia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nic.paranoia" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="vendors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nic.paranoia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nic.paranoia" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/scss" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="javascript.nodejs.core.library.configured.version" value="6.11.3" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -461,19 +481,19 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\raffa\Desktop\vertical-slider\src\assets\img" />
-      <recent name="C:\Users\raffa\Desktop\vertical-slider\src" />
-      <recent name="$PROJECT_DIR$/src/assets" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\raffa\Desktop\vertical-slider\src\js\vendors" />
       <recent name="C:\Users\raffa\Desktop\vertical-slider\src\assets" />
       <recent name="$PROJECT_DIR$/img" />
       <recent name="$PROJECT_DIR$/libs" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\raffa\Desktop\vertical-slider\src\assets\img" />
+      <recent name="C:\Users\raffa\Desktop\vertical-slider\src" />
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -527,6 +547,10 @@
       <workItem from="1511943051437" duration="20306000" />
       <workItem from="1512041831101" duration="109000" />
       <workItem from="1512320693442" duration="11261000" />
+      <workItem from="1514219412539" duration="72144000" />
+      <workItem from="1514581770490" duration="976000" />
+      <workItem from="1514591478233" duration="62936000" />
+      <workItem from="1515236961739" duration="15359000" />
     </task>
     <task id="LOCAL-00001" summary="basic setup">
       <created>1507545619814</created>
@@ -623,7 +647,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202129000" />
+    <option name="totallyTimeSpent" value="353544000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -635,20 +659,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12434141" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23766579" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960477" sideWeight="0.5015625" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960477" sideWeight="0.5015625" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32586873" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.4984375" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32586873" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23701298" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24986738" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22122017" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -723,243 +747,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/gulp/task/scripts.js" />
-    <entry file="file://$PROJECT_DIR$/src/gulp/task/nunjucks.js" />
-    <entry file="file://$PROJECT_DIR$/src/js/global.js" />
-    <entry file="file://$PROJECT_DIR$/npm-debug.log" />
-    <entry file="file://$PROJECT_DIR$/src/index.html" />
-    <entry file="file://$PROJECT_DIR$/build/assets/img/img01.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/src/js/main.js" />
-    <entry file="file://$PROJECT_DIR$/src/gulp/tasks/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/jquery/dist/jquery.js" />
-    <entry file="file://$USER_HOME$/Downloads/playground-starter-master/package.json" />
-    <entry file="file://$PROJECT_DIR$/build/js/vendors/vendors.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="true" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/playground-starter-master/project.json" />
-    <entry file="file://$USER_HOME$/Downloads/playground-starter-master/gulpfile.js" />
-    <entry file="file://$PROJECT_DIR$/build/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/css/global.min.css/global.css" />
-    <entry file="file://$PROJECT_DIR$/build/css/global.min.js" />
-    <entry file="file://$PROJECT_DIR$/build/css/global.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gulp/tasks/build.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="3" lean-forward="false" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/pages/_home.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/helpers/_helpers.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/components/_card.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="22" lean-forward="false" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/layout.nunjucks">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gulp/tasks/vendors.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gulp/tasks/watch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gulp/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="44" lean-forward="false" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gulp/tasks/html.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="56" lean-forward="false" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/global.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gulp/tasks/styles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.babel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../AnimatedFrameSlideshow/index4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../AnimatedFrameSlideshow/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="300" column="0" lean-forward="false" selection-start-line="300" selection-start-column="0" selection-end-line="409" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/helpers/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2185">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/base/_typography.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../AnimatedFrameSlideshow/js/demo4.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="179" column="81" lean-forward="false" selection-start-line="177" selection-start-column="20" selection-end-line="179" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/vendors/vendors.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#28#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gulp/tasks/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/img/img03.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/img/img04.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="68" column="34" lean-forward="false" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/img/img02.jpg">
@@ -972,47 +767,151 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.nunjucks">
+    <entry file="file://$PROJECT_DIR$/src/scss/helpers/_mixins.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="51" lean-forward="false" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
-          <caret line="27" column="51" lean-forward="false" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
-          <caret line="30" column="51" lean-forward="false" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
-          <caret line="21" column="51" lean-forward="false" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-          <folding>
-            <element signature="e#213#264#0#HTML" expanded="true" />
-            <element signature="e#363#414#0#HTML" expanded="true" />
-            <element signature="e#513#564#0#HTML" expanded="true" />
-            <element signature="e#663#714#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="350">
+          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/components/_slider.scss">
+    <entry file="file://$PROJECT_DIR$/build/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="35" column="4" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="175">
+          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/layout/_grid.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="134" column="1" lean-forward="false" selection-start-line="134" selection-start-column="1" selection-end-line="134" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/components/_slider.scss" />
+    <entry file="file://$PROJECT_DIR$/src/scss/helpers/_helpers.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gulp/tasks/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gulp/tasks/vendors.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/vendors/vendors.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gulp/tasks/assets.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="100">
           <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/vendors/old_slider.js">
+    <entry file="file://$PROJECT_DIR$/src/gulp/tasks/clean.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="98" column="38" lean-forward="false" selection-start-line="98" selection-start-column="38" selection-end-line="98" selection-end-column="38" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gulp/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="37" column="49" lean-forward="false" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gulp/tasks/html.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="19" column="43" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/components/_form.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2225">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/img/img04.jpg" />
+    <entry file="file://$PROJECT_DIR$/src/scss/helpers/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1814">
+          <caret line="93" column="40" lean-forward="false" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gulp/tasks/images.js">
+    <entry file="file://$PROJECT_DIR$/src/js/vendors/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="60" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/components/_button.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="72" column="3" lean-forward="false" selection-start-line="72" selection-start-column="3" selection-end-line="72" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/base/_typography.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="110" column="18" lean-forward="false" selection-start-line="110" selection-start-column="18" selection-end-line="110" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_BlockRevealers.zip/BlockRevealers/js/anime.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_BlockRevealers.zip/BlockRevealers/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3825">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_BlockRevealers.zip/BlockRevealers/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1025">
+          <caret line="41" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="215" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/vendors/blockRevealer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1168">
+          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1020,22 +919,199 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/global.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/helpers/_keyframes.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="2209" column="0" lean-forward="false" selection-start-line="2209" selection-start-column="0" selection-end-line="2209" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/themes/_theme.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-450">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/components/_card.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="58" column="31" lean-forward="false" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/prefix/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1100">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/prefix/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/prefix/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/prefix/test/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gulp/tasks/images.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gulp/tasks/styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gulp/tasks/watch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gulp/tasks/build.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="31" column="3" lean-forward="false" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gulp/tasks/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grid.nunjucks">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="22" column="52" lean-forward="false" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/detail.nunjucks">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/vendors/scroll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/layout.nunjucks">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/about.nunjucks">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.nunjucks">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/vendors/slider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="42" column="81" lean-forward="true" selection-start-line="42" selection-start-column="81" selection-end-line="42" selection-end-column="81" />
-          <folding>
-            <element signature="e#2308#6047#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="575">
+          <caret line="154" column="5" lean-forward="false" selection-start-line="152" selection-start-column="4" selection-end-line="154" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/components/_navbar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-200">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/pages/_home.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="266" column="19" lean-forward="false" selection-start-line="266" selection-start-column="19" selection-end-line="266" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+        <state relative-caret-position="475">
+          <caret line="213" column="42" lean-forward="false" selection-start-line="213" selection-start-column="42" selection-end-line="213" selection-end-column="42" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#3249#4102#0" expanded="false" />
+            <element signature="e#4146#4495#0" expanded="false" />
+            <element signature="e#4527#4767#0" expanded="false" />
+            <element signature="e#4797#5724#0" expanded="false" />
           </folding>
         </state>
       </provider>

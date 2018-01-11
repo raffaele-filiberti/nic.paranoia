@@ -1,0 +1,33 @@
+{% extends "layout.nunjucks" %}
+{% set bodyClass = "negative" %}
+
+{% block content %}
+
+    <div id="preloader">
+        <div class="txt">
+            <p class="lead"><span class="txt-perc"></span><span class="txt-index"></span></p>
+        </div>
+        <div class="progress-bar"><span></span></div>
+    </div>
+
+    <div class="nav">
+        <a href="/" class="nav__item link lead">Home</a>
+        <a href="/" class="nav__item link lead" id="about">Profile</a>
+    </div>
+    <canvas id="noise" width="150" height="150"></canvas>
+    <div class="archive">
+        <div class="archive__background">
+            <div class="archive__title breadcrumb">Archive</div>
+        </div>
+        <div class="archive__scroll">
+            <div class="archive__container container">
+                {% for faker in fakers %}
+                    <div class="block">
+                        <img src="{{ faker.img }}" alt="">
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

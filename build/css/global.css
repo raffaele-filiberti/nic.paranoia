@@ -5311,17 +5311,20 @@ code {
   position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
   width: 100vw;
   min-height: 100vh;
   visibility: hidden;
-  opacity: 0; }
+  opacity: 0;
+  overflow: hidden; }
   .page__background,
   .archive__background {
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5344,7 +5347,8 @@ code {
             align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; }
+            justify-content: center;
+    overflow: hidden; }
   .page__title,
   .archive__title {
     font-size: 10rem;
@@ -5534,4 +5538,4 @@ ul.social {
       background: #212121; }
 
 .scene__container {
-  min-height: 100vh; }
+  overflow: hidden; }

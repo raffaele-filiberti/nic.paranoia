@@ -161,12 +161,16 @@ class App {
                 wrapper: 0,
                 nav: 0,
             },
+            startTl: new TimelineMax(),
             cs: 0,
             _constructor() {
                 this.scroll = Object.assign({
                     wrapper: document.getElementsByClassName('page__scroll'),
                     nav: document.getElementsByClassName('nav')
                 });
+                this.startTl
+                    .set([document.querySelector('.page'), document.querySelector('.nav')], {autoAlpha: 1})
+
             },
             start() {
                 if (this.scroll.wrapper[0]) {
@@ -175,6 +179,11 @@ class App {
                         nav: this.scroll.nav
                     });
                 }
+                this.startTl
+                    .from(document.querySelector('.breadcrumb'), .5, {y: '50%', autoAlpha: 0})
+                    .from(document.querySelectorAll('.el-from-bottom'), .5, {y: '100%', autoAlpha: 0}, '-=.25')
+                    .from(document.querySelectorAll('.social'), .35, {x: '50%', autoAlpha: 0})
+                    .from(document.querySelectorAll('.develop'), .35, {y: '-50%', autoAlpha: 0}, '-=.35');
             },
         });
 
@@ -188,7 +197,7 @@ class App {
                     .then(this.fadeIn.bind(this));
             },
 
-            fadeOut() {
+            fadeOut: function () {
                 let deferred = Barba.Utils.deferred();
                 let exitTl = new TimelineMax({
                     onComplete: () => {
@@ -212,16 +221,15 @@ class App {
                 });
 
                 enterTl
+                    .to(document.body, .5, {backgroundColor: '#fff'})
+                    .set(document.body, {className: '+=negative'})
                     .set(this.oldContainer, {autoAlpha: 0})
                     .set(this.newContainer, {autoAlpha: 1})
-                    .set(document.body, {className: '+=negative'})
-                    .from(document.querySelector('.breadcrumb'), .5, {y: '50%', autoAlpha: 0})
-                    .from(document.querySelectorAll('.el-from-bottom'), .5, {y: '100%', autoAlpha: 0}, '-=.25')
-                    .from(document.querySelectorAll('.social'), .35, {x: '50%', autoAlpha: 0})
-                    .from(document.querySelectorAll('.develop'), .35, {y: '-50%', autoAlpha: 0}, '-=.35');
+                    .set([this.newContainer.querySelector('.page'), this.newContainer.querySelector('.nav')], {autoAlpha: 1})
+
             }
 
-            });
+        });
 
         Barba.Pjax.getTransition = function () {
             return FadeTransition;
@@ -256,4 +264,5 @@ class App {
         }
     }
 }
+
 let app = new App();

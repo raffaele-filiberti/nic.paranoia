@@ -11562,12 +11562,14 @@ var App = function () {
                     wrapper: 0,
                     nav: 0
                 },
+                startTl: new _gsap.TimelineMax(),
                 cs: 0,
                 _constructor: function _constructor() {
                     this.scroll = Object.assign({
                         wrapper: document.getElementsByClassName('page__scroll'),
                         nav: document.getElementsByClassName('nav')
                     });
+                    this.startTl.set([document.querySelector('.page'), document.querySelector('.nav')], { autoAlpha: 1 });
                 },
                 start: function start() {
                     if (this.scroll.wrapper[0]) {
@@ -11576,6 +11578,7 @@ var App = function () {
                             nav: this.scroll.nav
                         });
                     }
+                    this.startTl.from(document.querySelector('.breadcrumb'), .5, { y: '50%', autoAlpha: 0 }).from(document.querySelectorAll('.el-from-bottom'), .5, { y: '100%', autoAlpha: 0 }, '-=.25').from(document.querySelectorAll('.social'), .35, { x: '50%', autoAlpha: 0 }).from(document.querySelectorAll('.develop'), .35, { y: '-50%', autoAlpha: 0 }, '-=.35');
                 }
             });
 
@@ -11586,6 +11589,8 @@ var App = function () {
                 start: function start() {
                     Promise.all([this.newContainerLoading, this.fadeOut()]).then(this.fadeIn.bind(this));
                 },
+
+
                 fadeOut: function fadeOut() {
                     var deferred = _barba2.default.Utils.deferred();
                     var exitTl = new _gsap.TimelineMax({
@@ -11597,6 +11602,7 @@ var App = function () {
                     exitTl.to(document.querySelector('.breadcrumb'), .5, { y: '50%', autoAlpha: 0 }).to(document.querySelectorAll('.block'), .5, { y: '100%', autoAlpha: 0 }, '-=.25').to(document.querySelectorAll('.img__txt .el-from-right'), .35, { x: '50%', autoAlpha: 0 }).to(document.querySelectorAll('.img__txt .el-from-top'), .35, { y: '-50%', autoAlpha: 0 }, '-=.35');
                     return exitTl, deferred.promise;
                 },
+
                 fadeIn: function fadeIn() {
                     var _this2 = this;
 
@@ -11606,7 +11612,7 @@ var App = function () {
                         }
                     });
 
-                    enterTl.set(this.oldContainer, { autoAlpha: 0 }).set(this.newContainer, { autoAlpha: 1 }).set(document.body, { className: '+=negative' }).set(document.querySelector('.page'), { autoAlpha: 1 }).from(document.querySelector('.breadcrumb'), .5, { y: '50%', autoAlpha: 0 }).from(document.querySelectorAll('.el-from-bottom'), .5, { y: '100%', autoAlpha: 0 }, '-=.25').from(document.querySelectorAll('.social'), .35, { x: '50%', autoAlpha: 0 }).from(document.querySelectorAll('.develop'), .35, { y: '-50%', autoAlpha: 0 }, '-=.35');
+                    enterTl.to(document.body, .5, { backgroundColor: '#fff' }).set(document.body, { className: '+=negative' }).set(this.oldContainer, { autoAlpha: 0 }).set(this.newContainer, { autoAlpha: 1 }).set([this.newContainer.querySelector('.page'), this.newContainer.querySelector('.nav')], { autoAlpha: 1 });
                 }
             });
 
